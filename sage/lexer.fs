@@ -3,7 +3,7 @@ module lexer
 open System
 open System.Text.RegularExpressions
 
-type token =
+type Token =
     // Keywords
     | Let
     | In

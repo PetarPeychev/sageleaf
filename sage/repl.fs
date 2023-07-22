@@ -9,5 +9,5 @@ let rec run () =
     if input = "exit" then
         ()
     else
-        printfn "%A" (input |> lexer.lex)
+        printfn "%A" (input |> lexer.lex |> parser.parseStatement)
         run ()
