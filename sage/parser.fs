@@ -10,26 +10,42 @@ and Type =
     | BoolType
     | StrType
     | UnitType
+    | FunctionType of input: Type * output: Type
 
 and Expression =
+    | Id of string
     | Int of int
     | Bool of bool
     | Str of string
     | Unit
+    | Function of arg: string * body: Expression
 
-let parseExpression tokens =
+let rec parseExpression tokens =
     match tokens with
+    | lexer.Id a :: lexer.Arrow :: rest ->
+        let b, rest = parseExpression rest
+        (Function(a, b), rest)
     | lexer.Int n :: rest -> (Int n, rest)
     | lexer.Bool b :: rest -> (Bool b, rest)
     | lexer.Str s :: rest -> (Str s, rest)
+    | lexer.Id a :: rest -> (Id a, rest)
     | _ -> failwith "Expected an expression."
 
-let parseType tokens =
+let parseBasicType token =
+    match token with
+    | lexer.IntType -> IntType
+    | lexer.BoolType -> BoolType
+    | lexer.StrType -> StrType
+    | _ -> failwith "Expected a basic type."
+
+let rec parseType tokens =
     match tokens with
+    | a :: lexer.Arrow :: rest ->
+        let b, rest = parseType rest
+        (FunctionType(parseBasicType a, b), rest)
     | lexer.IntType :: rest -> (IntType, rest)
     | lexer.BoolType :: rest -> (BoolType, rest)
     | lexer.StrType :: rest -> (StrType, rest)
-    | lexer.UnitType :: rest -> (UnitType, rest)
     | _ -> failwith "Expected a type."
 
 let parseStatement tokens =
