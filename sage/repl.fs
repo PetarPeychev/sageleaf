@@ -13,6 +13,9 @@ let rec run () =
         |> lexer.lex
         |> parser.parseModule
         |> types.typeCheckModule
-        |> printfn "%A"
+        |> fun res ->
+            match res with
+            | Ok(m) -> printfn $"%A{m}"
+            | Error(e) -> printfn $"Type errors: %A{e}"
 
         run ()

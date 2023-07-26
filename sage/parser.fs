@@ -15,6 +15,7 @@ and Expression =
     | Int of int
     | Bool of bool
     | Str of string
+    | Unit
 
 let parseExpression tokens =
     match tokens with
