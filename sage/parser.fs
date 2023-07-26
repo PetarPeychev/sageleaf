@@ -2,29 +2,19 @@ module parser
 
 type Module = Statement list
 
-and Statement =
-    | Binding of name: string * typ: Type * value: Expression
-    | TypeDef of name: string * body: unit
+and Statement = Binding of name: string * typ: Type * value: Expression
+// | TypeDef of name: string * body: unit
 
 and Type =
     | IntType
     | BoolType
     | StrType
+    | UnitType
 
 and Expression =
     | Int of int
     | Bool of bool
     | Str of string
-
-// let rec parseStatement tokens =
-//     match tokens with
-//     | lexer.Let :: rest ->
-//         let name, rest = parseName rest
-//         expect (lexer.Colon)
-//         let type', rest = parseType rest
-//         let value, rest = parseExpression rest
-
-//         Binding(name, type', value) :: parseStatement rest
 
 let parseExpression tokens =
     match tokens with
@@ -38,6 +28,7 @@ let parseType tokens =
     | lexer.IntType :: rest -> (IntType, rest)
     | lexer.BoolType :: rest -> (BoolType, rest)
     | lexer.StrType :: rest -> (StrType, rest)
+    | lexer.UnitType :: rest -> (UnitType, rest)
     | _ -> failwith "Expected a type."
 
 let parseStatement tokens =

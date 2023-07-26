@@ -9,5 +9,10 @@ let rec run () =
     if input = "exit" then
         ()
     else
-        printfn "%A" (input |> lexer.lex |> parser.parseModule)
+        input
+        |> lexer.lex
+        |> parser.parseModule
+        |> types.typeCheckModule
+        |> printfn "%A"
+
         run ()

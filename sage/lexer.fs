@@ -32,6 +32,7 @@ type Token =
     | IntType
     | BoolType
     | StrType
+    | UnitType
 
     // Literals
     | Int of int
@@ -80,6 +81,7 @@ let lex input =
         | Prefix "int" rest -> IntType :: lex' rest (pos + 3)
         | Prefix "bool" rest -> BoolType :: lex' rest (pos + 4)
         | Prefix "str" rest -> StrType :: lex' rest (pos + 3)
+        | Prefix "unit" rest -> UnitType :: lex' rest (pos + 4)
 
         // Keywords
         | Prefix "let" rest -> Let :: lex' rest (pos + 3)

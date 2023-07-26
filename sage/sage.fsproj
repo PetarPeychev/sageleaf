@@ -8,6 +8,7 @@
     <Compile Include="lexer.fs" />
     <Compile Include="compiler.fs" />
     <Compile Include="parser.fs" />
+    <Compile Include="types.fs" />
     <Compile Include="repl.fs" />
     <Compile Include="main.fs" />
   </ItemGroup>
