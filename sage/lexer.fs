@@ -3,46 +3,35 @@ module lexer
 open System
 open System.Text.RegularExpressions
 
+type Span = { start: int; length: int }
+
 type Token =
     // Keywords
-    | Let
-    | In
-    | Type
-    | If
-    | Then
-    | Else
-    | Do
-    | When
-    | Is
-    | And
-    | Or
-    | Not
+    | Let of span: Span
+    | Do of span: Span
+    | Then of span: Span
 
     // Symbols
-    | Lparen
-    | Rparen
-    | Colon
-    | Equals
-    | Comma
-    | Arrow
-    | DoubleArrow
-    | Pipe
+    | Lbracket of span: Span
+    | Rbracket of span: Span
+    | Colon of span: Span
+    | Equals of span: Span
+    | Arrow of span: Span
 
     // Types
-    | IntType
-    | BoolType
-    | StrType
-    | UnitType
+    | IntType of span: Span
+    | BoolType of span: Span
+    | StrType of span: Span
 
     // Literals
-    | Int of int
-    | Bool of bool
-    | Str of string
-    | Id of string
+    | Int of span: Span * value: int
+    | Bool of span: Span * value: bool
+    | Str of span: Span * value: string
+    | Id of span: Span * value: string
 
     // Special
     | Eof
-    | Error of string
+    | Error of span: Span * msg: string
 
 let lex input =
     let (|Prefix|_|) (p: string) (s: string) =
@@ -68,50 +57,40 @@ let lex input =
         | Prefix "\r" rest -> lex' rest (pos + 1)
 
         // Symbols
-        | Prefix "(" rest -> Lparen :: lex' rest (pos + 1)
-        | Prefix ")" rest -> Rparen :: lex' rest (pos + 1)
-        | Prefix ":" rest -> Colon :: lex' rest (pos + 1)
-        | Prefix "=" rest -> Equals :: lex' rest (pos + 1)
-        | Prefix "," rest -> Comma :: lex' rest (pos + 1)
-        | Prefix "->" rest -> Arrow :: lex' rest (pos + 2)
-        | Prefix "=>" rest -> DoubleArrow :: lex' rest (pos + 2)
-        | Prefix ">>" rest -> Pipe :: lex' rest (pos + 2)
+        | Prefix "[" rest -> Lbracket { start = pos; length = 1 } :: lex' rest (pos + 1)
+        | Prefix "]" rest -> Rbracket { start = pos; length = 1 } :: lex' rest (pos + 1)
+        | Prefix ":" rest -> Colon { start = pos; length = 1 } :: lex' rest (pos + 1)
+        | Prefix "=" rest -> Equals { start = pos; length = 1 } :: lex' rest (pos + 1)
+        | Prefix "->" rest -> Arrow { start = pos; length = 2 } :: lex' rest (pos + 2)
 
         // Types
-        | Prefix "int" rest -> IntType :: lex' rest (pos + 3)
-        | Prefix "bool" rest -> BoolType :: lex' rest (pos + 4)
-        | Prefix "str" rest -> StrType :: lex' rest (pos + 3)
-        | Prefix "unit" rest -> UnitType :: lex' rest (pos + 4)
+        | Prefix "int" rest -> IntType { start = pos; length = 3 } :: lex' rest (pos + 3)
+        | Prefix "bool" rest -> BoolType { start = pos; length = 4 } :: lex' rest (pos + 4)
+        | Prefix "str" rest -> StrType { start = pos; length = 3 } :: lex' rest (pos + 3)
 
         // Keywords
-        | Prefix "let" rest -> Let :: lex' rest (pos + 3)
-        | Prefix "in" rest -> In :: lex' rest (pos + 2)
-        | Prefix "type" rest -> Type :: lex' rest (pos + 4)
-        | Prefix "if" rest -> If :: lex' rest (pos + 2)
-        | Prefix "then" rest -> Then :: lex' rest (pos + 4)
-        | Prefix "else" rest -> Else :: lex' rest (pos + 4)
-        | Prefix "do" rest -> Do :: lex' rest (pos + 2)
-        | Prefix "when" rest -> When :: lex' rest (pos + 4)
-        | Prefix "is" rest -> Is :: lex' rest (pos + 2)
-        | Prefix "and" rest -> And :: lex' rest (pos + 3)
-        | Prefix "or" rest -> Or :: lex' rest (pos + 2)
-        | Prefix "not" rest -> Not :: lex' rest (pos + 3)
+        | Prefix "let" rest -> Let { start = pos; length = 3 } :: lex' rest (pos + 3)
+        | Prefix "do" rest -> Do { start = pos; length = 2 } :: lex' rest (pos + 2)
+        | Prefix "then" rest -> Then { start = pos; length = 4 } :: lex' rest (pos + 4)
 
         // Literals
         | Regex "^([0]|[1-9][0-9]*)" (n, rest) ->
             try
-                Int(Int32.Parse(n))
+                Int({ start = pos; length = n.Length }, Int32.Parse(n))
             with ex ->
-                Error(n)
+                Error({ start = pos; length = n.Length }, "Lexer Error: Invalid integer literal %s{n}")
             :: lex' rest (pos + n.Length)
-        | Prefix "true" rest -> Bool(true) :: lex' rest (pos + 4)
-        | Prefix "false" rest -> Bool(false) :: lex' rest (pos + 5)
-        | Regex "^\"[^\"]*\"" (s, rest) -> Str(s.Replace("\"", "")) :: lex' rest (pos + s.Length)
-        | Regex "^[a-zA-Z_][a-zA-Z0-9_]*" (id, rest) -> Id(id) :: lex' rest (pos + id.Length)
+        | Prefix "true" rest -> Bool({ start = pos; length = 4 }, true) :: lex' rest (pos + 4)
+        | Prefix "false" rest -> Bool({ start = pos; length = 5 }, false) :: lex' rest (pos + 5)
+        | Regex "^\"[^\"]*\"" (s, rest) ->
+            Str({ start = pos; length = s.Length }, s.Replace("\"", ""))
+            :: lex' rest (pos + s.Length)
+        | Regex "^[a-zA-Z_][a-zA-Z0-9_]*" (id, rest) ->
+            Id({ start = pos; length = id.Length }, id) :: lex' rest (pos + id.Length)
 
         // Special
-        | Regex "^[^\s]+" (v, rest) -> Error(v) :: lex' rest (pos + v.Length)
+        | Regex "^[^\s]+" (v, rest) -> Error({ start = pos; length = v.Length }, v) :: lex' rest (pos + v.Length)
         | "" -> [ Eof ]
-        | _ -> [ Error(input) ]
+        | _ -> [ Error({ start = pos; length = 0 }, "Lexer Error: Unknown error.") ]
 
     lex' input 0
