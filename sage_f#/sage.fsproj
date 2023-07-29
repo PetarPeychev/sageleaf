@@ -5,7 +5,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="lexer.fs" />
-    <Compile Include="compiler.fs" />
     <Compile Include="parser.fs" />
     <Compile Include="types.fs" />
     <Compile Include="interpreter.fs" />

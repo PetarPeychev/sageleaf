@@ -1,15 +1,16 @@
 module parser
 
-type Module = Statement list
+type File =
+    { name: string
+      statements: Statement list }
 
 and Statement = Binding of name: string * typ: Type * value: Expression
-// | TypeDef of name: string * body: unit
 
 and Type =
     | IntType
     | BoolType
     | StrType
-    | UnitType
+    | ListType of Type
     | FunctionType of input: Type * output: Type
 
 and Expression =
@@ -17,79 +18,70 @@ and Expression =
     | Int of int
     | Bool of bool
     | Str of string
-    | Unit
+    | Apply of func: Expression * arg: Expression
+    | DoThen of d: Expression * t: Expression
     | Function of arg: string * body: Expression
 
 let rec parseExpression tokens =
     match tokens with
-    | lexer.Id a :: lexer.Arrow :: rest ->
+    | lexer.Id(_, a) :: lexer.Arrow _ :: rest ->
         let b, rest = parseExpression rest
         (Function(a, b), rest)
-    | lexer.Int n :: rest -> (Int n, rest)
-    | lexer.Bool b :: rest -> (Bool b, rest)
-    | lexer.Str s :: rest -> (Str s, rest)
-    | lexer.Id a :: rest -> (Id a, rest)
+    | lexer.Int(_, n) :: rest -> (Int n, rest)
+    | lexer.Bool(_, b) :: rest -> (Bool b, rest)
+    | lexer.Str(_, s) :: rest -> (Str s, rest)
+    | lexer.Id(_, a) :: rest -> (Id a, rest)
     | _ -> failwith "Expected an expression."
 
 let parseBasicType token =
     match token with
-    | lexer.IntType -> IntType
-    | lexer.BoolType -> BoolType
-    | lexer.StrType -> StrType
+    | lexer.IntType _ -> IntType
+    | lexer.BoolType _ -> BoolType
+    | lexer.StrType _ -> StrType
     | _ -> failwith "Expected a basic type."
 
 let rec parseType tokens =
     match tokens with
-    | a :: lexer.Arrow :: rest ->
+    | a :: lexer.Arrow _ :: rest ->
         let b, rest = parseType rest
         (FunctionType(parseBasicType a, b), rest)
-    | lexer.IntType :: rest -> (IntType, rest)
-    | lexer.BoolType :: rest -> (BoolType, rest)
-    | lexer.StrType :: rest -> (StrType, rest)
+    | lexer.IntType _ :: rest -> (IntType, rest)
+    | lexer.BoolType _ :: rest -> (BoolType, rest)
+    | lexer.StrType _ :: rest -> (StrType, rest)
     | _ -> failwith "Expected a type."
 
 let parseStatement tokens =
     match tokens with
-    | lexer.Let :: rest ->
+    | lexer.Let _ :: rest ->
         let name, rest =
             match rest with
-            | lexer.Id name :: rest -> (name, rest)
+            | lexer.Id(_, name) :: rest -> (name, rest)
             | _ -> failwith "Expected a name for the let binding."
 
         let _, rest =
             match rest with
-            | lexer.Colon :: rest -> ((), rest)
+            | lexer.Colon _ :: rest -> ((), rest)
             | _ -> failwith "Expected a colon after the let binding name."
 
         let typ, rest = parseType rest
 
         let _, rest =
             match rest with
-            | lexer.Equals :: rest -> ((), rest)
+            | lexer.Equals _ :: rest -> ((), rest)
             | _ -> failwith "Expected an equals sign after the let binding type."
 
         let value, rest = parseExpression rest
 
         (Binding(name, typ, value), rest)
-    // | lexer.Type :: rest ->
-    //     let name, rest =
-    //         match rest with
-    //         | lexer.Id name :: rest -> (name, rest)
-    //         | _ -> failwith "Expected a name for the type definition."
-
-    //     let _, rest =
-    //         match rest with
-    //         | lexer.Equals :: rest -> ((), rest)
-    //         | _ -> failwith "Expected an equals sign after the type definition type."
-
-    //     let body, rest = parseTypeDef rest
-
-    //     (TypeDef(name, body), rest)
     | _ -> failwith "Expected a top-level statement, either a let binding or a type definition."
 
-let rec parseModule tokens =
+let rec parseStatements tokens =
     match tokens with
     | [ lexer.Eof ] -> []
     | _ ->
         let statement, rest = parseStatement tokens
-        statement :: parseModule rest
+        statement :: parseStatements rest
+
+let rec parseFile name tokens =
+    { name = name
+      statements = parseStatements tokens }
