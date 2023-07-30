@@ -1,19 +1,20 @@
 #include "../include/sage.h"
 #include <string.h>
 
-using namespace ast;
+using namespace sage;
 using namespace std;
 
 void test()
 {
     Int *a = new Int(34);
     Int *b = new Int(35);
-    Add *c = new Add(a, b);
+    Int *c = new Int(420);
+    Add *d = new Add(a, b);
+    Sub *e = new Sub(c, d);
 
-    c->show();
-    cout << endl;
+    e->eval(true);
 
-    delete c;
+    delete e;
 }
 
 int main(int argc, char *argv[])
