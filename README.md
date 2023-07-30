@@ -6,3 +6,14 @@ Sageleaf is a statically-typed functional programming language with a clean synt
 - [Primitive Types](docs/primitive-types.md)
 - [Composite Types](docs/composite-types.md)
     - [Untagged Unions](docs/untagged-unions.md)
+
+### To Do:
+
+- [ ] Write and verify EBNF grammar
+- [ ] VSCode extension (textmate)
+- [ ] AST
+- [ ] Type checker
+- [ ] Tree-walking interpreter
+- [ ] Lexer
+- [ ] Parser
+- [ ] VSCode extension (LSP)
