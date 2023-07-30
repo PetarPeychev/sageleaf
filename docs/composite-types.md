@@ -59,6 +59,7 @@ There is no special syntax for constructing values of untagged unions, as all ty
 ## Code Examples
 
 **Parsing JSON**
+
 Imagine we want to parse and work with a json file, containing a list of employees:
 
 ```json
