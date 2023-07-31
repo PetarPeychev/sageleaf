@@ -16,14 +16,13 @@ void test()
                     new Int(44))),
             new Int(35)));
 
-    tree->eval(true);
+    auto env = runtime::Env();
+    tree->eval(env);
     cout << endl;
 
     auto functree = new Apply(
         new Id("print"),
-        new Apply(
-            new Id("str"),
-            new Int(69)));
+        new Int(69));
 
     functree->show();
     cout << endl;

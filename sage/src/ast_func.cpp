@@ -8,7 +8,7 @@ Apply::~Apply()
     delete func;
     delete arg;
 }
-int Apply::eval([[maybe_unused]] bool debug)
+runtime::Value *Apply::eval([[maybe_unused]] runtime::Env &env)
 {
     throw std::runtime_error("Eval Error: Evaluation of function application is not yet implemented.");
 }

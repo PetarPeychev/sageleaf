@@ -3,25 +3,27 @@
 using namespace ast;
 
 Add::Add(Node *left, Node *right) : left(left), right(right) {}
+
 Add::~Add()
 {
     delete left;
     delete right;
 }
-int Add::eval(bool debug)
+
+runtime::Value *Add::eval(runtime::Env &env)
 {
-    if (debug)
+    auto l = this->left->eval(env);
+    auto r = this->right->eval(env);
+    runtime::Value *res;
+    if (l->type == runtime::V_Int && r->type == runtime::V_Int)
     {
-        this->show();
-        std::cout << " => ";
-        std::cout << this->eval(false) << std::endl;
-        left->eval(debug);
-        right->eval(debug);
-        return left->eval(false) + right->eval(false);
+        res = new runtime::Int(((runtime::Int *)l)->value + ((runtime::Int *)r)->value);
     }
-    else
-        return left->eval(debug) + right->eval(debug);
+    delete l;
+    delete r;
+    return res;
 }
+
 void Add::show()
 {
     printf("(");
@@ -32,25 +34,27 @@ void Add::show()
 }
 
 Sub::Sub(Node *left, Node *right) : left(left), right(right) {}
+
 Sub::~Sub()
 {
     delete left;
     delete right;
 }
-int Sub::eval(bool debug)
+
+runtime::Value *Sub::eval(runtime::Env &env)
 {
-    if (debug)
+    auto l = this->left->eval(env);
+    auto r = this->right->eval(env);
+    runtime::Value *res;
+    if (l->type == runtime::V_Int && r->type == runtime::V_Int)
     {
-        this->show();
-        std::cout << " => ";
-        std::cout << this->eval(false) << std::endl;
-        left->eval(debug);
-        right->eval(debug);
-        return left->eval(false) - right->eval(false);
+        res = new runtime::Int(((runtime::Int *)l)->value - ((runtime::Int *)r)->value);
     }
-    else
-        return left->eval(debug) - right->eval(debug);
+    delete l;
+    delete r;
+    return res;
 }
+
 void Sub::show()
 {
     printf("(");
@@ -61,25 +65,27 @@ void Sub::show()
 }
 
 Mul::Mul(Node *left, Node *right) : left(left), right(right) {}
+
 Mul::~Mul()
 {
     delete left;
     delete right;
 }
-int Mul::eval(bool debug)
+
+runtime::Value *Mul::eval(runtime::Env &env)
 {
-    if (debug)
+    auto l = this->left->eval(env);
+    auto r = this->right->eval(env);
+    runtime::Value *res;
+    if (l->type == runtime::V_Int && r->type == runtime::V_Int)
     {
-        this->show();
-        std::cout << " => ";
-        std::cout << this->eval(false) << std::endl;
-        left->eval(debug);
-        right->eval(debug);
-        return left->eval(false) * right->eval(false);
+        res = new runtime::Int(((runtime::Int *)l)->value * ((runtime::Int *)r)->value);
     }
-    else
-        return left->eval(debug) * right->eval(debug);
+    delete l;
+    delete r;
+    return res;
 }
+
 void Mul::show()
 {
     printf("(");
@@ -90,25 +96,27 @@ void Mul::show()
 }
 
 Div::Div(Node *left, Node *right) : left(left), right(right) {}
+
 Div::~Div()
 {
     delete left;
     delete right;
 }
-int Div::eval(bool debug)
+
+runtime::Value *Div::eval(runtime::Env &env)
 {
-    if (debug)
+    auto l = this->left->eval(env);
+    auto r = this->right->eval(env);
+    runtime::Value *res;
+    if (l->type == runtime::V_Int && r->type == runtime::V_Int)
     {
-        this->show();
-        std::cout << " => ";
-        std::cout << this->eval(false) << std::endl;
-        left->eval(debug);
-        right->eval(debug);
-        return left->eval(false) / right->eval(false);
+        res = new runtime::Int(((runtime::Int *)l)->value / ((runtime::Int *)r)->value);
     }
-    else
-        return left->eval(debug) / right->eval(debug);
+    delete l;
+    delete r;
+    return res;
 }
+
 void Div::show()
 {
     printf("(");
