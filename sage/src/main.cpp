@@ -1,20 +1,35 @@
-#include "../include/sage.h"
+#include "../include/ast.h"
 #include <string.h>
 
-using namespace sage;
+using namespace ast;
 using namespace std;
 
 void test()
 {
-    Int *a = new Int(34);
-    Int *b = new Int(35);
-    Int *c = new Int(420);
-    Add *d = new Add(a, b);
-    Sub *e = new Sub(c, d);
+    auto tree = new Sub(
+        new Int(489),
+        new Add(
+            new Mul(
+                new Int(17),
+                new Div(
+                    new Int(88),
+                    new Int(44))),
+            new Int(35)));
 
-    e->eval(true);
+    tree->eval(true);
+    cout << endl;
 
-    delete e;
+    auto functree = new Apply(
+        new Id("print"),
+        new Apply(
+            new Id("str"),
+            new Int(69)));
+
+    functree->show();
+    cout << endl;
+
+    delete functree;
+    delete tree;
 }
 
 int main(int argc, char *argv[])

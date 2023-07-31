@@ -1,6 +1,6 @@
 #!/bin/bash
 
-g++ src/*.cpp -o sage
+g++ -Wall -Wextra src/*.cpp -o sage
 
 chmod +x sage
 
