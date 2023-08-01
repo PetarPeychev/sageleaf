@@ -9,11 +9,12 @@ Sageleaf is a statically-typed functional programming language with a clean synt
 
 ### To Do:
 
-- [ ] Write and verify EBNF grammar
-- [ ] VSCode extension (textmate)
-- [ ] AST
-- [ ] Type checker
-- [ ] Tree-walking interpreter
-- [ ] Lexer
-- [ ] Parser
-- [ ] VSCode extension (LSP)
+- [ ] EBNF grammar                  ░░░░░░░░░░
+- [ ] VSCode extension (textmate)   ░░░░░░░░░░
+- [ ] AST                           ██░░░░░░░░
+- [ ] Type checker                  ░░░░░░░░░░
+- [ ] Tree-walking interpreter      ██░░░░░░░░
+- [ ] Lexer                         ░░░░░░░░░░
+- [ ] Parser                        ░░░░░░░░░░
+- [ ] VSCode extension (LSP)        ░░░░░░░░░░
+- [ ] Standard Library              ░░░░░░░░░░
