@@ -1,0 +1,78 @@
+type = base | tuple | list | union
+base = "int" | "str" | "none"
+tuple = "(" type (", " type)+ ")"
+list = "[" type "]"
+union = type (" | " type)+
+
+
+type =
+    | "int"
+    | "str"
+    | "none"
+    | "(" type ("," type)+ ")"
+    | "[" type "]"
+    | "{" id ":" type ("," id ":" type)+ "}"
+    | type ("|" type)+
+
+
+type color = red: | green: | blue:
+
+type result a = ok: a | error: string
+
+let value_error: {.error string} = {.error "value error"}
+
+
+let list: [int] = [1, 2, 3]
+
+# let tuple: (int, int, str) = (1, 2, "hey")
+
+let z: int | str = "error"
+
+type rgb = {
+    red: int,
+    green: int,
+    blue: int
+}
+
+type result a =
+    {ok: a}
+    | {err: str}
+
+
+let read_file: str -> {ok: str} | {err: str} =
+    path ->
+        try
+            let file = open path in
+            let content = read file in
+            close file;
+            {ok: content}
+        except
+            {error: "file not found"}
+
+type perms =
+    | {admin}
+    | {user}
+    | {guest}
+
+type user = {
+    name: str,
+    age: int,
+    perms: perms
+}
+
+let is_admin: {perms: perms} -> bool =
+    user ->
+        when user.perms is
+        | {admin} => true
+        | _       => false
+
+let john := {
+    name: "John",
+    age: 20,
+    perms: {user}
+}
+
+let is_john_admin: bool =
+    john
+    |> is_admin
+

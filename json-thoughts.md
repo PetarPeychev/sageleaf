@@ -7,17 +7,17 @@
 ```
 
 ```fsharp
-type json = (
-        str
-        | int
-        | float
-        | bool
-        | none
-        | [json]
-        | {str: json}
-    )
+type json =
+    str
+    | int
+    | float
+    | bool
+    | none
+    | [json]
+    | {str: json}
 
-let read: str -> json = 
+
+let read: str -> json =
     s -> ...
 
 type my_type = (x: int, y: str, z: float)
