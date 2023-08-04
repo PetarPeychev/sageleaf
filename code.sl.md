@@ -1,3 +1,4 @@
+```fsharp
 let list: [int] = [1, 2, 3]
 
 let z: int or str = "error"
@@ -71,3 +72,4 @@ let last_element: [a] -> a or none:
 
         last_rec list none;
 
+```
