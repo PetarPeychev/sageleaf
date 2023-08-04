@@ -1,4 +1,3 @@
-```fsharp
 let list: [int] = [1, 2, 3]
 
 let z: int or str = "error"
@@ -71,5 +70,3 @@ let last_element: [a] -> a or none:
                 is [x: xs] then last_rec xs prev;
 
         last_rec list none;
-
-```

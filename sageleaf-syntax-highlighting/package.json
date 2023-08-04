@@ -1,0 +1,25 @@
+{
+  "name": "sageleaf-syntax-highlighting",
+  "displayName": "Sageleaf Syntax Highlighting",
+  "description": "Syntax highlighting for the sageleaf language.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "sageleaf",
+      "aliases": ["sageleaf", "sageleaf"],
+      "extensions": [".sl"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "sageleaf",
+      "scopeName": "source.sageleaf",
+      "path": "./syntaxes/sageleaf.tmLanguage.json"
+    }]
+  }
+}
