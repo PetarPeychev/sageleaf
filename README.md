@@ -34,7 +34,7 @@ Current status of the project:
 - [ ] Standard Library              ░░░░░░░░░░
 
 ### Tooling
-- [ ] VSCode Extension (TextMate)   ░░░░░░░░░░
+- [ ] VSCode Extension (TextMate)   ██████░░░░
 - [ ] VSCode Extension (LSP)        ░░░░░░░░░░
 
 ---
