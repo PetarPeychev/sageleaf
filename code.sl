@@ -31,10 +31,11 @@ type user = {
     perm: perms
 }
 
+# this is a comment explaining something
 let is_admin: {perm: perms} -> bool =
     user ->
         if user.perm
-        is {admin} then true
+        is {admin} then true # and another one
         else false
 
 let john := {
