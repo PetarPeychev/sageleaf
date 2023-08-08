@@ -2,7 +2,6 @@
 
 #include "../include/lexer.h"
 
-using namespace tokens;
 using namespace std;
 
 bool is_digit(char c)
@@ -32,7 +31,7 @@ bool match(string input, int i, string pattern)
     return true;
 }
 
-vector<Token> lexer::lex(string input)
+vector<Token> lex(string input)
 {
     vector<Token> tokens;
     for (size_t i = 0; i < input.length(); i++)
@@ -108,6 +107,10 @@ vector<Token> lexer::lex(string input)
         else if (c == ',')
         {
             tokens.push_back(Token(T_Comma, ","));
+        }
+        else if (c == '.')
+        {
+            tokens.push_back(Token(T_Dot, ","));
         }
         else if (c == '(')
         {
@@ -246,6 +249,23 @@ vector<Token> lexer::lex(string input)
                 }
             }
             tokens.push_back(Token(T_Str, value));
+        }
+        else if (c == '#')
+        {
+            while (true)
+            {
+                if (i >= input.length())
+                    break;
+                char next = input[i];
+                if (next == '\n')
+                {
+                    break;
+                }
+                else
+                {
+                    i++;
+                }
+            }
         }
         else
         {
