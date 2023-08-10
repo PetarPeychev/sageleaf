@@ -1,3 +1,5 @@
+#ifndef SAGE_LEXER_H
+#define SAGE_LEXER_H
 #include "types.h"
 
 typedef enum
@@ -22,5 +24,9 @@ typedef enum
 typedef struct
 {
     TokenType type;
-    u8 value[256]; // Assuming identifiers and numbers won't exceed this length
+    char value[1024]; // Assuming identifiers and numbers won't exceed this length
 } Token;
+
+Token *lex(char *buffer);
+
+#endif // SAGE_LEXER_H
