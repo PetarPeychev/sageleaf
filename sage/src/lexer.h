@@ -13,7 +13,7 @@ typedef enum
     TOKEN_KEYWORD_AND,
     TOKEN_KEYWORD_OR,
     TOKEN_KEYWORD_NOT,
-    
+
     TOKEN_KEYWORD_IF,
     TOKEN_KEYWORD_IS,
     TOKEN_KEYWORD_THEN,
@@ -27,7 +27,7 @@ typedef enum
     TOKEN_KEYWORD_ANY,
     TOKEN_KEYWORD_TRUE,
     TOKEN_KEYWORD_FALSE,
-    
+
     TOKEN_IDENTIFIER,
 
     // Single-Char Symbols
@@ -71,5 +71,9 @@ typedef struct
 } Token;
 
 Token *lex(char *buffer);
+
+char *token_type_to_string(TokenType type);
+
+char *token_to_string(Token *token);
 
 #endif // SAGE_LEXER_H

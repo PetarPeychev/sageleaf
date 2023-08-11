@@ -1,11 +1,22 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdarg.h>
 
 #include "lexer.h"
 #include "config.h"
 
-#define stoken(token) tokens[token_count].type = token; token_count++; i++; continue
+#define stoken(token)                 \
+    tokens[token_count].type = token; \
+    token_count++;                    \
+    i++;                              \
+    continue
+
+#define mtoken(token, size)           \
+    tokens[token_count].type = token; \
+    token_count++;                    \
+    i += size;                        \
+    continue
 
 Token *lex(char *buffer)
 {
@@ -31,33 +42,33 @@ Token *lex(char *buffer)
         /* -------------- Single-Character Symbols -------------- */
         switch (buffer[i])
         {
-            case ':':
+        case ':':
             stoken(TOKEN_COLON);
-            case ';':
+        case ';':
             stoken(TOKEN_SEMICOLON);
-            case ',':
+        case ',':
             stoken(TOKEN_COMMA);
-            case '=':
+        case '=':
             stoken(TOKEN_EQUALS);
-            case '+':
+        case '+':
             stoken(TOKEN_ADD);
-            case '*':
+        case '*':
             stoken(TOKEN_MUL);
-            case '/':
+        case '/':
             stoken(TOKEN_DIV);
-            case '%':
+        case '%':
             stoken(TOKEN_MOD);
-            case '(':
+        case '(':
             stoken(TOKEN_LPAREN);
-            case ')':
+        case ')':
             stoken(TOKEN_RPAREN);
-            case '[':
+        case '[':
             stoken(TOKEN_LSQUARE);
-            case ']':
+        case ']':
             stoken(TOKEN_RSQUARE);
-            case '{':
+        case '{':
             stoken(TOKEN_LSQUIRLY);
-            case '}':
+        case '}':
             stoken(TOKEN_RSQUIRLY);
         }
 
@@ -66,10 +77,7 @@ Token *lex(char *buffer)
         {
             if (buffer[i + 1] == '>')
             {
-                tokens[token_count].type = TOKEN_ARROW;
-                token_count++;
-                i += 2;
-                continue;
+                mtoken(TOKEN_ARROW, 2);
             }
             else
             {
@@ -81,10 +89,7 @@ Token *lex(char *buffer)
         {
             if (buffer[i + 1] == '=')
             {
-                tokens[token_count].type = TOKEN_LTE;
-                token_count++;
-                i += 2;
-                continue;
+                mtoken(TOKEN_LTE, 2);
             }
             else
             {
@@ -96,10 +101,7 @@ Token *lex(char *buffer)
         {
             if (buffer[i + 1] == '=')
             {
-                tokens[token_count].type = TOKEN_GTE;
-                token_count++;
-                i += 2;
-                continue;
+                mtoken(TOKEN_GTE, 2);
             }
             else
             {
@@ -194,17 +196,11 @@ Token *lex(char *buffer)
 
             if (buffer[i] == '\0')
             {
-                tokens[token_count].type = TOKEN_ERROR;
-                token_count++;
-                i++;
-                continue;
+                stoken(TOKEN_ERROR);
             }
 
             tokens[token_count].value[j] = '\0';
-            tokens[token_count].type = TOKEN_STR_LITERAL;
-            token_count++;
-            i++;
-            continue;
+            stoken(TOKEN_STR_LITERAL);
         }
 
         /* -------------- Comments -------------- */
@@ -216,9 +212,7 @@ Token *lex(char *buffer)
         }
 
         /* -------------- If none of the above, Error -------------- */
-        tokens[token_count].type = TOKEN_ERROR;
-        token_count++;
-        i++;
+        stoken(TOKEN_ERROR);
     }
 
     /* -------------- End of File -------------- */
@@ -226,4 +220,179 @@ Token *lex(char *buffer)
     token_count++;
 
     return tokens;
+}
+
+char *token_type_to_string(TokenType type)
+{
+    switch (type)
+    {
+    case TOKEN_KEYWORD_LET:
+        return "let";
+    case TOKEN_KEYWORD_VAR:
+        return "var";
+    case TOKEN_KEYWORD_TYPE:
+        return "type";
+    case TOKEN_KEYWORD_IMPORT:
+        return "import";
+    case TOKEN_KEYWORD_AND:
+        return "and";
+    case TOKEN_KEYWORD_OR:
+        return "or";
+    case TOKEN_KEYWORD_NOT:
+        return "not";
+    case TOKEN_KEYWORD_IF:
+        return "if";
+    case TOKEN_KEYWORD_IS:
+        return "is";
+    case TOKEN_KEYWORD_THEN:
+        return "then";
+    case TOKEN_KEYWORD_ELSE:
+        return "else";
+    case TOKEN_KEYWORD_INT:
+        return "int";
+    case TOKEN_KEYWORD_STR:
+        return "str";
+    case TOKEN_KEYWORD_FLOAT:
+        return "float";
+    case TOKEN_KEYWORD_BOOL:
+        return "bool";
+    case TOKEN_KEYWORD_NONE:
+        return "none";
+    case TOKEN_KEYWORD_ANY:
+        return "any";
+    case TOKEN_KEYWORD_TRUE:
+        return "true";
+    case TOKEN_KEYWORD_FALSE:
+        return "false";
+    case TOKEN_IDENTIFIER:
+        return "id";
+    case TOKEN_COLON:
+        return ":";
+    case TOKEN_SEMICOLON:
+        return ";";
+    case TOKEN_COMMA:
+        return ",";
+    case TOKEN_EQUALS:
+        return "=";
+    case TOKEN_ADD:
+        return "+";
+    case TOKEN_SUB:
+        return "-";
+    case TOKEN_MUL:
+        return "*";
+    case TOKEN_DIV:
+        return "/";
+    case TOKEN_MOD:
+        return "%";
+    case TOKEN_LT:
+        return "<";
+    case TOKEN_GT:
+        return ">";
+    case TOKEN_LPAREN:
+        return "(";
+    case TOKEN_RPAREN:
+        return ")";
+    case TOKEN_LSQUARE:
+        return "[";
+    case TOKEN_RSQUARE:
+        return "]";
+    case TOKEN_LSQUIRLY:
+        return "{";
+    case TOKEN_RSQUIRLY:
+        return "}";
+    case TOKEN_ARROW:
+        return "->";
+    case TOKEN_PIPE:
+        return "|>";
+    case TOKEN_GTE:
+        return ">=";
+    case TOKEN_LTE:
+        return "<=";
+    case TOKEN_INT_LITERAL:
+        return "int";
+    case TOKEN_STR_LITERAL:
+        return "str";
+    case TOKEN_ERROR:
+        return "error";
+    case TOKEN_EOF:
+        return "eof";
+    default:
+        return "error";
+    }
+}
+
+int vasprintf(char **str, const char *fmt, va_list args)
+{
+    int size = 0;
+    va_list tmpa;
+
+    // copy
+    va_copy(tmpa, args);
+
+    // apply variadic arguments to
+    // sprintf with format to get size
+    size = vsnprintf(NULL, 0, fmt, tmpa);
+
+    // toss args
+    va_end(tmpa);
+
+    // return -1 to be compliant if
+    // size is less than 0
+    if (size < 0)
+    {
+        return -1;
+    }
+
+    // alloc with size plus 1 for `\0'
+    *str = (char *)malloc(size + 1);
+
+    // return -1 to be compliant
+    // if pointer is `NULL'
+    if (NULL == *str)
+    {
+        return -1;
+    }
+
+    // format string with original
+    // variadic arguments and set new size
+    size = vsprintf(*str, fmt, args);
+    return size;
+}
+
+int asprintf(char **str, const char *fmt, ...)
+{
+    int size = 0;
+    va_list args;
+
+    // init variadic argumens
+    va_start(args, fmt);
+
+    // format and get size
+    size = vasprintf(str, fmt, args);
+
+    // toss args
+    va_end(args);
+
+    return size;
+}
+
+char *token_to_string(Token *token)
+{
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wswitch-enum"
+    char *string;
+    switch (token->type)
+    {
+    case TOKEN_INT_LITERAL:
+    case TOKEN_IDENTIFIER:
+        return token->value;
+    case TOKEN_STR_LITERAL:
+        if (0 > asprintf(&string, "\"%s\"", token->value))
+            return "error";
+        return string;
+    default:
+        return token_type_to_string(token->type);
+    }
+
+#pragma GCC diagnostic pop
 }

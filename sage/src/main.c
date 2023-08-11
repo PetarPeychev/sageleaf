@@ -22,8 +22,9 @@ int main(int argc, char **argv)
 
     for (u32 i = 0; tokens[i].type != TOKEN_EOF; i++)
     {
-        printf("Token(%d, %s)\n", tokens[i].type, tokens[i].value);
+        printf("%s ", token_to_string(&tokens[i]));
     }
+    printf("\n");
 
     free(tokens);
 
