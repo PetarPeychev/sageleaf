@@ -5,4 +5,6 @@
 
 char *read_file(const char *path);
 
+int print_to_string(char **str, const char *fmt, ...);
+
 #endif // SAGE_UTILS_H
