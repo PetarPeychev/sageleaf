@@ -38,7 +38,7 @@ expr = (
     | apply ("|>" apply)*
 )
 
-apply = term0 (term0)*
+apply = (term0)+
 
 term0 = term1 ("or" term1)*
 

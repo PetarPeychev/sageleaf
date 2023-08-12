@@ -3,15 +3,13 @@
 
 typedef enum
 {
-    NODE_CONST,
-    NODE_VAR,
-    NODE_TYPEDEF,
-    NODE_IMPORT,
+    NODE_PROG,
 } NodeType;
 
 typedef struct
 {
     NodeType type;
+
 } Node;
 
 #endif // SAGE_SYNTAX_H

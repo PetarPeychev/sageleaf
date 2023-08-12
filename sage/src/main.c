@@ -4,8 +4,6 @@
 #include "utils.h"
 #include "lexer.h"
 
-#define _POSIX_C_SOURCE 200809L
-
 int main(int argc, char **argv)
 {
     if (argc != 2)
@@ -15,7 +13,7 @@ int main(int argc, char **argv)
     }
 
     char *buffer = read_file(argv[1]);
-    printf("%s\n", buffer);
+    // printf("%s\n", buffer);
 
     Token *tokens = lex(buffer);
     free(buffer);
@@ -25,6 +23,12 @@ int main(int argc, char **argv)
         printf("%s ", token_to_string(&tokens[i]));
     }
     printf("\n");
+
+    for (u32 i = 0; tokens[i].type != TOKEN_EOF; i++)
+    {
+        if (tokens[i].type == TOKEN_IDENTIFIER || tokens[i].type == TOKEN_STR_LITERAL || tokens[i].type == TOKEN_INT_LITERAL)
+            free(tokens[i].value);
+    }
 
     free(tokens);
 

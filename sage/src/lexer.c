@@ -117,6 +117,7 @@ Token *lex(char *buffer)
         /* -------------- Integers Literals -------------- */
         if (buffer[i] >= '0' && buffer[i] <= '9')
         {
+            tokens[token_count].value = malloc(sizeof(char) * MAX_LITERAL);
             u32 j = 0;
             while (buffer[i] >= '0' && buffer[i] <= '9')
             {
@@ -133,6 +134,7 @@ Token *lex(char *buffer)
         /* -------------- Keywords and Identifiers -------------- */
         if (is_id_start(buffer[i]))
         {
+            tokens[token_count].value = malloc(sizeof(char) * MAX_LITERAL);
             u32 j = 0;
             while (buffer[i] != '\0' && (is_id(buffer[i])))
             {
@@ -183,6 +185,9 @@ Token *lex(char *buffer)
             else
                 tokens[token_count].type = TOKEN_IDENTIFIER;
 
+            if (tokens[token_count].type != TOKEN_IDENTIFIER)
+                free(tokens[i].value);
+
             token_count++;
             continue;
         }
@@ -190,6 +195,7 @@ Token *lex(char *buffer)
         /* -------------- String Literals -------------- */
         if (buffer[i] == '"')
         {
+            tokens[token_count].value = malloc(sizeof(char) * MAX_LITERAL);
             u32 j = 0;
             i++;
             while (buffer[i] != '"' && buffer[i] != '\0')
