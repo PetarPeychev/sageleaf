@@ -18,6 +18,9 @@
     i += size;                        \
     continue
 
+#define is_id_start(c) (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || c == '_' || c == '.'
+#define is_id(c) is_id_start(c) || (c >= '0' && c <= '9')
+
 Token *lex(char *buffer)
 {
     Token *tokens = malloc(sizeof(Token) * MAX_TOKENS);
@@ -58,6 +61,8 @@ Token *lex(char *buffer)
             stoken(TOKEN_DIV);
         case '%':
             stoken(TOKEN_MOD);
+        case '^':
+            stoken(TOKEN_POW);
         case '(':
             stoken(TOKEN_LPAREN);
         case ')':
@@ -126,10 +131,10 @@ Token *lex(char *buffer)
         }
 
         /* -------------- Keywords and Identifiers -------------- */
-        if ((buffer[i] >= 'a' && buffer[i] <= 'z') || buffer[i] == '_')
+        if (is_id_start(buffer[i]))
         {
             u32 j = 0;
-            while (buffer[i] != '\0' && ((buffer[i] >= 'a' && buffer[i] <= 'z') || buffer[i] == '_'))
+            while (buffer[i] != '\0' && (is_id(buffer[i])))
             {
                 tokens[token_count].value[j] = buffer[i];
                 i++;
@@ -284,6 +289,8 @@ char *token_type_to_string(TokenType type)
         return "/";
     case TOKEN_MOD:
         return "%";
+    case TOKEN_POW:
+        return "^";
     case TOKEN_LT:
         return "<";
     case TOKEN_GT:

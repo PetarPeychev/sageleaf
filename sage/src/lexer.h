@@ -40,6 +40,7 @@ typedef enum
     TOKEN_MUL,
     TOKEN_DIV,
     TOKEN_MOD,
+    TOKEN_POW,
     TOKEN_LT,
     TOKEN_GT,
     TOKEN_LPAREN,

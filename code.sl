@@ -62,12 +62,12 @@ let fibonacci: int -> int =
         is 0 or num = 1 then num
         is n then fibonacci (n - 1) + fibonacci (n - 2)
 
-let last_element: [a] -> a or none:
+let last_element: [a] -> a or none =
     list ->
-        let last_rec: [a] -> a or none -> a or none =
+        let last_rec =
             list -> prev ->
                 if list
                 is [] then prev
                 is [x: xs] then last_rec xs prev;
 
-        last_rec list none;
+        last_rec list none
