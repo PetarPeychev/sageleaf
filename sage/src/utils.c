@@ -1,6 +1,6 @@
+#include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdarg.h>
 
 #include "utils.h"
 
@@ -57,20 +57,14 @@ i32 vasprintf(char **str, const char *fmt, va_list args)
 
     // return -1 to be compliant if
     // size is less than 0
-    if (size < 0)
-    {
-        return -1;
-    }
+    if (size < 0) { return -1; }
 
     // alloc with size plus 1 for `\0'
     *str = (char *)malloc(size + 1);
 
     // return -1 to be compliant
     // if pointer is `NULL'
-    if (NULL == *str)
-    {
-        return -1;
-    }
+    if (NULL == *str) { return -1; }
 
     // format string with original
     // variadic arguments and set new size

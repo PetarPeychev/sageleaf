@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "utils.h"
 #include "lexer.h"
+#include "utils.h"
 
 int main(int argc, char **argv)
 {
@@ -19,14 +19,14 @@ int main(int argc, char **argv)
     free(buffer);
 
     for (u32 i = 0; tokens[i].type != TOKEN_EOF; i++)
-    {
-        printf("%s ", token_to_string(&tokens[i]));
-    }
+    { printf("%s ", token_to_string(&tokens[i])); }
     printf("\n");
 
     for (u32 i = 0; tokens[i].type != TOKEN_EOF; i++)
     {
-        if (tokens[i].type == TOKEN_IDENTIFIER || tokens[i].type == TOKEN_STR_LITERAL || tokens[i].type == TOKEN_INT_LITERAL)
+        if (tokens[i].type == TOKEN_IDENTIFIER ||
+            tokens[i].type == TOKEN_STR_LITERAL ||
+            tokens[i].type == TOKEN_INT_LITERAL)
             free(tokens[i].value);
     }
 

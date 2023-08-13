@@ -1,8 +1,8 @@
 #ifndef SAGE_LEXER_H
 #define SAGE_LEXER_H
 
-#include "types.h"
 #include "config.h"
+#include "types.h"
 
 typedef enum
 {
