@@ -1,5 +1,5 @@
-#ifndef SAGE_TYPES_H
-#define SAGE_TYPES_H
+#ifndef TYPES_H
+#define TYPES_H
 
 #include <stdbool.h>
 #include <stdint.h>
@@ -14,7 +14,9 @@ typedef int16_t i16;
 typedef int32_t i32;
 typedef int64_t i64;
 
-typedef float f32; // I am evil
+typedef float f32;
 typedef double f64;
 
-#endif // SAGE_TYPES_H
+typedef u8 utf8;
+
+#endif // TYPES_H
