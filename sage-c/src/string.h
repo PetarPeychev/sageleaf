@@ -11,24 +11,10 @@ typedef struct
     utf8 *data;
 } String;
 
-#define string_new(X)          \
-    _Generic(                  \
-        (X),                   \
-        u32: str_new_from_str, \
-        default: cbrt,         \
-        char *: _str_new_from_cstr)(X)
-
 String string_new_from_str(u32 capacity);
 String string_new_from_cstr(char *cstr);
 
 void string_free(String str);
-
-#define string_equals(str, X)         \
-    _Generic(                         \
-        (X),                          \
-        String: string_equals_string, \
-        default: cbrt,                \
-        char *: string_equals_cstring)(str, X)
 
 bool string_equals_string(String str, String other);
 bool string_equals_cstring(String str, char *cstr);
