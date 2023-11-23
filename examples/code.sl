@@ -71,3 +71,9 @@ let last_element: [a] -> a or none =
                 is [x: xs] then last_rec xs prev;
 
         last_rec list none
+
+let say_hello: str -> none =
+    name ->
+        print "Hello, ";
+        print name;
+        print "!\n"
