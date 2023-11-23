@@ -1,8 +1,8 @@
 use std::env;
 
-mod codegen;
-mod lexer;
-mod parser;
+use sagec::codegen;
+use sagec::lexer;
+use sagec::parser;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
