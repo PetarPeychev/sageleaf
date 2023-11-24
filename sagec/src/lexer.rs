@@ -1,6 +1,8 @@
-use std::{iter::Peekable, str::Chars};
+use std::iter::Peekable;
+use std::str::Chars;
 
-pub enum TokenKind {
+#[derive(Debug, PartialEq)]
+pub enum Token {
     Plus,
     Minus,
     Asterisk,
@@ -10,42 +12,66 @@ pub enum TokenKind {
     Integer(i64),
 }
 
-pub struct Span {
-    pub start: usize,
-    pub end: usize,
-    pub line: usize,
-    pub literal: String,
-}
+pub fn lex(input: String) -> Vec<Token> {
+    let mut tokens = Vec::new();
+    let mut chars = input.chars().peekable();
 
-impl Span {
-    pub fn length(&self) -> usize {
-        self.end - self.start
+    while let Some(&c) = chars.peek() {
+        if c.is_whitespace() {
+            chars.next();
+            continue;
+        }
+
+        let token = match c {
+            '+' => {
+                chars.next();
+                Token::Plus
+            }
+            '-' => {
+                chars.next();
+                Token::Minus
+            }
+            '*' => {
+                chars.next();
+                Token::Asterisk
+            }
+            '/' => {
+                chars.next();
+                Token::Slash
+            }
+            '(' => {
+                chars.next();
+                Token::LeftParen
+            }
+            ')' => {
+                chars.next();
+                Token::RightParen
+            }
+            _ if c.is_digit(10) => read_integer(&mut chars),
+            _ => {
+                panic!("ERROR: Invalid character: {}", c);
+            }
+        };
+
+        tokens.push(token);
     }
+
+    tokens
 }
 
-pub struct Token {
-    pub kind: TokenKind,
-    pub span: Span,
+fn read_integer(chars: &mut Peekable<Chars>) -> Token {
+    let mut value_string = String::new();
+
+    while let Some(&c) = chars.peek() {
+        if !c.is_digit(10) {
+            break;
+        }
+        value_string.push(c);
+        chars.next();
+    }
+
+    let value = value_string
+        .parse::<i64>()
+        .expect("ERROR: Failed to parse integer.");
+    Token::Integer(value)
 }
-
-pub struct Lexer<'a> {
-    input: Peekable<Chars<'a>>,
-    line: usize,
-    position: usize,
-}
-
-// impl<'a> Iterator for Lexer<'a> {
-//     type Item = Token;
-
-//     fn next(&mut self) -> Option<Self::Item> {
-//         match self.input.peek()? {
-//             c if c.is_digit(10) => Some(self.lex_integer()),
-//             c if c.is_whitespace() => {
-//                 self.input.next();
-//                 self.next()
-//             }
-//             c if c.is_ascii_punctuation() => Some(self.lex_punctuation()),
-//             _ => None,
-//         }
-//     }
-// }
