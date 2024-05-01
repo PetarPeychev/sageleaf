@@ -26,14 +26,11 @@ fn print_usage(program: &str) {
 }
 
 fn compile(file_path: &str) {
-    let source = std::fs::read_to_string(file_path).expect("Failed to read file.");
+    let source = std::fs::read_to_string(file_path).expect("ERROR: Failed to read file.");
     let tokens = lexer::lex(source);
-
     println!("{:?}", tokens);
-
     let ast = parser::parse(tokens);
-
     println!("{:#?}", ast);
-    // let code = codegen::generate(&ast);
-    // println!("{}", code);
+    let code = codegen::generate(&ast);
+    println!("{}", code);
 }
