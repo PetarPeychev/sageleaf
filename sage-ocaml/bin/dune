@@ -1,0 +1,9 @@
+(executable
+ (public_name sage)
+ (name main)
+ (libraries sage))
+
+(ocamllex lexer)
+
+(menhir
+ (modules parser))
