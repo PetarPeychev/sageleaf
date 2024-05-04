@@ -19,6 +19,9 @@ types, null-safety, errors as values, algebraic data types and pattern matching.
     - [Records](#records)
     - [Variants](#variants)
     - [Interfaces](#interfaces)
+    - [Type Aliases](#type-aliases)
+    - [Functions](#functions)
+    - [Modules and Imports](#modules-and-imports)
 
 ---
 
@@ -122,4 +125,27 @@ Variant values can be constructed by using the name of the variant:
 - `let list: LinkedList(int) = Node(34, Node(35, Empty));`
 
 ### Interfaces
+...
+
+### Type Aliases
+...
+
+### Functions
+Functions are declared using the `fn` keyword and are denoted by `fn name(a: T, b: T): T` where `T` is the type of the function's return value:
+```
+fn say_hello(name: str) {
+    print("Hello, " + name + "!");
+}
+
+fn add(a: i32, b: i32): i32 {
+    let sum: i32 = a + b;
+    return sum;
+}
+```
+
+Functions can be called by using the name of the function:
+- `let result: i32 = add(1, 2);`
+- `print("hello");`
+
+### Modules and Imports
 ...
