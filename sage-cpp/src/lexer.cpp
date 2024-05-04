@@ -23,10 +23,7 @@ bool match(string input, int i, string pattern)
 {
     for (size_t j = 0; j < pattern.length(); j++)
     {
-        if (input[i + j] != pattern[j])
-        {
-            return false;
-        }
+        if (input[i + j] != pattern[j]) { return false; }
     }
     return true;
 }
@@ -37,9 +34,7 @@ vector<Token> lex(string input)
     for (size_t i = 0; i < input.length(); i++)
     {
         char c = input[i];
-        if (c == ' ' || c == '\t' || c == '\n')
-        {
-        }
+        if (c == ' ' || c == '\t' || c == '\n') {}
         else if (match(input, i, "->"))
         {
             tokens.push_back(Token(T_Arrow, "->"));
@@ -60,102 +55,40 @@ vector<Token> lex(string input)
             tokens.push_back(Token(T_Gte, ">="));
             i += 2;
         }
-        else if (c == '+')
-        {
-            tokens.push_back(Token(T_Add, "+"));
-        }
-        else if (c == '-')
-        {
-            tokens.push_back(Token(T_Sub, "-"));
-        }
-        else if (c == '*')
-        {
-            tokens.push_back(Token(T_Mul, "*"));
-        }
-        else if (c == '/')
-        {
-            tokens.push_back(Token(T_Div, "/"));
-        }
-        else if (c == '^')
-        {
-            tokens.push_back(Token(T_Exp, "^"));
-        }
-        else if (c == '%')
-        {
-            tokens.push_back(Token(T_Mod, "%"));
-        }
-        else if (c == '=')
-        {
-            tokens.push_back(Token(T_Eq, "="));
-        }
-        else if (c == '<')
-        {
-            tokens.push_back(Token(T_Lt, "<"));
-        }
-        else if (c == '>')
-        {
-            tokens.push_back(Token(T_Gt, ">"));
-        }
-        else if (c == ':')
-        {
-            tokens.push_back(Token(T_Colon, ":"));
-        }
-        else if (c == ';')
-        {
-            tokens.push_back(Token(T_Semi, ";"));
-        }
-        else if (c == ',')
-        {
-            tokens.push_back(Token(T_Comma, ","));
-        }
-        else if (c == '.')
-        {
-            tokens.push_back(Token(T_Dot, ","));
-        }
-        else if (c == '(')
-        {
-            tokens.push_back(Token(T_LParen, "("));
-        }
-        else if (c == ')')
-        {
-            tokens.push_back(Token(T_RParen, ")"));
-        }
-        else if (c == '{')
-        {
-            tokens.push_back(Token(T_LSquirly, "{"));
-        }
-        else if (c == '}')
-        {
-            tokens.push_back(Token(T_RSquirly, "}"));
-        }
-        else if (c == '[')
-        {
-            tokens.push_back(Token(T_LSquare, "["));
-        }
-        else if (c == ']')
-        {
-            tokens.push_back(Token(T_RSquare, "]"));
-        }
+        else if (c == '+') { tokens.push_back(Token(T_Add, "+")); }
+        else if (c == '-') { tokens.push_back(Token(T_Sub, "-")); }
+        else if (c == '*') { tokens.push_back(Token(T_Mul, "*")); }
+        else if (c == '/') { tokens.push_back(Token(T_Div, "/")); }
+        else if (c == '^') { tokens.push_back(Token(T_Exp, "^")); }
+        else if (c == '%') { tokens.push_back(Token(T_Mod, "%")); }
+        else if (c == '=') { tokens.push_back(Token(T_Eq, "=")); }
+        else if (c == '<') { tokens.push_back(Token(T_Lt, "<")); }
+        else if (c == '>') { tokens.push_back(Token(T_Gt, ">")); }
+        else if (c == ':') { tokens.push_back(Token(T_Colon, ":")); }
+        else if (c == ';') { tokens.push_back(Token(T_Semi, ";")); }
+        else if (c == ',') { tokens.push_back(Token(T_Comma, ",")); }
+        else if (c == '.') { tokens.push_back(Token(T_Dot, ",")); }
+        else if (c == '(') { tokens.push_back(Token(T_LParen, "(")); }
+        else if (c == ')') { tokens.push_back(Token(T_RParen, ")")); }
+        else if (c == '{') { tokens.push_back(Token(T_LSquirly, "{")); }
+        else if (c == '}') { tokens.push_back(Token(T_RSquirly, "}")); }
+        else if (c == '[') { tokens.push_back(Token(T_LSquare, "[")); }
+        else if (c == ']') { tokens.push_back(Token(T_RSquare, "]")); }
         else if (is_alpha(c))
         {
             string value = {c};
             while (true)
             {
-                if (i + 1 >= input.length())
-                    break;
+                if (i + 1 >= input.length()) break;
                 char next = input[i + 1];
                 if (is_alphanum(next))
                 {
                     value += next;
                     i++;
                 }
-                else
-                {
-                    break;
-                }
+                else { break; }
             }
-            if (value == "if")
-                tokens.push_back(Token(T_If, value));
+            if (value == "if") tokens.push_back(Token(T_If, value));
             else if (value == "is")
                 tokens.push_back(Token(T_Is, value));
             else if (value == "then")
@@ -197,8 +130,7 @@ vector<Token> lex(string input)
             bool decimal = false;
             while (true)
             {
-                if (i + 1 >= input.length())
-                    break;
+                if (i + 1 >= input.length()) break;
                 char next = input[i + 1];
                 if (is_digit(next))
                 {
@@ -219,13 +151,9 @@ vector<Token> lex(string input)
                         i++;
                     }
                 }
-                else
-                {
-                    break;
-                }
+                else { break; }
             }
-            if (decimal)
-                tokens.push_back(Token(T_Float, value));
+            if (decimal) tokens.push_back(Token(T_Float, value));
             else
                 tokens.push_back(Token(T_Int, value));
         }
@@ -235,13 +163,9 @@ vector<Token> lex(string input)
             i++;
             while (true)
             {
-                if (i >= input.length())
-                    break;
+                if (i >= input.length()) break;
                 char next = input[i];
-                if (next == '"')
-                {
-                    break;
-                }
+                if (next == '"') { break; }
                 else
                 {
                     value += next;
@@ -254,17 +178,10 @@ vector<Token> lex(string input)
         {
             while (true)
             {
-                if (i >= input.length())
-                    break;
+                if (i >= input.length()) break;
                 char next = input[i];
-                if (next == '\n')
-                {
-                    break;
-                }
-                else
-                {
-                    i++;
-                }
+                if (next == '\n') { break; }
+                else { i++; }
             }
         }
         else

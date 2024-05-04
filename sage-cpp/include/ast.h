@@ -18,18 +18,12 @@ inline std::string node_to_str(NodeType type)
 {
     switch (type)
     {
-    case N_File:
-        return "File";
-    case N_Let:
-        return "Let";
-    case N_Id:
-        return "Id";
-    case N_IntType:
-        return "IntType";
-    case N_Int:
-        return "Int";
-    default:
-        return "Unknown";
+        case N_File: return "File";
+        case N_Let: return "Let";
+        case N_Id: return "Id";
+        case N_IntType: return "IntType";
+        case N_Int: return "Int";
+        default: return "Unknown";
     }
 }
 
@@ -41,10 +35,7 @@ struct Node
 
     void show()
     {
-        std::cout << node_to_str(this->type)
-                  << "("
-                  << value_to_str(this->value.type)
-                  << ")"
-                  << std::endl;
+        std::cout << node_to_str(this->type) << "("
+                  << value_to_str(this->value.type) << ")" << std::endl;
     }
 };
