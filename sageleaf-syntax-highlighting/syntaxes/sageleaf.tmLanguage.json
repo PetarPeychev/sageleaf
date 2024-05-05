@@ -14,7 +14,7 @@
       "patterns": [
         {
           "name": "keyword.control.sageleaf",
-          "match": "\\b(if|elif|else|let|var|type|fn|import|and|or|not|is|match|return)\\b"
+          "match": "\\b(if|elif|else|let|var|type|interface|import|export|and|or|not|is|match|return|for|in|while|break|continue)\\b"
         }
       ]
     },
@@ -37,7 +37,7 @@
       "patterns": [
         {
           "name": "constant.language.sageleaf",
-          "match": "\\b(true|false|none)\\b"
+          "match": "\\b(true|false)\\b"
         },
         {
           "name": "constant.numeric.decimal.sageleaf",
@@ -82,7 +82,7 @@
       "patterns": [
         {
           "name": "support.type.sageleaf",
-          "match": "\\b(i32|u32|i64|u64|f32|f64|bool|str|none)\\b"
+          "match": "\\b(i8|u8|i16|u16|i32|u32|i64|u64|i128|u128|f32|f64|bool|str)\\b"
         }
       ]
     }
