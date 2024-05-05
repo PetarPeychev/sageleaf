@@ -44,7 +44,7 @@ Current status of the project:
 ## Overview
 Sageleaf programs are made up of modules. Modules are collections of types, functions and variables colocated in the same file.
 
-Programs have a single entry point, a function `fn main(): ()` which is called when the program is run.
+Programs have a single entry point, a function `main()` which is called when the program is run.
 
 ### Bindings
 Bindings are used to bind a value to a name in the current scope. They are denoted by the `let` keyword:
@@ -89,7 +89,7 @@ Tuple values can be constructed through tuple literals:
 - `let two: (str, str) = ("a", "b");`
 - `let one: (str,) = ("hello",);`
 
-***Note:*** The empty tuple `()` has only one possible value, which is also written as `()`. This is the [unit type](https://en.wikipedia.org/wiki/Unit_type) for the language. (equivalent to `None`, `void` or `unit` in other languages) It's used to represent the input or return type of functions which are primarily used for their side effects, such as `fn print(str): ()` or `fn read_line(): str`.
+***Note:*** The empty tuple `()` has only one possible value, which is also written as `()`. This is the [unit type](https://en.wikipedia.org/wiki/Unit_type) for the language. (equivalent to `None`, `void` or `unit` in other languages) It's used to represent the input or return type of functions which are primarily used for their side effects, such as `print(str): ()` or `read_line(): str`.
 
 ### Lists
 Lists are ordered homogenous sequences, denoted by `['a]` where `'a` can be any other type:
@@ -116,7 +116,7 @@ Record values can be constructed through record literals:
 ### Variants
 Variants are [sum types](https://en.wikipedia.org/wiki/Tagged_union) which represent two or more alternative named cases which can optionally contain extra data. They are declared using the `type` keyword and are denoted by `x or 'y(a')` where `a` can be any other type:
 - `type PrimaryColor = Red or Blue or Green;`
-- `type Result 'a = Ok(a') or Error(str);`
+- `type Result('a) = Ok('a) or Error(str);`
 - `type LinkedList 'a = Empty or Node('a, LinkedList('a));`
 
 Variant values can be constructed by using the name of the variant:
@@ -135,12 +135,12 @@ interface Person = {name: str, age: int};
 # Employee satisfies the Person interface
 type Employee = {name: str, age: int, salary: int};
 
-fn print_person(person: Person) {
+print_person(person: Person) {
     print("Name: " + person.name);
     print("Age: " + person.age);
 }
 
-fn main() {
+main() {
     let employee: Employee = {name: "John Doe", age: 42, salary: 100000};
 
     # since Employee satisfies the Person interface, we can pass it to print_person
@@ -159,15 +159,21 @@ Type aliases can be used to specialize a generic type:
 
 
 ### Functions
-Functions are declared using the `fn` keyword and are denoted by `fn name(a: T, b: T): T` where `T` is the type of the function's return value:
+Functions are declared using the `name(x: 'a, y: 'b): 'c` syntax where `'a` and
+`'b` are the types of the function's arguments and `c` is the type of the
+function's return value:
 ```
-fn say_hello(name: str) {
-    print("Hello, " + name + "!");
-}
-
-fn add(a: i32, b: i32): i32 {
+add(a: i32, b: i32): i32 {
     let sum: i32 = a + b;
     return sum;
+}
+```
+
+The return type can optionally be omitted as syntactic sugar for returning the
+unit type`: ()`:
+```
+say_hello(name: str) {
+    print("Hello, " + name + "!");
 }
 ```
 
@@ -175,5 +181,56 @@ Functions can be called by using the name of the function:
 - `let result: i32 = add(1, 2);`
 - `print("hello");`
 
-### Modules and Imports
-...
+### Modules
+Each sageleaf file is a module. Other modules or their members can be imported
+into the current module using the `import` keyword:
+```
+import {
+    math,
+    pprint from string
+}
+```
+
+When importing a module, the exported members of the module are made available
+under a namespace of the same name:
+```
+let pi: f64 = math.pi;
+```
+
+When importing specific members of a module with the `from` keyword, the
+imported members are added to the current module's namespace:
+```
+let john: Employee = {name: "John Doe", age: 42, salary: 100000};
+pprint(john);
+```
+
+By default, modules don't export any members. To export a member, use the
+`export` keyword:
+```
+export {
+    Employee,
+    print_person
+}
+```
+
+***Note:*** There can only be one `import` statement and one `export` statement
+in a module. It's recommended to keep these statements at the top of the file
+to have a clear definition of the module's interface.
+
+Directories can be used to organize modules. Modules can be imported from
+subdirectories using the `subdir.module` syntax:
+```
+import {
+    ds.hashmap,
+    filter from ds.list
+}
+```
+
+To resolve name conflicts or shorten names, imports can be aliased using the
+`as` keyword:
+```
+import {
+    very.long.module_name as mod,
+    very_long_function_name from module as func
+}
+```
