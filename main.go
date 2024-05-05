@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"sage/lexer"
 )
 
 func main() {
@@ -26,5 +27,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Printf("Input: %s\n\n", input)
+	l := lexer.New(string(input))
+	tokens := l.Tokenize()
+	fmt.Printf("Tokens: %v\n\n", tokens)
 }
