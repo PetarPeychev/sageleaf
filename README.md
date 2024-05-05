@@ -48,7 +48,7 @@ Programs have a single entry point, a function `main()` which is called when the
 
 ### Bindings
 Bindings are used to bind a value to a name in the current scope. They are denoted by the `let` keyword:
-- `let x: int = 42;`
+- `let x: i32 = 42;`
 - `let y: str = "hello";`
 
 ***Note:*** Bindings are immutable, so once a value is bound to a name, it cannot be changed.
@@ -56,7 +56,7 @@ Bindings are used to bind a value to a name in the current scope. They are denot
 ### Variables
 Mutable variables are similar to bindings, but their values can be changed. They are denoted by the `var` keyword:
 ```
-var x: int = 42;
+var x: i32 = 42;
 x = 43;
 ```
 ***Note:*** Variables should be used sparingly and module-level variables should be avoided if possible, as mutable state can lead to bugs and make programs harder to reason about.
@@ -93,23 +93,23 @@ Tuple values can be constructed through tuple literals:
 
 ### Lists
 Lists are ordered homogenous sequences, denoted by `['a]` where `'a` can be any other type:
-- `[int]`
+- `[i32]`
 - `[[str]]`
 
 List values can be constructed through list literals:
-- `let nums: [int] = [1, 2, 3];`
+- `let nums: [i32] = [1, 2, 3];`
 - `let nested: [[str]] = [["a", "b"], ["c", "d"]];`
 
 ### Records
 Records are structures made up of named fields. They are declared using the `type` keyword and aredenoted by `{x: 'a, y: 'b}` where `x` and `y` are field names while `'a` and `'b` can be any other type:
-- `type color = {red: int, green: int, blue: int};`
-- `type person = {name: str, age: int, hobbies: [str]};`
+- `type color = {red: i8, green: i8, blue: i8};`
+- `type person = {name: str, age: i32, hobbies: [str]};`
 
 Record values can be constructed through record literals:
 - `let purple: color = {red: 128, green: 0, blue: 128};`
 - `let robyn: person = {name: "Robyn", age: 21, hobbies: ["programming", "drawing"]};`
 
-***Note:*** Records must be declared before they can be used. Anonymous records can't be used as types. (e.g. `let blue: {red: int, green: int, blue: int} = {red: 0, green: 0, blue: 128};` is not valid syntax)
+***Note:*** Records must be declared before they can be used. Anonymous records can't be used as types. (e.g. `let blue: {red: i8, green: i8, blue: i8} = {red: 0, green: 0, blue: 128};` is not valid syntax)
 
 ***Note:*** Records are nominally typed which means that two records with the same field names but different types are not considered equal. To write functions which are polymorphic over different records with the same subset of fields, use an [interface](#interfaces).
 
@@ -121,8 +121,8 @@ Variants are [sum types](https://en.wikipedia.org/wiki/Tagged_union) which repre
 
 Variant values can be constructed by using the name of the variant:
 - `let red: PrimaryColor = Red;`
-- `let output: Result(int) = Error("not found");`
-- `let list: LinkedList(int) = Node(34, Node(35, Empty));`
+- `let output: Result(i32) = Error("not found");`
+- `let list: LinkedList(i32) = Node(34, Node(35, Empty));`
 
 ### Interfaces
 Interfaces are used to define a subset of a record type which can be used as
@@ -130,10 +130,10 @@ an input for a polymorphic function. They are declared using the `interface`
 keyword and are denoted by `interface name = {field: 'a, field: 'b};` where
 `'a` and `'b` are the names of the fields in the interface:
 ```
-interface Person = {name: str, age: int};
+interface Person = {name: str, age: i32};
 
 # Employee satisfies the Person interface
-type Employee = {name: str, age: int, salary: int};
+type Employee = {name: str, age: i32, salary: i32};
 
 print_person(person: Person) {
     print("Name: " + person.name);
@@ -150,11 +150,11 @@ main() {
 
 ### Type Aliases
 Type aliases are used to create new names for existing types. They are declared using the `type` keyword and are denoted by `type name = 'a;` where `'a` is the name of the type to alias:
-- `type Age = int; let age: Age = 42;`
+- `type Age = i32; let age: Age = 42;`
 - `type Name = str; let name: Name = "John Doe";`
 
 Type aliases can be used to specialize a generic type:
-- `type IntList = [int]; let list: IntList = [1, 2, 3];`
+- `type IntList = [i32]; let list: IntList = [1, 2, 3];`
 - `type StrResult = Result(str); let result: StrResult = Ok("hello");`
 
 
@@ -180,6 +180,26 @@ say_hello(name: str) {
 Functions can be called by using the name of the function:
 - `let result: i32 = add(1, 2);`
 - `print("hello");`
+
+Anonymous functions can be created using the `fn` keyword:
+```
+filter(list: ['a], predicate: ('a) -> bool) -> ['a] {
+    var result: ['a] = [];
+    for x in list {
+        if predicate(x) {
+            result.append(x);
+        }
+    }
+    return result;
+}
+
+main() {
+    let list: [i32] = [1, 2, 3, 4, 5];
+
+    # filter out all even numbers
+    let even: [i32] = filter(list, (x) { return x % 2 == 0; });
+}
+```
 
 ### Modules
 Each sageleaf file is a module. Other modules or their members can be imported
