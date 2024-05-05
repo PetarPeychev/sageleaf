@@ -125,10 +125,38 @@ Variant values can be constructed by using the name of the variant:
 - `let list: LinkedList(int) = Node(34, Node(35, Empty));`
 
 ### Interfaces
-...
+Interfaces are used to define a subset of a record type which can be used as
+an input for a polymorphic function. They are declared using the `interface`
+keyword and are denoted by `interface name = {field: 'a, field: 'b};` where
+`'a` and `'b` are the names of the fields in the interface:
+```
+interface Person = {name: str, age: int};
+
+# Employee satisfies the Person interface
+type Employee = {name: str, age: int, salary: int};
+
+fn print_person(person: Person) {
+    print("Name: " + person.name);
+    print("Age: " + person.age);
+}
+
+fn main() {
+    let employee: Employee = {name: "John Doe", age: 42, salary: 100000};
+
+    # since Employee satisfies the Person interface, we can pass it to print_person
+    print_person(employee);
+}
+```
 
 ### Type Aliases
-...
+Type aliases are used to create new names for existing types. They are declared using the `type` keyword and are denoted by `type name = 'a;` where `'a` is the name of the type to alias:
+- `type Age = int; let age: Age = 42;`
+- `type Name = str; let name: Name = "John Doe";`
+
+Type aliases can be used to specialize a generic type:
+- `type IntList = [int]; let list: IntList = [1, 2, 3];`
+- `type StrResult = Result(str); let result: StrResult = Ok("hello");`
+
 
 ### Functions
 Functions are declared using the `fn` keyword and are denoted by `fn name(a: T, b: T): T` where `T` is the type of the function's return value:
