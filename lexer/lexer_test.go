@@ -21,6 +21,7 @@ func TestTokenize(t *testing.T) {
 		{Type: RPAREN, Value: []rune(")")},
 		{Type: SEMICOLON, Value: []rune(";")},
 		{Type: RBRACE, Value: []rune("}")},
+		{Type: EOF, Value: []rune{-1}},
 	}
 	if !reflect.DeepEqual(tokens, expected) {
 		t.Errorf("Tokens do not match. \nExpected: %v\nGot:      %v", expected, tokens)

@@ -146,10 +146,10 @@ func (l *Lexer) Tokenize() []Token {
 	var tokens []Token
 	for {
 		token := l.nextToken()
+		tokens = append(tokens, token)
 		if token.Type == EOF {
 			break
 		}
-		tokens = append(tokens, token)
 	}
 	return tokens
 }
