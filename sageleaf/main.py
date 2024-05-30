@@ -1,9 +1,9 @@
 import os
 import sys
 
-from .lex import Lexer
-from .parse import Parser
-from .compile import Compiler
+from sageleaf.lex import Lexer
+from sageleaf.parse import Parser
+from sageleaf.compile import Compiler
 
 
 def main():
@@ -11,30 +11,19 @@ def main():
     with open(filename, 'r') as f:
         code = f.read()
 
-    lexer = Lexer(code)
-    tokens = lexer.tokenize()
-    # for token in tokens:
-    #     t = token["type"]
-    #     if "value" in token:
-    #         t += f"({token['value']})"
-    #     print(t)
+    tokens = Lexer(code).tokenize()
+    ast = Parser(tokens).parse()
+    print(ast)
+    # asm = Compiler(ast).compile()
 
-    parser = Parser(tokens)
-    ast = parser.parse()
-    # print(json.dumps(ast))
+    # with open("hello.asm", 'w') as f:
+    #     f.write(asm)
+    # os.system("nasm -f elf64 -o hello.o hello.asm")
 
-    compiler = Compiler(ast)
-    asm = compiler.compile()
-    # print(asm)
+    # os.system("ld -o hello hello.o")
 
-    with open("hello.asm", 'w') as f:
-        f.write(asm)
-    os.system("nasm -f elf64 -o hello.o hello.asm")
-
-    os.system("ld -o hello hello.o")
-
-    os.system("./hello")
-    os.system("rm hello.asm hello.o hello")
+    # os.system("./hello")
+    # os.system("rm hello.asm hello.o hello")
 
 
 if __name__ == '__main__':
