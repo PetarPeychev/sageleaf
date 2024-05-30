@@ -1,4 +1,6 @@
 .vscode/
 brainstorm
-sagec
-sage
+*.egg-info
+__pycache__
+*.pyc
+venv/
