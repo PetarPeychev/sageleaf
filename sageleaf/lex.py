@@ -9,6 +9,9 @@ class Lexer:
 
         self.keywords = {
             "fn": TT.FN,
+            "let": TT.LET,
+            "if": TT.IF,
+            "else": TT.ELSE,
             "return": TT.RETURN,
             "i32": TT.I32,
         }
@@ -38,6 +41,15 @@ class Lexer:
                 self.pos += 1
             elif self.input[self.pos] == ";":
                 tokens.append(Token(TT.SEMICOLON))
+                self.pos += 1
+            elif self.input[self.pos] == "=":
+                tokens.append(Token(TT.ASSIGN))
+                self.pos += 1
+            elif self.input[self.pos] == "+":
+                tokens.append(Token(TT.PLUS))
+                self.pos += 1
+            elif self.input[self.pos] == ">":
+                tokens.append(Token(TT.GT))
                 self.pos += 1
             elif self.input[self.pos] == '"':
                 self.pos += 1
