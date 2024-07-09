@@ -3,11 +3,38 @@ from dataclasses import dataclass
 
 class TokenType(StrEnum):
     FN = 'fn'
+    LET = 'let'
+    IF = 'if'
+    ELIF = 'elif'
+    ELSE = 'else'
     I32 = 'i32'
     RETURN = 'return'
     COMMA = ','
     COLON = ':'
     SEMICOLON = ';'
+    ASSIGN = '='
+
+    # Arithmetic Operators
+    PLUS = '+'
+    MINUS = '-'
+    MUL = '*'
+    DIV = '/'
+    MOD = '%'
+
+    # Comparison Operators
+    IS = 'is'
+    LT = '<'
+    GT = '>'
+    LE = '<='
+    GE = '>='
+
+    # Logical
+    AND = 'and'
+    OR = 'or'
+    NOT = 'not'
+    TRUE = 'true'
+    FALSE = 'false'
+
     LPAREN = '('
     RPAREN = ')'
     LBRACE = '{'

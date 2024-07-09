@@ -1,5 +1,7 @@
 import os
 import sys
+import json
+from dataclasses import asdict
 
 from sageleaf.lex import Lexer
 from sageleaf.parse import Parser
@@ -14,6 +16,7 @@ def main():
     tokens = Lexer(code).tokenize()
     ast = Parser(tokens).parse()
     print(ast)
+    # print(json.dumps(asdict(ast)))
     # asm = Compiler(ast).compile()
 
     # with open("hello.asm", 'w') as f:
