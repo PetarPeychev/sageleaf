@@ -4,14 +4,16 @@
 // ###### Lexer ######
 typedef enum TokenType
 {
+    TOKEN_EOF,
     TOKEN_LPAREN,
     TOKEN_RPAREN,
     TOKEN_LCURLY,
     TOKEN_RCURLY,
     TOKEN_FN,
     TOKEN_IDENTIFIER,
-    TOKEN_EOF,
 } TokenType;
+
+char *token_type_to_str(TokenType type);
 
 typedef struct Token
 {
@@ -29,10 +31,11 @@ Token *tokenize(char *code);
 void print_token(Token token);
 
 // ###### Parser ######
-typedef struct AST
+typedef enum NodeType
 {
-    Node *definitions;
-} AST;
+    NODE_EOF,
+    NODE_FN,
+} NodeType;
 
 typedef struct Node
 {
@@ -40,16 +43,27 @@ typedef struct Node
     void *data;
 } Node;
 
-typedef enum NodeType
+typedef struct AST
 {
-    NODE_FN,
-} NodeType;
+    Node *definitions;
+} AST;
 
 typedef struct FNData
 {
     char *name;
 } FNData;
 
+typedef struct Parser
+{
+    Token *tokens;
+    int current_token;
+} Parser;
+
 AST parse(Token *tokens);
+Node parse_definition(Parser *parser);
+Node parse_fn(Parser *parser);
+char *node_type_to_str(NodeType type);
+void print_node(Node node);
+void ast_to_graphviz(AST ast, char *filename);
 
 #endif // SAGE_H

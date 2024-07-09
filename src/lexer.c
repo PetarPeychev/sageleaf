@@ -5,6 +5,29 @@
 
 #include "sage.h"
 
+char *token_type_to_str(TokenType type)
+{
+    switch (type)
+    {
+    case TOKEN_EOF:
+        return "EOF";
+    case TOKEN_LPAREN:
+        return "LPAREN";
+    case TOKEN_RPAREN:
+        return "RPAREN";
+    case TOKEN_LCURLY:
+        return "LCURLY";
+    case TOKEN_RCURLY:
+        return "RCURLY";
+    case TOKEN_FN:
+        return "FN";
+    case TOKEN_IDENTIFIER:
+        return "IDENTIFIER";
+    default:
+        return "Unknown";
+    }
+}
+
 bool is_alpha(char c)
 {
     return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || c == '_';
@@ -184,32 +207,12 @@ Token *tokenize(char *code)
 
 void print_token(Token token)
 {
-    if (token.type == TOKEN_LPAREN)
+    if (token.type == TOKEN_IDENTIFIER)
     {
-        printf("LPAREN(%d, %d, %d, %d)\n", token.line_start, token.line_end, token.column_start, token.column_end);
+        printf("%s(%s, %d, %d, %d, %d)\n", token_type_to_str(token.type), (char *)token.data, token.line_start, token.line_end, token.column_start, token.column_end);
     }
-    else if (token.type == TOKEN_RPAREN)
+    else
     {
-        printf("RPAREN(%d, %d, %d, %d)\n", token.line_start, token.line_end, token.column_start, token.column_end);
-    }
-    else if (token.type == TOKEN_LCURLY)
-    {
-        printf("LCURLY(%d, %d, %d, %d)\n", token.line_start, token.line_end, token.column_start, token.column_end);
-    }
-    else if (token.type == TOKEN_RCURLY)
-    {
-        printf("RCURLY(%d, %d, %d, %d)\n", token.line_start, token.line_end, token.column_start, token.column_end);
-    }
-    else if (token.type == TOKEN_FN)
-    {
-        printf("FN(%d, %d, %d, %d)\n", token.line_start, token.line_end, token.column_start, token.column_end);
-    }
-    else if (token.type == TOKEN_IDENTIFIER)
-    {
-        printf("IDENTIFIER(%s, %d, %d, %d, %d)\n", (char *)token.data, token.line_start, token.line_end, token.column_start, token.column_end);
-    }
-    else if (token.type == TOKEN_EOF)
-    {
-        printf("EOF(%d, %d, %d, %d)\n", token.line_start, token.line_end, token.column_start, token.column_end);
+        printf("%s(%d, %d, %d, %d)\n", token_type_to_str(token.type), token.line_start, token.line_end, token.column_start, token.column_end);
     }
 }

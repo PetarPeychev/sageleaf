@@ -5,9 +5,12 @@
 
 int main(int argc, char *argv[])
 {
-    char *code = "fn main() {}";
+    char *code = "fn add() {}\nfn main()\n{\n}\n";
+    printf("Code:\n");
+    printf("%s\n\n", code);
     Token *tokens = tokenize(code);
 
+    printf("Tokens:\n");
     int i = 0;
     while (true)
     {
@@ -18,6 +21,16 @@ int main(int argc, char *argv[])
         }
         i++;
     }
+    printf("\n");
+
+    printf("AST:\n");
+    AST ast = parse(tokens);
+    for (int i = 0; ast.definitions[i].type != NODE_EOF; i++)
+    {
+        print_node(ast.definitions[i]);
+    }
+
+    ast_to_graphviz(ast, "ast.dot");
 
     return 0;
 }
