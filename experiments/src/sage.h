@@ -66,4 +66,21 @@ char *node_type_to_str(NodeType type);
 void print_node(Node node);
 void ast_to_graphviz(AST ast, char *filename);
 
+// ###### Lowering ######
+typedef enum IRInstructionType
+{
+    IR_INSTR_LABEL,
+    IR_INSTR_EXIT,
+} IRInstructionType;
+
+typedef struct IRInstruction
+{
+    IRInstructionType type;
+} IRInstruction;
+
+typedef struct IR
+{
+    IRInstruction *instructions;
+} IR;
+
 #endif // SAGE_H

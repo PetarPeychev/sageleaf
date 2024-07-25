@@ -5,7 +5,7 @@
 
 int main(int argc, char *argv[])
 {
-    char *code = "fn add() {}\nfn main()\n{\n}\n";
+    char *code = "fn main() {}";
     printf("Code:\n");
     printf("%s\n\n", code);
     Token *tokens = tokenize(code);

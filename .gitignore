@@ -4,4 +4,3 @@ brainstorm
 __pycache__
 *.pyc
 venv/
-sage

@@ -1,0 +1,6 @@
+digraph {
+	root [shape=box];
+	n0 [label="main"];
+
+	root -> n0;
+}

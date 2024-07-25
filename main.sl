@@ -1,1 +1,3 @@
-fn main() {}
+fn main(): i64 {
+    return 42;
+}
