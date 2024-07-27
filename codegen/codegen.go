@@ -37,13 +37,20 @@ func (c *CodeGen) generateFunction(f ast.Function) string {
 	if f.Name == "main" {
 		code.WriteString("_start:\n")
 
+		if len(f.Body) == 0 {
+			code.WriteString("\tmov rax, " + SYSCALL_EXIT + "\n")
+			code.WriteString("\tmov rdi, 0\n")
+			code.WriteString("\tsyscall\n")
+			return code.String()
+		}
+
 		for _, r := range f.Body {
 			code.WriteString("\tmov rax, " + SYSCALL_EXIT + "\n")
 			switch r.Value.(type) {
 			case ast.IntegerLiteral:
 				exit_code := strconv.FormatInt(r.Value.(ast.IntegerLiteral).Value, 10)
 				code.WriteString("\tmov rdi, " + exit_code + "\n")
-				code.WriteString("\tsyscall\t\n")
+				code.WriteString("\tsyscall\n")
 			default:
 				panic("Not implemented yet.")
 			}

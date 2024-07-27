@@ -24,13 +24,13 @@ func (l *Lexer) Next() token.Token {
 
 	switch l.ch {
 	case '+':
-		tok = newToken(token.Add, l.ch)
+		tok = newToken(token.Plus, l.ch)
 	case '-':
 		tok = newToken(token.Minus, l.ch)
 	case '*':
-		tok = newToken(token.Multiply, l.ch)
+		tok = newToken(token.Asterisk, l.ch)
 	case '/':
-		tok = newToken(token.Divide, l.ch)
+		tok = newToken(token.Slash, l.ch)
 	case ';':
 		tok = newToken(token.Semicolon, l.ch)
 	case ':':

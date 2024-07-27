@@ -14,10 +14,10 @@ const (
 	Identifier = "Identifier"
 	Integer    = "Integer"
 
-	Add      = "+"
+	Plus     = "+"
 	Minus    = "-"
-	Multiply = "*"
-	Divide   = "/"
+	Asterisk = "*"
+	Slash    = "/"
 
 	Semicolon = ";"
 	Colon     = ":"

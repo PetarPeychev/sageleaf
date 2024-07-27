@@ -82,6 +82,11 @@ func (p *Parser) parseReturn() ast.Return {
 
 	p.consume(token.Return)
 
+	if p.peek(token.Semicolon) {
+		ret.Value = ast.IntegerLiteral{Value: 0}
+		return ret
+	}
+
 	ret.Value = p.parseExpression()
 
 	return ret
