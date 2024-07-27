@@ -30,8 +30,13 @@ type Expression interface {
 	expression()
 }
 
-type IntegerLiteral struct {
-	Value int64
+type Add struct {
+	Expression
+	Left  Expression
+	Right Expression
 }
 
-func (il IntegerLiteral) expression() {}
+type IntegerLiteral struct {
+	Expression
+	Value int64
+}

@@ -93,7 +93,19 @@ func (p *Parser) parseReturn() ast.Return {
 }
 
 func (p *Parser) parseExpression() ast.Expression {
-	return p.parseIntegerLiteral()
+	return p.parseAdd()
+}
+
+func (p *Parser) parseAdd() ast.Expression {
+	var expr ast.Expression = p.parseIntegerLiteral()
+
+	for p.peek(token.Plus) {
+		p.consume(token.Plus)
+		right := p.parseIntegerLiteral()
+		expr = ast.Add{Left: expr, Right: right}
+	}
+
+	return expr
 }
 
 func (p *Parser) parseIntegerLiteral() ast.IntegerLiteral {
