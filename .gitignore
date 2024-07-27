@@ -1,6 +1,2 @@
 .vscode/
-brainstorm
-*.egg-info
-__pycache__
-*.pyc
-venv/
+sage
