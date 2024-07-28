@@ -110,6 +110,15 @@ programs = [
         """,
         123,
     ),
+    (
+        "main_return_parenthesized",
+        """
+        fn main(): i64 {
+            return (2 + 3) * 4 - (((3 + 5)) / 2);
+        }
+        """,
+        16,
+    ),
 ]
 
 failures: list[str] = []

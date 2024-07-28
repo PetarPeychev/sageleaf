@@ -115,21 +115,34 @@ func (p *Parser) parseAddSubtract() ast.Expression {
 }
 
 func (p *Parser) parseMultiplyDivide() ast.Expression {
-	var expr ast.Expression = p.parseIntegerLiteral()
+	var expr ast.Expression = p.parsePrimary()
 
 	for p.peek(token.Asterisk) || p.peek(token.Slash) {
 		if p.peek(token.Asterisk) {
 			p.consume(token.Asterisk)
-			right := p.parseIntegerLiteral()
+			right := p.parsePrimary()
 			expr = ast.Multiply{Left: expr, Right: right}
 		} else if p.peek(token.Slash) {
 			p.consume(token.Slash)
-			right := p.parseIntegerLiteral()
+			right := p.parsePrimary()
 			expr = ast.Divide{Left: expr, Right: right}
 		}
 	}
 
 	return expr
+}
+
+func (p *Parser) parsePrimary() ast.Expression {
+	if p.peek(token.LeftParen) {
+		p.consume(token.LeftParen)
+		expr := p.parseExpression()
+		p.consume(token.RightParen)
+		return expr
+	} else if p.peek(token.Integer) {
+		return p.parseIntegerLiteral()
+	} else {
+		panic("expected expression, got " + p.current.Type)
+	}
 }
 
 func (p *Parser) parseIntegerLiteral() ast.IntegerLiteral {
