@@ -36,6 +36,24 @@ type Add struct {
 	Right Expression
 }
 
+type Subtract struct {
+	Expression
+	Left  Expression
+	Right Expression
+}
+
+type Multiply struct {
+	Expression
+	Left  Expression
+	Right Expression
+}
+
+type Divide struct {
+	Expression
+	Left  Expression
+	Right Expression
+}
+
 type IntegerLiteral struct {
 	Expression
 	Value int64

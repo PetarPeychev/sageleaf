@@ -47,6 +47,69 @@ programs = [
         """,
         42,
     ),
+    (
+        "main_return_add_subtract",
+        """
+        fn main(): i64 {
+            return 28 - 9 + 5;
+        }
+        """,
+        24,
+    ),
+    (
+        "main_return_multiply",
+        """
+        fn main(): i64 {
+            return 28 * 9;
+        }
+        """,
+        252,
+    ),
+    (
+        "main_return_multiply_multiply",
+        """
+        fn main(): i64 {
+            return 3 * 4 * 5;
+        }
+        """,
+        60,
+    ),
+    (
+        "main_return_divide",
+        """
+        fn main(): i64 {
+            return 28 / 4;
+        }
+        """,
+        7,
+    ),
+    (
+        "main_return_multiply_divide",
+        """
+        fn main(): i64 {
+            return 28 * 9 / 4;
+        }
+        """,
+        63,
+    ),
+    (
+        "main_return_divide_divide_remainder",
+        """
+        fn main(): i64 {
+            return 28 / 4 / 2;
+        }
+        """,
+        3,
+    ),
+    (
+        "main_return_precendence_mul_div_sub_add",
+        """
+        fn main(): i64 {
+            return 28 * 9 + 10 / 4 - 28 * 5 + 9;
+        }
+        """,
+        123,
+    ),
 ]
 
 failures: list[str] = []
@@ -55,7 +118,7 @@ for name, code, expected_exit_code in programs:
         with open(name + ".sl", "w") as f:
             f.write(code)
 
-        os.system("./sage build " + name + ".sl")
+        os.system("go run sage both " + name + ".sl")
 
         exit_code = subprocess.run(["./" + name], capture_output=True).returncode
 

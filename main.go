@@ -29,20 +29,24 @@ func main() {
 
 	switch command {
 	case "build":
-		build(file)
+		build(file, "exe")
 	case "run":
 		run(file)
 	case "test":
 		test(file)
 	case "format":
 		format(file)
+	case "asm":
+		build(file, "asm")
+	case "both":
+		build(file, "both")
 	default:
 		fmt.Printf("Error: Unknown command %s.\n", command)
 		os.Exit(1)
 	}
 }
 
-func build(file string) {
+func build(file string, output string) {
 	// read the source file
 	content, err := os.ReadFile(file)
 	if err != nil {
@@ -80,12 +84,16 @@ func build(file string) {
 	}
 
 	// clean up
+	if output == "exe" {
+		os.Remove(strings.TrimSuffix(file, ".sl") + ".asm")
+	} else if output == "asm" {
+		os.Remove(strings.TrimSuffix(file, ".sl"))
+	}
 	os.Remove(strings.TrimSuffix(file, ".sl") + ".o")
 }
 
 func run(file string) {
-	build(file)
-	os.Remove(strings.TrimSuffix(file, ".sl") + ".asm")
+	build(file, "exe")
 
 	// run the executable
 	cmd := exec.Command(strings.TrimSuffix(file, ".sl"))

@@ -93,16 +93,40 @@ func (p *Parser) parseReturn() ast.Return {
 }
 
 func (p *Parser) parseExpression() ast.Expression {
-	return p.parseAdd()
+	return p.parseAddSubtract()
 }
 
-func (p *Parser) parseAdd() ast.Expression {
+func (p *Parser) parseAddSubtract() ast.Expression {
+	var expr ast.Expression = p.parseMultiplyDivide()
+
+	for p.peek(token.Plus) || p.peek(token.Minus) {
+		if p.peek(token.Plus) {
+			p.consume(token.Plus)
+			right := p.parseMultiplyDivide()
+			expr = ast.Add{Left: expr, Right: right}
+		} else if p.peek(token.Minus) {
+			p.consume(token.Minus)
+			right := p.parseMultiplyDivide()
+			expr = ast.Subtract{Left: expr, Right: right}
+		}
+	}
+
+	return expr
+}
+
+func (p *Parser) parseMultiplyDivide() ast.Expression {
 	var expr ast.Expression = p.parseIntegerLiteral()
 
-	for p.peek(token.Plus) {
-		p.consume(token.Plus)
-		right := p.parseIntegerLiteral()
-		expr = ast.Add{Left: expr, Right: right}
+	for p.peek(token.Asterisk) || p.peek(token.Slash) {
+		if p.peek(token.Asterisk) {
+			p.consume(token.Asterisk)
+			right := p.parseIntegerLiteral()
+			expr = ast.Multiply{Left: expr, Right: right}
+		} else if p.peek(token.Slash) {
+			p.consume(token.Slash)
+			right := p.parseIntegerLiteral()
+			expr = ast.Divide{Left: expr, Right: right}
+		}
 	}
 
 	return expr

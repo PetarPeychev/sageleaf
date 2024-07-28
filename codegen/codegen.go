@@ -1,6 +1,7 @@
 package codegen
 
 import (
+	"fmt"
 	"sage/ast"
 	"strconv"
 	"strings"
@@ -68,7 +69,14 @@ func (c *CodeGen) generateExpression(expr ast.Expression) {
 		c.generateIntegerLiteral(e)
 	case ast.Add:
 		c.generateAdd(e)
+	case ast.Subtract:
+		c.generateSubtract(e)
+	case ast.Multiply:
+		c.generateMultiply(e)
+	case ast.Divide:
+		c.generateDivide(e)
 	default:
+		fmt.Println(e)
 		panic("unknown expression type")
 	}
 }
@@ -84,5 +92,32 @@ func (c *CodeGen) generateAdd(add ast.Add) {
 	c.code.WriteString("\tpop rdi\n")
 	c.code.WriteString("\tpop rax\n")
 	c.code.WriteString("\tadd rax, rdi\n")
+	c.code.WriteString("\tpush rax\n")
+}
+
+func (c *CodeGen) generateSubtract(sub ast.Subtract) {
+	c.generateExpression(sub.Left)
+	c.generateExpression(sub.Right)
+	c.code.WriteString("\tpop rdi\n")
+	c.code.WriteString("\tpop rax\n")
+	c.code.WriteString("\tsub rax, rdi\n")
+	c.code.WriteString("\tpush rax\n")
+}
+
+func (c *CodeGen) generateMultiply(mul ast.Multiply) {
+	c.generateExpression(mul.Left)
+	c.generateExpression(mul.Right)
+	c.code.WriteString("\tpop rdi\n")
+	c.code.WriteString("\tpop rax\n")
+	c.code.WriteString("\timul rax, rdi\n")
+	c.code.WriteString("\tpush rax\n")
+}
+
+func (c *CodeGen) generateDivide(div ast.Divide) {
+	c.generateExpression(div.Left)
+	c.generateExpression(div.Right)
+	c.code.WriteString("\tpop rdi\n")
+	c.code.WriteString("\tpop rax\n")
+	c.code.WriteString("\tidiv rdi\n")
 	c.code.WriteString("\tpush rax\n")
 }
