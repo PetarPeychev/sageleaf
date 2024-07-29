@@ -55,6 +55,8 @@ func (c *CodeGen) generateStatement(s ast.Statement) {
 	switch s := s.(type) {
 	case ast.Return:
 		c.generateReturn(s)
+	case ast.Declaration:
+		// c.generateDeclaration(s)
 	case ast.Assignment:
 		// c.generateAssignment(s)
 	default:

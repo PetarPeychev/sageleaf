@@ -22,6 +22,10 @@ type None struct {
 	Type
 }
 
+type Any struct {
+	Type
+}
+
 type Statement interface {
 	statementNode()
 }
@@ -31,10 +35,16 @@ type Return struct {
 	Value Expression
 }
 
-type Assignment struct {
+type Declaration struct {
 	Statement
 	Name  string
 	Type  Type
+	Value Expression
+}
+
+type Assignment struct {
+	Statement
+	Name  string
 	Value Expression
 }
 

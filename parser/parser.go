@@ -79,7 +79,14 @@ func (p *Parser) parseFunction() ast.Function {
 
 func (p *Parser) parseStatement() ast.Statement {
 	if p.peek(token.Identifier) {
-		return p.parseAssignment()
+		p.advance()
+		if p.peek(token.Colon) {
+			return p.parseDeclaration()
+		} else if p.peek(token.Equals) {
+			return p.parseAssignment()
+		} else {
+			panic("expected declaration orassignment, got " + p.current.Type)
+		}
 	} else if p.peek(token.Return) {
 		return p.parseReturn()
 	} else {
@@ -87,19 +94,31 @@ func (p *Parser) parseStatement() ast.Statement {
 	}
 }
 
-func (p *Parser) parseAssignment() ast.Assignment {
-	assignment := ast.Assignment{}
+func (p *Parser) parseDeclaration() ast.Declaration {
+	declaration := ast.Declaration{}
 
-	assignment.Name = p.consume(token.Identifier).Literal
+	declaration.Name = p.consume(token.Identifier).Literal
 
 	p.consume(token.Colon)
 
 	if p.peek(token.I64) {
 		p.consume(token.I64)
-		assignment.Type = ast.I64{}
+		declaration.Type = ast.I64{}
 	} else {
-		assignment.Type = ast.I64{} // TODO: implement other types
+		declaration.Type = ast.Any{}
 	}
+
+	p.consume(token.Equals)
+
+	declaration.Value = p.parseExpression()
+
+	return declaration
+}
+
+func (p *Parser) parseAssignment() ast.Assignment {
+	assignment := ast.Assignment{}
+
+	assignment.Name = p.consume(token.Identifier).Literal
 
 	p.consume(token.Equals)
 
