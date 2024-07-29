@@ -21,8 +21,8 @@ func TestReturnStatement(t *testing.T) {
 			{
 				Name:       "main",
 				ReturnType: ast.I64{},
-				Body: []ast.Return{
-					{
+				Body: []ast.Statement{
+					ast.Return{
 						Value: ast.IntegerLiteral{Value: 42},
 					},
 				},
@@ -49,8 +49,8 @@ func TestAdd(t *testing.T) {
 			{
 				Name:       "main",
 				ReturnType: ast.I64{},
-				Body: []ast.Return{
-					{
+				Body: []ast.Statement{
+					ast.Return{
 						Value: ast.Add{
 							Left: ast.Add{
 								Left:  ast.IntegerLiteral{Value: 28},

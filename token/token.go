@@ -21,6 +21,7 @@ const (
 
 	Semicolon = ";"
 	Colon     = ":"
+	Equals    = "="
 
 	LeftParen  = "("
 	RightParen = ")"

@@ -68,13 +68,44 @@ func (p *Parser) parseFunction() ast.Function {
 	p.consume(token.LeftBrace)
 
 	for !p.peek(token.RightBrace) {
-		function.Body = append(function.Body, p.parseReturn())
+		function.Body = append(function.Body, p.parseStatement())
 		p.consume(token.Semicolon)
 	}
 
 	p.consume(token.RightBrace)
 
 	return function
+}
+
+func (p *Parser) parseStatement() ast.Statement {
+	if p.peek(token.Identifier) {
+		return p.parseAssignment()
+	} else if p.peek(token.Return) {
+		return p.parseReturn()
+	} else {
+		panic("expected statement, got " + p.current.Type)
+	}
+}
+
+func (p *Parser) parseAssignment() ast.Assignment {
+	assignment := ast.Assignment{}
+
+	assignment.Name = p.consume(token.Identifier).Literal
+
+	p.consume(token.Colon)
+
+	if p.peek(token.I64) {
+		p.consume(token.I64)
+		assignment.Type = ast.I64{}
+	} else {
+		assignment.Type = ast.I64{} // TODO: implement other types
+	}
+
+	p.consume(token.Equals)
+
+	assignment.Value = p.parseExpression()
+
+	return assignment
 }
 
 func (p *Parser) parseReturn() ast.Return {

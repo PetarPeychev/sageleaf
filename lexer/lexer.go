@@ -35,6 +35,8 @@ func (l *Lexer) Next() token.Token {
 		tok = newToken(token.Semicolon, l.ch)
 	case ':':
 		tok = newToken(token.Colon, l.ch)
+	case '=':
+		tok = newToken(token.Equals, l.ch)
 	case '(':
 		tok = newToken(token.LeftParen, l.ch)
 	case ')':

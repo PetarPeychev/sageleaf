@@ -46,8 +46,19 @@ func (c *CodeGen) generateFunction(f ast.Function) {
 		panic("Not implemented yet.")
 	}
 
-	for _, r := range f.Body {
-		c.generateReturn(r)
+	for _, s := range f.Body {
+		c.generateStatement(s)
+	}
+}
+
+func (c *CodeGen) generateStatement(s ast.Statement) {
+	switch s := s.(type) {
+	case ast.Return:
+		c.generateReturn(s)
+	case ast.Assignment:
+		// c.generateAssignment(s)
+	default:
+		panic("unknown statement type")
 	}
 }
 

@@ -7,11 +7,11 @@ type Program struct {
 type Function struct {
 	Name       string
 	ReturnType Type
-	Body       []Return
+	Body       []Statement
 }
 
 type Type interface {
-	type_()
+	typeNode()
 }
 
 type I64 struct {
@@ -22,12 +22,24 @@ type None struct {
 	Type
 }
 
+type Statement interface {
+	statementNode()
+}
+
 type Return struct {
+	Statement
+	Value Expression
+}
+
+type Assignment struct {
+	Statement
+	Name  string
+	Type  Type
 	Value Expression
 }
 
 type Expression interface {
-	expression()
+	expressionNode()
 }
 
 type Add struct {

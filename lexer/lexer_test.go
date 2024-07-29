@@ -9,6 +9,7 @@ import (
 func TestNextToken(t *testing.T) {
 	input := `
 		fn main(): i64 {
+			x := 1;
 			return 42;
 		} @@
 
@@ -26,6 +27,11 @@ func TestNextToken(t *testing.T) {
 		{token.Colon, ":"},
 		{token.I64, "i64"},
 		{token.LeftBrace, "{"},
+		{token.Identifier, "x"},
+		{token.Colon, ":"},
+		{token.Equals, "="},
+		{token.Integer, "1"},
+		{token.Semicolon, ";"},
 		{token.Return, "return"},
 		{token.Integer, "42"},
 		{token.Semicolon, ";"},

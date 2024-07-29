@@ -127,7 +127,7 @@ for name, code, expected_exit_code in programs:
         with open(name + ".sl", "w") as f:
             f.write(code)
 
-        os.system("go run sage both " + name + ".sl")
+        os.system("go run sage _build " + name + ".sl")
 
         exit_code = subprocess.run(["./" + name], capture_output=True).returncode
 
@@ -151,6 +151,7 @@ for name, code, expected_exit_code in programs:
     finally:
         os.remove(name + ".sl")
         os.remove(name)
+        os.remove(name + ".o")
         os.remove(name + ".asm")
 
 if len(failures) > 0:
