@@ -4,6 +4,7 @@ import (
 	"sage/ast"
 	"sage/lexer"
 	"sage/token"
+	"sage/types"
 	"strconv"
 )
 
@@ -58,23 +59,31 @@ func (p *Parser) parseFunction() ast.Function {
 	p.consume(token.RightParen)
 
 	if !p.peek(token.Colon) {
-		function.ReturnType = ast.None{}
+		function.ReturnType = types.None{}
 	} else {
 		p.consume(token.Colon)
 		p.consume(token.I64)
-		function.ReturnType = ast.I64{}
+		function.ReturnType = types.I64{}
 	}
+
+	function.Body = p.parseBlock()
+
+	return function
+}
+
+func (p *Parser) parseBlock() ast.Block {
+	block := ast.Block{}
 
 	p.consume(token.LeftBrace)
 
 	for !p.peek(token.RightBrace) {
-		function.Body = append(function.Body, p.parseStatement())
+		block.Statements = append(block.Statements, p.parseStatement())
 		p.consume(token.Semicolon)
 	}
 
 	p.consume(token.RightBrace)
 
-	return function
+	return block
 }
 
 func (p *Parser) parseStatement() ast.Statement {
@@ -103,9 +112,9 @@ func (p *Parser) parseDeclaration() ast.Declaration {
 
 	if p.peek(token.I64) {
 		p.consume(token.I64)
-		declaration.Type = ast.I64{}
+		declaration.Type = types.I64{}
 	} else {
-		declaration.Type = ast.Any{}
+		declaration.Type = types.Any{}
 	}
 
 	p.consume(token.Equals)

@@ -1,29 +1,24 @@
 package ast
 
+import (
+	"sage/symbols"
+	"sage/types"
+)
+
 type Program struct {
 	Declarations []Function
+	Symbols      *symbols.Table
 }
 
 type Function struct {
 	Name       string
-	ReturnType Type
-	Body       []Statement
+	ReturnType types.Type
+	Body       Block
 }
 
-type Type interface {
-	typeNode()
-}
-
-type I64 struct {
-	Type
-}
-
-type None struct {
-	Type
-}
-
-type Any struct {
-	Type
+type Block struct {
+	Statements []Statement
+	Symbols    *symbols.Table
 }
 
 type Statement interface {
@@ -38,7 +33,7 @@ type Return struct {
 type Declaration struct {
 	Statement
 	Name  string
-	Type  Type
+	Type  types.Type
 	Value Expression
 }
 

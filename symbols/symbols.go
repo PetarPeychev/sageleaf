@@ -2,23 +2,23 @@ package symbols
 
 import (
 	"errors"
-	"sage/ast"
+	"sage/types"
 )
 
 type Symbol struct {
-	Type ast.Type
+	Type types.Type
 }
 
-type SymbolTable struct {
+type Table struct {
 	symbols map[string]Symbol
-	parent  *SymbolTable
+	parent  *Table
 }
 
-func New(parent *SymbolTable) *SymbolTable {
-	return &SymbolTable{symbols: make(map[string]Symbol), parent: parent}
+func New(parent *Table) *Table {
+	return &Table{symbols: make(map[string]Symbol), parent: parent}
 }
 
-func (s *SymbolTable) Lookup(name string) (Symbol, error) {
+func (s *Table) Lookup(name string) (Symbol, error) {
 	if s.symbols[name].Type != nil {
 		return s.symbols[name], nil
 	}
@@ -26,4 +26,8 @@ func (s *SymbolTable) Lookup(name string) (Symbol, error) {
 		return s.parent.Lookup(name)
 	}
 	return Symbol{}, errors.New("symbol not found")
+}
+
+func (s *Table) Define(name string, type_ types.Type) {
+	s.symbols[name] = Symbol{Type: type_}
 }

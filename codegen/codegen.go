@@ -38,7 +38,7 @@ func (c *CodeGen) generateFunction(f ast.Function) {
 		c.code.WriteString("_start:\n")
 		c.in_main = true
 
-		if len(f.Body) == 0 {
+		if len(f.Body.Statements) == 0 {
 			c.generateReturn(ast.Return{Value: ast.IntegerLiteral{Value: 0}})
 			return
 		}
@@ -46,7 +46,7 @@ func (c *CodeGen) generateFunction(f ast.Function) {
 		panic("Not implemented yet.")
 	}
 
-	for _, s := range f.Body {
+	for _, s := range f.Body.Statements {
 		c.generateStatement(s)
 	}
 }
