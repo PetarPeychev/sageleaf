@@ -20,7 +20,7 @@ func main() {
 		fmt.Println()
 		fmt.Println("Commands:")
 		fmt.Println("  build   Compile a sage file to an executable.")
-		fmt.Println("  run     Run a sage file.")
+		fmt.Println("  run     Build and run a sage file.")
 		os.Exit(1)
 	}
 
