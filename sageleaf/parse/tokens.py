@@ -25,7 +25,7 @@ class SourceSpan(BaseModel):
         return data
 
     def print(self):
-        print(f"{self.file_path.name} {self.start_line}:{self.start_column}\n")
+        print(f"{self.file_path.name} {self.start_line}:{self.start_column}")
         with open(self.file_path) as f:
             lines = f.readlines()
 

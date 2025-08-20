@@ -1,7 +1,3 @@
-fn add() {
-
-}
-
-fn add(a: i32) {
-
+fn main() {
+    // do nothing
 }
