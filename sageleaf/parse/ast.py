@@ -84,7 +84,7 @@ class ASTNode(BaseModel):
 
 class Program(ASTNode):
     statements: list[TopLevelStatement]
-    functions: dict[str, FunctionDef] = None
+    functions: dict[str, FunctionDef] | None = None
 
 
 type TopLevelStatement = (
