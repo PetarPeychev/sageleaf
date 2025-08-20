@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Sageleaf is a statically-typed programming language that compiles to C99.
 
-**IMPORTANT:** Full design is a WIP and available in `DESIGN.md`
+**IMPORTANT:** Full design is a WIP and available in `README.md`
 
 ## Running the Compiler
 
