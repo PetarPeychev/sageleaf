@@ -1,0 +1,8230 @@
+[
+  {
+    "type": "LParen",
+    "value": "(",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 4,
+      "start_column": 1,
+      "end_line": 4,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "RParen",
+    "value": ")",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 4,
+      "start_column": 2,
+      "end_line": 4,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "LParen",
+    "value": "(",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 4,
+      "start_column": 3,
+      "end_line": 4,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "RParen",
+    "value": ")",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 4,
+      "start_column": 6,
+      "end_line": 4,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 5,
+      "start_column": 1,
+      "end_line": 5,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 5,
+      "start_column": 2,
+      "end_line": 5,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 5,
+      "start_column": 3,
+      "end_line": 5,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 5,
+      "start_column": 5,
+      "end_line": 5,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "LBracket",
+    "value": "[",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 6,
+      "start_column": 1,
+      "end_line": 6,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "RBracket",
+    "value": "]",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 6,
+      "start_column": 2,
+      "end_line": 6,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "LBracket",
+    "value": "[",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 6,
+      "start_column": 3,
+      "end_line": 6,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "RBracket",
+    "value": "]",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 6,
+      "start_column": 5,
+      "end_line": 6,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 9,
+      "start_column": 1,
+      "end_line": 9,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Comma",
+    "value": ",",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 9,
+      "start_column": 2,
+      "end_line": 9,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 9,
+      "start_column": 3,
+      "end_line": 9,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 9,
+      "start_column": 4,
+      "end_line": 9,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 10,
+      "start_column": 1,
+      "end_line": 10,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 10,
+      "start_column": 2,
+      "end_line": 10,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 10,
+      "start_column": 3,
+      "end_line": 10,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "Comma",
+    "value": ",",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 10,
+      "start_column": 4,
+      "end_line": 10,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Comma",
+    "value": ",",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 10,
+      "start_column": 5,
+      "end_line": 10,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Comma",
+    "value": ",",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 10,
+      "start_column": 6,
+      "end_line": 10,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 10,
+      "start_column": 7,
+      "end_line": 10,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 10,
+      "start_column": 8,
+      "end_line": 10,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 10,
+      "start_column": 9,
+      "end_line": 10,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 10,
+      "start_column": 10,
+      "end_line": 10,
+      "end_column": 11
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 10,
+      "start_column": 11,
+      "end_line": 10,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 10,
+      "start_column": 12,
+      "end_line": 10,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "Plus",
+    "value": "+",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 13,
+      "start_column": 1,
+      "end_line": 13,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Minus",
+    "value": "-",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 13,
+      "start_column": 2,
+      "end_line": 13,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "Star",
+    "value": "*",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 13,
+      "start_column": 3,
+      "end_line": 13,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "Slash",
+    "value": "/",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 13,
+      "start_column": 4,
+      "end_line": 13,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Percent",
+    "value": "%",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 13,
+      "start_column": 5,
+      "end_line": 13,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Ne",
+    "value": "!=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 14,
+      "start_column": 1,
+      "end_line": 14,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "Ge",
+    "value": ">=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 14,
+      "start_column": 3,
+      "end_line": 14,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Le",
+    "value": "<=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 14,
+      "start_column": 5,
+      "end_line": 14,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "Eq",
+    "value": "==",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 15,
+      "start_column": 1,
+      "end_line": 15,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "Eq",
+    "value": "==",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 15,
+      "start_column": 3,
+      "end_line": 15,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Assign",
+    "value": "=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 15,
+      "start_column": 5,
+      "end_line": 15,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Ne",
+    "value": "!=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 15,
+      "start_column": 6,
+      "end_line": 15,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "Ne",
+    "value": "!=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 15,
+      "start_column": 8,
+      "end_line": 15,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "Eq",
+    "value": "==",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 15,
+      "start_column": 10,
+      "end_line": 15,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "Assign",
+    "value": "=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 15,
+      "start_column": 12,
+      "end_line": 15,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "Ge",
+    "value": ">=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 15,
+      "start_column": 13,
+      "end_line": 15,
+      "end_column": 15
+    }
+  },
+  {
+    "type": "Le",
+    "value": "<=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 15,
+      "start_column": 15,
+      "end_line": 15,
+      "end_column": 17
+    }
+  },
+  {
+    "type": "Lt",
+    "value": "<",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 15,
+      "start_column": 17,
+      "end_line": 15,
+      "end_column": 18
+    }
+  },
+  {
+    "type": "Lt",
+    "value": "<",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 15,
+      "start_column": 18,
+      "end_line": 15,
+      "end_column": 19
+    }
+  },
+  {
+    "type": "Gt",
+    "value": ">",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 15,
+      "start_column": 19,
+      "end_line": 15,
+      "end_column": 20
+    }
+  },
+  {
+    "type": "Ge",
+    "value": ">=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 15,
+      "start_column": 20,
+      "end_line": 15,
+      "end_column": 22
+    }
+  },
+  {
+    "type": "Arrow",
+    "value": "->",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 16,
+      "start_column": 1,
+      "end_line": 16,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "Gt",
+    "value": ">",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 16,
+      "start_column": 3,
+      "end_line": 16,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "Gt",
+    "value": ">",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 16,
+      "start_column": 4,
+      "end_line": 16,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Gt",
+    "value": ">",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 16,
+      "start_column": 5,
+      "end_line": 16,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Ampersand",
+    "value": "&",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 17,
+      "start_column": 1,
+      "end_line": 17,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Ampersand",
+    "value": "&",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 17,
+      "start_column": 2,
+      "end_line": 17,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "Ampersand",
+    "value": "&",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 17,
+      "start_column": 3,
+      "end_line": 17,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 20,
+      "start_column": 1,
+      "end_line": 20,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 20,
+      "start_column": 2,
+      "end_line": 20,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "RangeInclusive",
+    "value": "..=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 20,
+      "start_column": 3,
+      "end_line": 20,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "RangeExclusive",
+    "value": "..<",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 20,
+      "start_column": 6,
+      "end_line": 20,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "Fn",
+    "value": "fn",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 23,
+      "start_column": 1,
+      "end_line": 23,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "Type",
+    "value": "type",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 23,
+      "start_column": 4,
+      "end_line": 23,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "Return",
+    "value": "return",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 23,
+      "start_column": 9,
+      "end_line": 23,
+      "end_column": 15
+    }
+  },
+  {
+    "type": "For",
+    "value": "for",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 23,
+      "start_column": 16,
+      "end_line": 23,
+      "end_column": 19
+    }
+  },
+  {
+    "type": "While",
+    "value": "while",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 23,
+      "start_column": 20,
+      "end_line": 23,
+      "end_column": 25
+    }
+  },
+  {
+    "type": "If",
+    "value": "if",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 23,
+      "start_column": 26,
+      "end_line": 23,
+      "end_column": 28
+    }
+  },
+  {
+    "type": "Elif",
+    "value": "elif",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 23,
+      "start_column": 29,
+      "end_line": 23,
+      "end_column": 33
+    }
+  },
+  {
+    "type": "Else",
+    "value": "else",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 23,
+      "start_column": 34,
+      "end_line": 23,
+      "end_column": 38
+    }
+  },
+  {
+    "type": "And",
+    "value": "and",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 23,
+      "start_column": 39,
+      "end_line": 23,
+      "end_column": 42
+    }
+  },
+  {
+    "type": "Or",
+    "value": "or",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 23,
+      "start_column": 43,
+      "end_line": 23,
+      "end_column": 45
+    }
+  },
+  {
+    "type": "Not",
+    "value": "not",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 23,
+      "start_column": 46,
+      "end_line": 23,
+      "end_column": 49
+    }
+  },
+  {
+    "type": "In",
+    "value": "in",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 23,
+      "start_column": 50,
+      "end_line": 23,
+      "end_column": 52
+    }
+  },
+  {
+    "type": "Break",
+    "value": "break",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 23,
+      "start_column": 53,
+      "end_line": 23,
+      "end_column": 58
+    }
+  },
+  {
+    "type": "Continue",
+    "value": "continue",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 23,
+      "start_column": 59,
+      "end_line": 23,
+      "end_column": 67
+    }
+  },
+  {
+    "type": "Match",
+    "value": "match",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 23,
+      "start_column": 68,
+      "end_line": 23,
+      "end_column": 73
+    }
+  },
+  {
+    "type": "Case",
+    "value": "case",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 23,
+      "start_column": 74,
+      "end_line": 23,
+      "end_column": 78
+    }
+  },
+  {
+    "type": "Const",
+    "value": "const",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 23,
+      "start_column": 79,
+      "end_line": 23,
+      "end_column": 84
+    }
+  },
+  {
+    "type": "Import",
+    "value": "import",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 23,
+      "start_column": 85,
+      "end_line": 23,
+      "end_column": 91
+    }
+  },
+  {
+    "type": "From",
+    "value": "from",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 23,
+      "start_column": 92,
+      "end_line": 23,
+      "end_column": 96
+    }
+  },
+  {
+    "type": "As",
+    "value": "as",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 23,
+      "start_column": 97,
+      "end_line": 23,
+      "end_column": 99
+    }
+  },
+  {
+    "type": "Struct",
+    "value": "struct",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 23,
+      "start_column": 100,
+      "end_line": 23,
+      "end_column": 106
+    }
+  },
+  {
+    "type": "Union",
+    "value": "union",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 23,
+      "start_column": 107,
+      "end_line": 23,
+      "end_column": 112
+    }
+  },
+  {
+    "type": "True",
+    "value": "true",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 23,
+      "start_column": 113,
+      "end_line": 23,
+      "end_column": 117
+    }
+  },
+  {
+    "type": "False",
+    "value": "false",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 23,
+      "start_column": 118,
+      "end_line": 23,
+      "end_column": 123
+    }
+  },
+  {
+    "type": "I8",
+    "value": "i8",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 26,
+      "start_column": 1,
+      "end_line": 26,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "I16",
+    "value": "i16",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 26,
+      "start_column": 4,
+      "end_line": 26,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "I32",
+    "value": "i32",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 26,
+      "start_column": 8,
+      "end_line": 26,
+      "end_column": 11
+    }
+  },
+  {
+    "type": "I64",
+    "value": "i64",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 26,
+      "start_column": 12,
+      "end_line": 26,
+      "end_column": 15
+    }
+  },
+  {
+    "type": "U8",
+    "value": "u8",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 26,
+      "start_column": 16,
+      "end_line": 26,
+      "end_column": 18
+    }
+  },
+  {
+    "type": "U16",
+    "value": "u16",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 26,
+      "start_column": 19,
+      "end_line": 26,
+      "end_column": 22
+    }
+  },
+  {
+    "type": "U32",
+    "value": "u32",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 26,
+      "start_column": 23,
+      "end_line": 26,
+      "end_column": 26
+    }
+  },
+  {
+    "type": "U64",
+    "value": "u64",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 26,
+      "start_column": 27,
+      "end_line": 26,
+      "end_column": 30
+    }
+  },
+  {
+    "type": "Usize",
+    "value": "usize",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 26,
+      "start_column": 31,
+      "end_line": 26,
+      "end_column": 36
+    }
+  },
+  {
+    "type": "F32",
+    "value": "f32",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 26,
+      "start_column": 37,
+      "end_line": 26,
+      "end_column": 40
+    }
+  },
+  {
+    "type": "F64",
+    "value": "f64",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 26,
+      "start_column": 41,
+      "end_line": 26,
+      "end_column": 44
+    }
+  },
+  {
+    "type": "Bool",
+    "value": "bool",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 26,
+      "start_column": 45,
+      "end_line": 26,
+      "end_column": 49
+    }
+  },
+  {
+    "type": "Str",
+    "value": "str",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 26,
+      "start_column": 50,
+      "end_line": 26,
+      "end_column": 53
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "fntype",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 29,
+      "start_column": 1,
+      "end_line": 29,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "returnfor",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 29,
+      "start_column": 8,
+      "end_line": 29,
+      "end_column": 17
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "whileif",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 29,
+      "start_column": 18,
+      "end_line": 29,
+      "end_column": 25
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "elifelse",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 29,
+      "start_column": 26,
+      "end_line": 29,
+      "end_column": 34
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "andor",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 29,
+      "start_column": 35,
+      "end_line": 29,
+      "end_column": 40
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "notin",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 29,
+      "start_column": 41,
+      "end_line": 29,
+      "end_column": 46
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "breakcontinue",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 29,
+      "start_column": 47,
+      "end_line": 29,
+      "end_column": 60
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "identifier",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 32,
+      "start_column": 1,
+      "end_line": 32,
+      "end_column": 11
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "_underscore",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 32,
+      "start_column": 12,
+      "end_line": 32,
+      "end_column": 23
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "_123",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 32,
+      "start_column": 24,
+      "end_line": 32,
+      "end_column": 28
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "abc123",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 32,
+      "start_column": 29,
+      "end_line": 32,
+      "end_column": 35
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "UPPER_CASE",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 32,
+      "start_column": 36,
+      "end_line": 32,
+      "end_column": 46
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "camelCase",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 32,
+      "start_column": 47,
+      "end_line": 32,
+      "end_column": 56
+    }
+  },
+  {
+    "type": "Underscore",
+    "value": "_",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 33,
+      "start_column": 1,
+      "end_line": 33,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "__multiple__underscores__",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 34,
+      "start_column": 1,
+      "end_line": 34,
+      "end_column": 26
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "identifier_with_unicode_\u03b1\u03b2\u03b3",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 35,
+      "start_column": 1,
+      "end_line": 35,
+      "end_column": 28
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "tr\u00e8s_nice",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 36,
+      "start_column": 1,
+      "end_line": 36,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "caf\u00e9",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 37,
+      "start_column": 1,
+      "end_line": 37,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "0",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 40,
+      "start_column": 1,
+      "end_line": 40,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "1",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 40,
+      "start_column": 3,
+      "end_line": 40,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "42",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 40,
+      "start_column": 5,
+      "end_line": 40,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "123456789",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 40,
+      "start_column": 8,
+      "end_line": 40,
+      "end_column": 17
+    }
+  },
+  {
+    "type": "FloatLiteral",
+    "value": "0.0",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 41,
+      "start_column": 1,
+      "end_line": 41,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "FloatLiteral",
+    "value": "1.5",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 41,
+      "start_column": 5,
+      "end_line": 41,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "FloatLiteral",
+    "value": "3.14159",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 41,
+      "start_column": 9,
+      "end_line": 41,
+      "end_column": 16
+    }
+  },
+  {
+    "type": "FloatLiteral",
+    "value": "0.123",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 41,
+      "start_column": 17,
+      "end_line": 41,
+      "end_column": 22
+    }
+  },
+  {
+    "type": "FloatLiteral",
+    "value": "999.999",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 41,
+      "start_column": 23,
+      "end_line": 41,
+      "end_column": 30
+    }
+  },
+  {
+    "type": "FloatLiteral",
+    "value": "123.456",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 42,
+      "start_column": 1,
+      "end_line": 42,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 42,
+      "start_column": 8,
+      "end_line": 42,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "789",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 42,
+      "start_column": 9,
+      "end_line": 42,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "123",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 45,
+      "start_column": 1,
+      "end_line": 45,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 45,
+      "start_column": 4,
+      "end_line": 45,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "toString",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 45,
+      "start_column": 5,
+      "end_line": 45,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "42",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 46,
+      "start_column": 1,
+      "end_line": 46,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 46,
+      "start_column": 3,
+      "end_line": 46,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "max_value",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 46,
+      "start_column": 4,
+      "end_line": 46,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "simple string",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 49,
+      "start_column": 1,
+      "end_line": 49,
+      "end_column": 14
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "string with spaces",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 50,
+      "start_column": 1,
+      "end_line": 50,
+      "end_column": 19
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "string\nwith\tescapes\r\\",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 51,
+      "start_column": 1,
+      "end_line": 51,
+      "end_column": 22
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "string with \"quotes\"",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 52,
+      "start_column": 1,
+      "end_line": 52,
+      "end_column": 21
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "string with \u0000 null terminator",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 53,
+      "start_column": 1,
+      "end_line": 53,
+      "end_column": 30
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "string with unicode: caf\u00e9, \u03b1\u03b2\u03b3, \u4f60\u597d",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 54,
+      "start_column": 1,
+      "end_line": 54,
+      "end_column": 35
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 55,
+      "start_column": 1,
+      "end_line": 55,
+      "end_column": 1
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "string with \\ backslash",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 56,
+      "start_column": 1,
+      "end_line": 56,
+      "end_column": 24
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "first",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 59,
+      "start_column": 1,
+      "end_line": 59,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "second",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 59,
+      "start_column": 8,
+      "end_line": 59,
+      "end_column": 14
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "a",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 60,
+      "start_column": 1,
+      "end_line": 60,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "b",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 60,
+      "start_column": 4,
+      "end_line": 60,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "c",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 60,
+      "start_column": 7,
+      "end_line": 60,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "Fn",
+    "value": "fn",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 66,
+      "start_column": 1,
+      "end_line": 66,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "test",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 66,
+      "start_column": 4,
+      "end_line": 66,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "LParen",
+    "value": "(",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 66,
+      "start_column": 8,
+      "end_line": 66,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "RParen",
+    "value": ")",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 66,
+      "start_column": 9,
+      "end_line": 66,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 66,
+      "start_column": 11,
+      "end_line": 66,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 66,
+      "start_column": 12,
+      "end_line": 66,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "CLiteral",
+    "value": "\n    #include <stdio.h>\n    printf(\"Hello from C!\\n\");\n",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 69,
+      "start_column": 1,
+      "end_line": 69,
+      "end_column": 56
+    }
+  },
+  {
+    "type": "CLiteral",
+    "value": "\n    int x = 42;\n    return x;\n",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 74,
+      "start_column": 1,
+      "end_line": 74,
+      "end_column": 32
+    }
+  },
+  {
+    "type": "CLiteral",
+    "value": "\n    if (condition) {\n        for (int i = 0; i < 10; i++) {\n            printf(\"i = %d\\n\", i);\n        }\n    }\n",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 80,
+      "start_column": 1,
+      "end_line": 80,
+      "end_column": 113
+    }
+  },
+  {
+    "type": "Fn",
+    "value": "fn",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 89,
+      "start_column": 1,
+      "end_line": 89,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "LParen",
+    "value": "(",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 89,
+      "start_column": 3,
+      "end_line": 89,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "x",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 89,
+      "start_column": 4,
+      "end_line": 89,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 89,
+      "start_column": 5,
+      "end_line": 89,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "I32",
+    "value": "i32",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 89,
+      "start_column": 6,
+      "end_line": 89,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "RParen",
+    "value": ")",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 89,
+      "start_column": 9,
+      "end_line": 89,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "Arrow",
+    "value": "->",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 89,
+      "start_column": 10,
+      "end_line": 89,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "Bool",
+    "value": "bool",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 89,
+      "start_column": 12,
+      "end_line": 89,
+      "end_column": 16
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 89,
+      "start_column": 16,
+      "end_line": 89,
+      "end_column": 17
+    }
+  },
+  {
+    "type": "Return",
+    "value": "return",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 89,
+      "start_column": 17,
+      "end_line": 89,
+      "end_column": 23
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "x",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 89,
+      "start_column": 24,
+      "end_line": 89,
+      "end_column": 25
+    }
+  },
+  {
+    "type": "Gt",
+    "value": ">",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 89,
+      "start_column": 25,
+      "end_line": 89,
+      "end_column": 26
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "0",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 89,
+      "start_column": 26,
+      "end_line": 89,
+      "end_column": 27
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 89,
+      "start_column": 27,
+      "end_line": 89,
+      "end_column": 28
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 89,
+      "start_column": 28,
+      "end_line": 89,
+      "end_column": 29
+    }
+  },
+  {
+    "type": "Struct",
+    "value": "struct",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 90,
+      "start_column": 1,
+      "end_line": 90,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "Point",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 90,
+      "start_column": 8,
+      "end_line": 90,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 90,
+      "start_column": 13,
+      "end_line": 90,
+      "end_column": 14
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "x",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 90,
+      "start_column": 14,
+      "end_line": 90,
+      "end_column": 15
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 90,
+      "start_column": 15,
+      "end_line": 90,
+      "end_column": 16
+    }
+  },
+  {
+    "type": "F32",
+    "value": "f32",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 90,
+      "start_column": 16,
+      "end_line": 90,
+      "end_column": 19
+    }
+  },
+  {
+    "type": "Comma",
+    "value": ",",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 90,
+      "start_column": 19,
+      "end_line": 90,
+      "end_column": 20
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "y",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 90,
+      "start_column": 20,
+      "end_line": 90,
+      "end_column": 21
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 90,
+      "start_column": 21,
+      "end_line": 90,
+      "end_column": 22
+    }
+  },
+  {
+    "type": "F32",
+    "value": "f32",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 90,
+      "start_column": 22,
+      "end_line": 90,
+      "end_column": 25
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 90,
+      "start_column": 25,
+      "end_line": 90,
+      "end_column": 26
+    }
+  },
+  {
+    "type": "Type",
+    "value": "type",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 91,
+      "start_column": 1,
+      "end_line": 91,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "Result",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 91,
+      "start_column": 6,
+      "end_line": 91,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "Assign",
+    "value": "=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 91,
+      "start_column": 12,
+      "end_line": 91,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "Union",
+    "value": "union",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 91,
+      "start_column": 13,
+      "end_line": 91,
+      "end_column": 18
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 91,
+      "start_column": 18,
+      "end_line": 91,
+      "end_column": 19
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "Ok",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 91,
+      "start_column": 19,
+      "end_line": 91,
+      "end_column": 21
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 91,
+      "start_column": 21,
+      "end_line": 91,
+      "end_column": 22
+    }
+  },
+  {
+    "type": "I32",
+    "value": "i32",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 91,
+      "start_column": 22,
+      "end_line": 91,
+      "end_column": 25
+    }
+  },
+  {
+    "type": "Comma",
+    "value": ",",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 91,
+      "start_column": 25,
+      "end_line": 91,
+      "end_column": 26
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "Err",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 91,
+      "start_column": 26,
+      "end_line": 91,
+      "end_column": 29
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 91,
+      "start_column": 29,
+      "end_line": 91,
+      "end_column": 30
+    }
+  },
+  {
+    "type": "Str",
+    "value": "str",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 91,
+      "start_column": 30,
+      "end_line": 91,
+      "end_column": 33
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 91,
+      "start_column": 33,
+      "end_line": 91,
+      "end_column": 34
+    }
+  },
+  {
+    "type": "Fn",
+    "value": "fn",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 94,
+      "start_column": 1,
+      "end_line": 94,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "add",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 94,
+      "start_column": 6,
+      "end_line": 94,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "LParen",
+    "value": "(",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 94,
+      "start_column": 12,
+      "end_line": 94,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "a",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 94,
+      "start_column": 16,
+      "end_line": 94,
+      "end_column": 17
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 94,
+      "start_column": 20,
+      "end_line": 94,
+      "end_column": 21
+    }
+  },
+  {
+    "type": "I32",
+    "value": "i32",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 94,
+      "start_column": 24,
+      "end_line": 94,
+      "end_column": 27
+    }
+  },
+  {
+    "type": "Comma",
+    "value": ",",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 94,
+      "start_column": 30,
+      "end_line": 94,
+      "end_column": 31
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "b",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 94,
+      "start_column": 34,
+      "end_line": 94,
+      "end_column": 35
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 94,
+      "start_column": 38,
+      "end_line": 94,
+      "end_column": 39
+    }
+  },
+  {
+    "type": "I32",
+    "value": "i32",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 94,
+      "start_column": 42,
+      "end_line": 94,
+      "end_column": 45
+    }
+  },
+  {
+    "type": "RParen",
+    "value": ")",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 94,
+      "start_column": 48,
+      "end_line": 94,
+      "end_column": 49
+    }
+  },
+  {
+    "type": "Arrow",
+    "value": "->",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 94,
+      "start_column": 52,
+      "end_line": 94,
+      "end_column": 54
+    }
+  },
+  {
+    "type": "I32",
+    "value": "i32",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 94,
+      "start_column": 57,
+      "end_line": 94,
+      "end_column": 60
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 94,
+      "start_column": 63,
+      "end_line": 94,
+      "end_column": 64
+    }
+  },
+  {
+    "type": "Return",
+    "value": "return",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 95,
+      "start_column": 5,
+      "end_line": 95,
+      "end_column": 11
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "a",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 95,
+      "start_column": 14,
+      "end_line": 95,
+      "end_column": 15
+    }
+  },
+  {
+    "type": "Plus",
+    "value": "+",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 95,
+      "start_column": 18,
+      "end_line": 95,
+      "end_column": 19
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "b",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 95,
+      "start_column": 22,
+      "end_line": 95,
+      "end_column": 23
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 95,
+      "start_column": 26,
+      "end_line": 95,
+      "end_column": 27
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 96,
+      "start_column": 1,
+      "end_line": 96,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Const",
+    "value": "const",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 99,
+      "start_column": 1,
+      "end_line": 99,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "\u03c0",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 99,
+      "start_column": 7,
+      "end_line": 99,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "Assign",
+    "value": "=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 99,
+      "start_column": 9,
+      "end_line": 99,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "FloatLiteral",
+    "value": "3.14159",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 99,
+      "start_column": 11,
+      "end_line": 99,
+      "end_column": 18
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 99,
+      "start_column": 18,
+      "end_line": 99,
+      "end_column": 19
+    }
+  },
+  {
+    "type": "Const",
+    "value": "const",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 100,
+      "start_column": 1,
+      "end_line": 100,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "caf\u00e9_price",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 100,
+      "start_column": 7,
+      "end_line": 100,
+      "end_column": 17
+    }
+  },
+  {
+    "type": "Assign",
+    "value": "=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 100,
+      "start_column": 18,
+      "end_line": 100,
+      "end_column": 19
+    }
+  },
+  {
+    "type": "FloatLiteral",
+    "value": "4.50",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 100,
+      "start_column": 20,
+      "end_line": 100,
+      "end_column": 24
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 100,
+      "start_column": 24,
+      "end_line": 100,
+      "end_column": 25
+    }
+  },
+  {
+    "type": "Fn",
+    "value": "fn",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 101,
+      "start_column": 1,
+      "end_line": 101,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "na\u00efve_approach",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 101,
+      "start_column": 4,
+      "end_line": 101,
+      "end_column": 18
+    }
+  },
+  {
+    "type": "LParen",
+    "value": "(",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 101,
+      "start_column": 18,
+      "end_line": 101,
+      "end_column": 19
+    }
+  },
+  {
+    "type": "RParen",
+    "value": ")",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 101,
+      "start_column": 19,
+      "end_line": 101,
+      "end_column": 20
+    }
+  },
+  {
+    "type": "Arrow",
+    "value": "->",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 101,
+      "start_column": 21,
+      "end_line": 101,
+      "end_column": 23
+    }
+  },
+  {
+    "type": "Bool",
+    "value": "bool",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 101,
+      "start_column": 24,
+      "end_line": 101,
+      "end_column": 28
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 101,
+      "start_column": 29,
+      "end_line": 101,
+      "end_column": 30
+    }
+  },
+  {
+    "type": "Return",
+    "value": "return",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 101,
+      "start_column": 31,
+      "end_line": 101,
+      "end_column": 37
+    }
+  },
+  {
+    "type": "False",
+    "value": "false",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 101,
+      "start_column": 38,
+      "end_line": 101,
+      "end_column": 43
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 101,
+      "start_column": 43,
+      "end_line": 101,
+      "end_column": 44
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 101,
+      "start_column": 45,
+      "end_line": 101,
+      "end_column": 46
+    }
+  },
+  {
+    "type": "Underscore",
+    "value": "_",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 104,
+      "start_column": 1,
+      "end_line": 104,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Assign",
+    "value": "=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 104,
+      "start_column": 3,
+      "end_line": 104,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "42",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 104,
+      "start_column": 5,
+      "end_line": 104,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 104,
+      "start_column": 7,
+      "end_line": 104,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "_var",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 105,
+      "start_column": 1,
+      "end_line": 105,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Assign",
+    "value": "=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 105,
+      "start_column": 6,
+      "end_line": 105,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "test",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 105,
+      "start_column": 8,
+      "end_line": 105,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 105,
+      "start_column": 14,
+      "end_line": 105,
+      "end_column": 15
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "var_",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 106,
+      "start_column": 1,
+      "end_line": 106,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Assign",
+    "value": "=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 106,
+      "start_column": 6,
+      "end_line": 106,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "True",
+    "value": "true",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 106,
+      "start_column": 8,
+      "end_line": 106,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 106,
+      "start_column": 12,
+      "end_line": 106,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "_123_",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 107,
+      "start_column": 1,
+      "end_line": 107,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Assign",
+    "value": "=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 107,
+      "start_column": 7,
+      "end_line": 107,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "456",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 107,
+      "start_column": 9,
+      "end_line": 107,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 107,
+      "start_column": 12,
+      "end_line": 107,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "result",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 110,
+      "start_column": 1,
+      "end_line": 110,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "Assign",
+    "value": "=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 110,
+      "start_column": 7,
+      "end_line": 110,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "LParen",
+    "value": "(",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 110,
+      "start_column": 8,
+      "end_line": 110,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "a",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 110,
+      "start_column": 9,
+      "end_line": 110,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "Plus",
+    "value": "+",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 110,
+      "start_column": 10,
+      "end_line": 110,
+      "end_column": 11
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "b",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 110,
+      "start_column": 11,
+      "end_line": 110,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "RParen",
+    "value": ")",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 110,
+      "start_column": 12,
+      "end_line": 110,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "Star",
+    "value": "*",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 110,
+      "start_column": 13,
+      "end_line": 110,
+      "end_column": 14
+    }
+  },
+  {
+    "type": "LParen",
+    "value": "(",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 110,
+      "start_column": 14,
+      "end_line": 110,
+      "end_column": 15
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "c",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 110,
+      "start_column": 15,
+      "end_line": 110,
+      "end_column": 16
+    }
+  },
+  {
+    "type": "Minus",
+    "value": "-",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 110,
+      "start_column": 16,
+      "end_line": 110,
+      "end_column": 17
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "d",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 110,
+      "start_column": 17,
+      "end_line": 110,
+      "end_column": 18
+    }
+  },
+  {
+    "type": "RParen",
+    "value": ")",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 110,
+      "start_column": 18,
+      "end_line": 110,
+      "end_column": 19
+    }
+  },
+  {
+    "type": "Slash",
+    "value": "/",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 110,
+      "start_column": 19,
+      "end_line": 110,
+      "end_column": 20
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "e",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 110,
+      "start_column": 20,
+      "end_line": 110,
+      "end_column": 21
+    }
+  },
+  {
+    "type": "Percent",
+    "value": "%",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 110,
+      "start_column": 21,
+      "end_line": 110,
+      "end_column": 22
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "f",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 110,
+      "start_column": 22,
+      "end_line": 110,
+      "end_column": 23
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 110,
+      "start_column": 23,
+      "end_line": 110,
+      "end_column": 24
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "array",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 111,
+      "start_column": 1,
+      "end_line": 111,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "LBracket",
+    "value": "[",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 111,
+      "start_column": 6,
+      "end_line": 111,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "index",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 111,
+      "start_column": 7,
+      "end_line": 111,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "RBracket",
+    "value": "]",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 111,
+      "start_column": 12,
+      "end_line": 111,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "Assign",
+    "value": "=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 111,
+      "start_column": 13,
+      "end_line": 111,
+      "end_column": 14
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "value",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 111,
+      "start_column": 14,
+      "end_line": 111,
+      "end_column": 19
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 111,
+      "start_column": 19,
+      "end_line": 111,
+      "end_column": 20
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "obj",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 112,
+      "start_column": 1,
+      "end_line": 112,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 112,
+      "start_column": 4,
+      "end_line": 112,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "field",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 112,
+      "start_column": 5,
+      "end_line": 112,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 112,
+      "start_column": 10,
+      "end_line": 112,
+      "end_column": 11
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "method",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 112,
+      "start_column": 11,
+      "end_line": 112,
+      "end_column": 17
+    }
+  },
+  {
+    "type": "LParen",
+    "value": "(",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 112,
+      "start_column": 17,
+      "end_line": 112,
+      "end_column": 18
+    }
+  },
+  {
+    "type": "RParen",
+    "value": ")",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 112,
+      "start_column": 18,
+      "end_line": 112,
+      "end_column": 19
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 112,
+      "start_column": 19,
+      "end_line": 112,
+      "end_column": 20
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "0",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 115,
+      "start_column": 1,
+      "end_line": 115,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 115,
+      "start_column": 2,
+      "end_line": 115,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 115,
+      "start_column": 3,
+      "end_line": 115,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "10",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 115,
+      "start_column": 4,
+      "end_line": 115,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "0",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 116,
+      "start_column": 1,
+      "end_line": 116,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "RangeExclusive",
+    "value": "..<",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 116,
+      "start_column": 2,
+      "end_line": 116,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "10",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 116,
+      "start_column": 5,
+      "end_line": 116,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "start",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 117,
+      "start_column": 1,
+      "end_line": 117,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "RangeInclusive",
+    "value": "..=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 117,
+      "start_column": 6,
+      "end_line": 117,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "end",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 117,
+      "start_column": 9,
+      "end_line": 117,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "begin",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 118,
+      "start_column": 1,
+      "end_line": 118,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "RangeExclusive",
+    "value": "..<",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 118,
+      "start_column": 6,
+      "end_line": 118,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "finish",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 118,
+      "start_column": 9,
+      "end_line": 118,
+      "end_column": 15
+    }
+  },
+  {
+    "type": "If",
+    "value": "if",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 121,
+      "start_column": 1,
+      "end_line": 121,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "True",
+    "value": "true",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 121,
+      "start_column": 4,
+      "end_line": 121,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "And",
+    "value": "and",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 121,
+      "start_column": 9,
+      "end_line": 121,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "False",
+    "value": "false",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 121,
+      "start_column": 13,
+      "end_line": 121,
+      "end_column": 18
+    }
+  },
+  {
+    "type": "Or",
+    "value": "or",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 121,
+      "start_column": 19,
+      "end_line": 121,
+      "end_column": 21
+    }
+  },
+  {
+    "type": "Not",
+    "value": "not",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 121,
+      "start_column": 22,
+      "end_line": 121,
+      "end_column": 25
+    }
+  },
+  {
+    "type": "True",
+    "value": "true",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 121,
+      "start_column": 26,
+      "end_line": 121,
+      "end_column": 30
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 121,
+      "start_column": 31,
+      "end_line": 121,
+      "end_column": 32
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 121,
+      "start_column": 32,
+      "end_line": 121,
+      "end_column": 33
+    }
+  },
+  {
+    "type": "Match",
+    "value": "match",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 122,
+      "start_column": 1,
+      "end_line": 122,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "result",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 122,
+      "start_column": 7,
+      "end_line": 122,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 122,
+      "start_column": 14,
+      "end_line": 122,
+      "end_column": 15
+    }
+  },
+  {
+    "type": "True",
+    "value": "true",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 123,
+      "start_column": 5,
+      "end_line": 123,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "Arrow",
+    "value": "->",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 123,
+      "start_column": 10,
+      "end_line": 123,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "yes",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 123,
+      "start_column": 13,
+      "end_line": 123,
+      "end_column": 16
+    }
+  },
+  {
+    "type": "Comma",
+    "value": ",",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 123,
+      "start_column": 18,
+      "end_line": 123,
+      "end_column": 19
+    }
+  },
+  {
+    "type": "False",
+    "value": "false",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 124,
+      "start_column": 5,
+      "end_line": 124,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "Arrow",
+    "value": "->",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 124,
+      "start_column": 11,
+      "end_line": 124,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "no",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 124,
+      "start_column": 14,
+      "end_line": 124,
+      "end_column": 16
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 125,
+      "start_column": 1,
+      "end_line": 125,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "x",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 128,
+      "start_column": 1,
+      "end_line": 128,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Assign",
+    "value": "=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 128,
+      "start_column": 2,
+      "end_line": 128,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "y",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 128,
+      "start_column": 3,
+      "end_line": 128,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 128,
+      "start_column": 4,
+      "end_line": 128,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "a",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 129,
+      "start_column": 1,
+      "end_line": 129,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Eq",
+    "value": "==",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 129,
+      "start_column": 2,
+      "end_line": 129,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "b",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 129,
+      "start_column": 4,
+      "end_line": 129,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 129,
+      "start_column": 5,
+      "end_line": 129,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "c",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 130,
+      "start_column": 1,
+      "end_line": 130,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Ne",
+    "value": "!=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 130,
+      "start_column": 2,
+      "end_line": 130,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "d",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 130,
+      "start_column": 4,
+      "end_line": 130,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 130,
+      "start_column": 5,
+      "end_line": 130,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "e",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 131,
+      "start_column": 1,
+      "end_line": 131,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Gt",
+    "value": ">",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 131,
+      "start_column": 2,
+      "end_line": 131,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "f",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 131,
+      "start_column": 3,
+      "end_line": 131,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 131,
+      "start_column": 4,
+      "end_line": 131,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "g",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 132,
+      "start_column": 1,
+      "end_line": 132,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Lt",
+    "value": "<",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 132,
+      "start_column": 2,
+      "end_line": 132,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "h",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 132,
+      "start_column": 3,
+      "end_line": 132,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 132,
+      "start_column": 4,
+      "end_line": 132,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "i",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 133,
+      "start_column": 1,
+      "end_line": 133,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Ge",
+    "value": ">=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 133,
+      "start_column": 2,
+      "end_line": 133,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "j",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 133,
+      "start_column": 4,
+      "end_line": 133,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 133,
+      "start_column": 5,
+      "end_line": 133,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "k",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 134,
+      "start_column": 1,
+      "end_line": 134,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Le",
+    "value": "<=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 134,
+      "start_column": 2,
+      "end_line": 134,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "l",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 134,
+      "start_column": 4,
+      "end_line": 134,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 134,
+      "start_column": 5,
+      "end_line": 134,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "func",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 137,
+      "start_column": 1,
+      "end_line": 137,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "LParen",
+    "value": "(",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 137,
+      "start_column": 5,
+      "end_line": 137,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "arg1",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 137,
+      "start_column": 6,
+      "end_line": 137,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "Comma",
+    "value": ",",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 137,
+      "start_column": 10,
+      "end_line": 137,
+      "end_column": 11
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "arg2",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 137,
+      "start_column": 11,
+      "end_line": 137,
+      "end_column": 15
+    }
+  },
+  {
+    "type": "Comma",
+    "value": ",",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 137,
+      "start_column": 15,
+      "end_line": 137,
+      "end_column": 16
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "arg3",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 137,
+      "start_column": 16,
+      "end_line": 137,
+      "end_column": 20
+    }
+  },
+  {
+    "type": "RParen",
+    "value": ")",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 137,
+      "start_column": 20,
+      "end_line": 137,
+      "end_column": 21
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 137,
+      "start_column": 21,
+      "end_line": 137,
+      "end_column": 22
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "object",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 138,
+      "start_column": 1,
+      "end_line": 138,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 138,
+      "start_column": 7,
+      "end_line": 138,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "method",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 138,
+      "start_column": 8,
+      "end_line": 138,
+      "end_column": 14
+    }
+  },
+  {
+    "type": "LParen",
+    "value": "(",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 138,
+      "start_column": 14,
+      "end_line": 138,
+      "end_column": 15
+    }
+  },
+  {
+    "type": "RParen",
+    "value": ")",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 138,
+      "start_column": 15,
+      "end_line": 138,
+      "end_column": 16
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 138,
+      "start_column": 16,
+      "end_line": 138,
+      "end_column": 17
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "chain",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 138,
+      "start_column": 17,
+      "end_line": 138,
+      "end_column": 22
+    }
+  },
+  {
+    "type": "LParen",
+    "value": "(",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 138,
+      "start_column": 22,
+      "end_line": 138,
+      "end_column": 23
+    }
+  },
+  {
+    "type": "RParen",
+    "value": ")",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 138,
+      "start_column": 23,
+      "end_line": 138,
+      "end_column": 24
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 138,
+      "start_column": 24,
+      "end_line": 138,
+      "end_column": 25
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "call",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 138,
+      "start_column": 25,
+      "end_line": 138,
+      "end_column": 29
+    }
+  },
+  {
+    "type": "LParen",
+    "value": "(",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 138,
+      "start_column": 29,
+      "end_line": 138,
+      "end_column": 30
+    }
+  },
+  {
+    "type": "RParen",
+    "value": ")",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 138,
+      "start_column": 30,
+      "end_line": 138,
+      "end_column": 31
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 138,
+      "start_column": 31,
+      "end_line": 138,
+      "end_column": 32
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "arr",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 141,
+      "start_column": 1,
+      "end_line": 141,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "LBracket",
+    "value": "[",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 141,
+      "start_column": 4,
+      "end_line": 141,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "0",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 141,
+      "start_column": 5,
+      "end_line": 141,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "RBracket",
+    "value": "]",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 141,
+      "start_column": 6,
+      "end_line": 141,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "LBracket",
+    "value": "[",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 141,
+      "start_column": 7,
+      "end_line": 141,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "1",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 141,
+      "start_column": 8,
+      "end_line": 141,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "RBracket",
+    "value": "]",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 141,
+      "start_column": 9,
+      "end_line": 141,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "LBracket",
+    "value": "[",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 141,
+      "start_column": 10,
+      "end_line": 141,
+      "end_column": 11
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "2",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 141,
+      "start_column": 11,
+      "end_line": 141,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "RBracket",
+    "value": "]",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 141,
+      "start_column": 12,
+      "end_line": 141,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 141,
+      "start_column": 13,
+      "end_line": 141,
+      "end_column": 14
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "point",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 142,
+      "start_column": 1,
+      "end_line": 142,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 142,
+      "start_column": 6,
+      "end_line": 142,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "x",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 142,
+      "start_column": 7,
+      "end_line": 142,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 142,
+      "start_column": 8,
+      "end_line": 142,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "abs",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 142,
+      "start_column": 9,
+      "end_line": 142,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "LParen",
+    "value": "(",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 142,
+      "start_column": 12,
+      "end_line": 142,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "RParen",
+    "value": ")",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 142,
+      "start_column": 13,
+      "end_line": 142,
+      "end_column": 14
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 142,
+      "start_column": 14,
+      "end_line": 142,
+      "end_column": 15
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "sqrt",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 142,
+      "start_column": 15,
+      "end_line": 142,
+      "end_column": 19
+    }
+  },
+  {
+    "type": "LParen",
+    "value": "(",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 142,
+      "start_column": 19,
+      "end_line": 142,
+      "end_column": 20
+    }
+  },
+  {
+    "type": "RParen",
+    "value": ")",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 142,
+      "start_column": 20,
+      "end_line": 142,
+      "end_column": 21
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 142,
+      "start_column": 21,
+      "end_line": 142,
+      "end_column": 22
+    }
+  },
+  {
+    "type": "Fn",
+    "value": "fn",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 145,
+      "start_column": 1,
+      "end_line": 145,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "complex_function",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 145,
+      "start_column": 4,
+      "end_line": 145,
+      "end_column": 20
+    }
+  },
+  {
+    "type": "LParen",
+    "value": "(",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 145,
+      "start_column": 20,
+      "end_line": 145,
+      "end_column": 21
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "param1",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 146,
+      "start_column": 5,
+      "end_line": 146,
+      "end_column": 11
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 146,
+      "start_column": 11,
+      "end_line": 146,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "Struct",
+    "value": "struct",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 146,
+      "start_column": 13,
+      "end_line": 146,
+      "end_column": 19
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 146,
+      "start_column": 20,
+      "end_line": 146,
+      "end_column": 21
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "x",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 146,
+      "start_column": 22,
+      "end_line": 146,
+      "end_column": 23
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 146,
+      "start_column": 23,
+      "end_line": 146,
+      "end_column": 24
+    }
+  },
+  {
+    "type": "I32",
+    "value": "i32",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 146,
+      "start_column": 25,
+      "end_line": 146,
+      "end_column": 28
+    }
+  },
+  {
+    "type": "Comma",
+    "value": ",",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 146,
+      "start_column": 28,
+      "end_line": 146,
+      "end_column": 29
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "y",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 146,
+      "start_column": 30,
+      "end_line": 146,
+      "end_column": 31
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 146,
+      "start_column": 31,
+      "end_line": 146,
+      "end_column": 32
+    }
+  },
+  {
+    "type": "F32",
+    "value": "f32",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 146,
+      "start_column": 33,
+      "end_line": 146,
+      "end_column": 36
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 146,
+      "start_column": 37,
+      "end_line": 146,
+      "end_column": 38
+    }
+  },
+  {
+    "type": "Comma",
+    "value": ",",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 146,
+      "start_column": 38,
+      "end_line": 146,
+      "end_column": 39
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "param2",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 147,
+      "start_column": 5,
+      "end_line": 147,
+      "end_column": 11
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 147,
+      "start_column": 11,
+      "end_line": 147,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "Union",
+    "value": "union",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 147,
+      "start_column": 13,
+      "end_line": 147,
+      "end_column": 18
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 147,
+      "start_column": 19,
+      "end_line": 147,
+      "end_column": 20
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "A",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 147,
+      "start_column": 21,
+      "end_line": 147,
+      "end_column": 22
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 147,
+      "start_column": 22,
+      "end_line": 147,
+      "end_column": 23
+    }
+  },
+  {
+    "type": "Bool",
+    "value": "bool",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 147,
+      "start_column": 24,
+      "end_line": 147,
+      "end_column": 28
+    }
+  },
+  {
+    "type": "Comma",
+    "value": ",",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 147,
+      "start_column": 28,
+      "end_line": 147,
+      "end_column": 29
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "B",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 147,
+      "start_column": 30,
+      "end_line": 147,
+      "end_column": 31
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 147,
+      "start_column": 31,
+      "end_line": 147,
+      "end_column": 32
+    }
+  },
+  {
+    "type": "Str",
+    "value": "str",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 147,
+      "start_column": 33,
+      "end_line": 147,
+      "end_column": 36
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 147,
+      "start_column": 37,
+      "end_line": 147,
+      "end_column": 38
+    }
+  },
+  {
+    "type": "RParen",
+    "value": ")",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 148,
+      "start_column": 1,
+      "end_line": 148,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Arrow",
+    "value": "->",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 148,
+      "start_column": 3,
+      "end_line": 148,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "Result",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 148,
+      "start_column": 6,
+      "end_line": 148,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "Lt",
+    "value": "<",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 148,
+      "start_column": 12,
+      "end_line": 148,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "I32",
+    "value": "i32",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 148,
+      "start_column": 13,
+      "end_line": 148,
+      "end_column": 16
+    }
+  },
+  {
+    "type": "Comma",
+    "value": ",",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 148,
+      "start_column": 16,
+      "end_line": 148,
+      "end_column": 17
+    }
+  },
+  {
+    "type": "Str",
+    "value": "str",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 148,
+      "start_column": 18,
+      "end_line": 148,
+      "end_column": 21
+    }
+  },
+  {
+    "type": "Gt",
+    "value": ">",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 148,
+      "start_column": 21,
+      "end_line": 148,
+      "end_column": 22
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 148,
+      "start_column": 23,
+      "end_line": 148,
+      "end_column": 24
+    }
+  },
+  {
+    "type": "Match",
+    "value": "match",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 149,
+      "start_column": 5,
+      "end_line": 149,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "param1",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 149,
+      "start_column": 11,
+      "end_line": 149,
+      "end_column": 17
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 149,
+      "start_column": 18,
+      "end_line": 149,
+      "end_column": 19
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 150,
+      "start_column": 9,
+      "end_line": 150,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "x",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 150,
+      "start_column": 11,
+      "end_line": 150,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 150,
+      "start_column": 12,
+      "end_line": 150,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "0",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 150,
+      "start_column": 14,
+      "end_line": 150,
+      "end_column": 15
+    }
+  },
+  {
+    "type": "Comma",
+    "value": ",",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 150,
+      "start_column": 15,
+      "end_line": 150,
+      "end_column": 16
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "y",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 150,
+      "start_column": 17,
+      "end_line": 150,
+      "end_column": 18
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 150,
+      "start_column": 18,
+      "end_line": 150,
+      "end_column": 19
+    }
+  },
+  {
+    "type": "Underscore",
+    "value": "_",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 150,
+      "start_column": 20,
+      "end_line": 150,
+      "end_column": 21
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 150,
+      "start_column": 22,
+      "end_line": 150,
+      "end_column": 23
+    }
+  },
+  {
+    "type": "Arrow",
+    "value": "->",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 150,
+      "start_column": 24,
+      "end_line": 150,
+      "end_column": 26
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "Result",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 150,
+      "start_column": 27,
+      "end_line": 150,
+      "end_column": 33
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 150,
+      "start_column": 33,
+      "end_line": 150,
+      "end_column": 34
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "Err",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 150,
+      "start_column": 34,
+      "end_line": 150,
+      "end_column": 37
+    }
+  },
+  {
+    "type": "LParen",
+    "value": "(",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 150,
+      "start_column": 37,
+      "end_line": 150,
+      "end_column": 38
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "zero x",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 150,
+      "start_column": 38,
+      "end_line": 150,
+      "end_column": 44
+    }
+  },
+  {
+    "type": "RParen",
+    "value": ")",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 150,
+      "start_column": 46,
+      "end_line": 150,
+      "end_column": 47
+    }
+  },
+  {
+    "type": "Comma",
+    "value": ",",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 150,
+      "start_column": 47,
+      "end_line": 150,
+      "end_column": 48
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 151,
+      "start_column": 9,
+      "end_line": 151,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "x",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 151,
+      "start_column": 11,
+      "end_line": 151,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "Comma",
+    "value": ",",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 151,
+      "start_column": 12,
+      "end_line": 151,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "y",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 151,
+      "start_column": 14,
+      "end_line": 151,
+      "end_column": 15
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 151,
+      "start_column": 16,
+      "end_line": 151,
+      "end_column": 17
+    }
+  },
+  {
+    "type": "If",
+    "value": "if",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 151,
+      "start_column": 18,
+      "end_line": 151,
+      "end_column": 20
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "x",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 151,
+      "start_column": 21,
+      "end_line": 151,
+      "end_column": 22
+    }
+  },
+  {
+    "type": "Gt",
+    "value": ">",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 151,
+      "start_column": 23,
+      "end_line": 151,
+      "end_column": 24
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "0",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 151,
+      "start_column": 25,
+      "end_line": 151,
+      "end_column": 26
+    }
+  },
+  {
+    "type": "Arrow",
+    "value": "->",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 151,
+      "start_column": 27,
+      "end_line": 151,
+      "end_column": 29
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 151,
+      "start_column": 30,
+      "end_line": 151,
+      "end_column": 31
+    }
+  },
+  {
+    "type": "For",
+    "value": "for",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 152,
+      "start_column": 13,
+      "end_line": 152,
+      "end_column": 16
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "i",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 152,
+      "start_column": 17,
+      "end_line": 152,
+      "end_column": 18
+    }
+  },
+  {
+    "type": "In",
+    "value": "in",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 152,
+      "start_column": 19,
+      "end_line": 152,
+      "end_column": 21
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "0",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 152,
+      "start_column": 22,
+      "end_line": 152,
+      "end_column": 23
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 152,
+      "start_column": 23,
+      "end_line": 152,
+      "end_column": 24
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 152,
+      "start_column": 24,
+      "end_line": 152,
+      "end_column": 25
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "x",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 152,
+      "start_column": 25,
+      "end_line": 152,
+      "end_column": 26
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 152,
+      "start_column": 27,
+      "end_line": 152,
+      "end_column": 28
+    }
+  },
+  {
+    "type": "If",
+    "value": "if",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 153,
+      "start_column": 17,
+      "end_line": 153,
+      "end_column": 19
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "i",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 153,
+      "start_column": 20,
+      "end_line": 153,
+      "end_column": 21
+    }
+  },
+  {
+    "type": "Percent",
+    "value": "%",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 153,
+      "start_column": 22,
+      "end_line": 153,
+      "end_column": 23
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "2",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 153,
+      "start_column": 24,
+      "end_line": 153,
+      "end_column": 25
+    }
+  },
+  {
+    "type": "Eq",
+    "value": "==",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 153,
+      "start_column": 26,
+      "end_line": 153,
+      "end_column": 28
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "0",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 153,
+      "start_column": 29,
+      "end_line": 153,
+      "end_column": 30
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 153,
+      "start_column": 31,
+      "end_line": 153,
+      "end_column": 32
+    }
+  },
+  {
+    "type": "Continue",
+    "value": "continue",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 154,
+      "start_column": 21,
+      "end_line": 154,
+      "end_column": 29
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 154,
+      "start_column": 29,
+      "end_line": 154,
+      "end_column": 30
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 155,
+      "start_column": 17,
+      "end_line": 155,
+      "end_column": 18
+    }
+  },
+  {
+    "type": "Return",
+    "value": "return",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 156,
+      "start_column": 17,
+      "end_line": 156,
+      "end_column": 23
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "Result",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 156,
+      "start_column": 24,
+      "end_line": 156,
+      "end_column": 30
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 156,
+      "start_column": 30,
+      "end_line": 156,
+      "end_column": 31
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "Ok",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 156,
+      "start_column": 31,
+      "end_line": 156,
+      "end_column": 33
+    }
+  },
+  {
+    "type": "LParen",
+    "value": "(",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 156,
+      "start_column": 33,
+      "end_line": 156,
+      "end_column": 34
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "i",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 156,
+      "start_column": 34,
+      "end_line": 156,
+      "end_column": 35
+    }
+  },
+  {
+    "type": "Star",
+    "value": "*",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 156,
+      "start_column": 36,
+      "end_line": 156,
+      "end_column": 37
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "y",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 156,
+      "start_column": 38,
+      "end_line": 156,
+      "end_column": 39
+    }
+  },
+  {
+    "type": "As",
+    "value": "as",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 156,
+      "start_column": 40,
+      "end_line": 156,
+      "end_column": 42
+    }
+  },
+  {
+    "type": "I32",
+    "value": "i32",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 156,
+      "start_column": 43,
+      "end_line": 156,
+      "end_column": 46
+    }
+  },
+  {
+    "type": "RParen",
+    "value": ")",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 156,
+      "start_column": 46,
+      "end_line": 156,
+      "end_column": 47
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 156,
+      "start_column": 47,
+      "end_line": 156,
+      "end_column": 48
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 157,
+      "start_column": 13,
+      "end_line": 157,
+      "end_column": 14
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 158,
+      "start_column": 9,
+      "end_line": 158,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "Comma",
+    "value": ",",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 158,
+      "start_column": 10,
+      "end_line": 158,
+      "end_column": 11
+    }
+  },
+  {
+    "type": "Underscore",
+    "value": "_",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 159,
+      "start_column": 9,
+      "end_line": 159,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "Arrow",
+    "value": "->",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 159,
+      "start_column": 11,
+      "end_line": 159,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "Result",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 159,
+      "start_column": 14,
+      "end_line": 159,
+      "end_column": 20
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 159,
+      "start_column": 20,
+      "end_line": 159,
+      "end_column": 21
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "Ok",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 159,
+      "start_column": 21,
+      "end_line": 159,
+      "end_column": 23
+    }
+  },
+  {
+    "type": "LParen",
+    "value": "(",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 159,
+      "start_column": 23,
+      "end_line": 159,
+      "end_column": 24
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "42",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 159,
+      "start_column": 24,
+      "end_line": 159,
+      "end_column": 26
+    }
+  },
+  {
+    "type": "RParen",
+    "value": ")",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 159,
+      "start_column": 26,
+      "end_line": 159,
+      "end_column": 27
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 160,
+      "start_column": 5,
+      "end_line": 160,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 161,
+      "start_column": 1,
+      "end_line": 161,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Import",
+    "value": "import",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 164,
+      "start_column": 1,
+      "end_line": 164,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "std",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 164,
+      "start_column": 8,
+      "end_line": 164,
+      "end_column": 11
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 164,
+      "start_column": 11,
+      "end_line": 164,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "io",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 164,
+      "start_column": 12,
+      "end_line": 164,
+      "end_column": 14
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 164,
+      "start_column": 14,
+      "end_line": 164,
+      "end_column": 15
+    }
+  },
+  {
+    "type": "From",
+    "value": "from",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 165,
+      "start_column": 1,
+      "end_line": 165,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "std",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 165,
+      "start_column": 6,
+      "end_line": 165,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 165,
+      "start_column": 9,
+      "end_line": 165,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "collections",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 165,
+      "start_column": 10,
+      "end_line": 165,
+      "end_column": 21
+    }
+  },
+  {
+    "type": "Import",
+    "value": "import",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 165,
+      "start_column": 22,
+      "end_line": 165,
+      "end_column": 28
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "Vector",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 165,
+      "start_column": 29,
+      "end_line": 165,
+      "end_column": 35
+    }
+  },
+  {
+    "type": "Comma",
+    "value": ",",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 165,
+      "start_column": 35,
+      "end_line": 165,
+      "end_column": 36
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "HashMap",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 165,
+      "start_column": 37,
+      "end_line": 165,
+      "end_column": 44
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 165,
+      "start_column": 44,
+      "end_line": 165,
+      "end_column": 45
+    }
+  },
+  {
+    "type": "Import",
+    "value": "import",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 166,
+      "start_column": 1,
+      "end_line": 166,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "math",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 166,
+      "start_column": 8,
+      "end_line": 166,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "As",
+    "value": "as",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 166,
+      "start_column": 13,
+      "end_line": 166,
+      "end_column": 15
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "m",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 166,
+      "start_column": 16,
+      "end_line": 166,
+      "end_column": 17
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 166,
+      "start_column": 17,
+      "end_line": 166,
+      "end_column": 18
+    }
+  },
+  {
+    "type": "Const",
+    "value": "const",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 169,
+      "start_column": 1,
+      "end_line": 169,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "MAX_SIZE",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 169,
+      "start_column": 7,
+      "end_line": 169,
+      "end_column": 15
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 169,
+      "start_column": 15,
+      "end_line": 169,
+      "end_column": 16
+    }
+  },
+  {
+    "type": "Usize",
+    "value": "usize",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 169,
+      "start_column": 17,
+      "end_line": 169,
+      "end_column": 22
+    }
+  },
+  {
+    "type": "Assign",
+    "value": "=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 169,
+      "start_column": 23,
+      "end_line": 169,
+      "end_column": 24
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "1000",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 169,
+      "start_column": 25,
+      "end_line": 169,
+      "end_column": 29
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 169,
+      "start_column": 29,
+      "end_line": 169,
+      "end_column": 30
+    }
+  },
+  {
+    "type": "Const",
+    "value": "const",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 170,
+      "start_column": 1,
+      "end_line": 170,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "PI",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 170,
+      "start_column": 7,
+      "end_line": 170,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 170,
+      "start_column": 9,
+      "end_line": 170,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "F64",
+    "value": "f64",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 170,
+      "start_column": 11,
+      "end_line": 170,
+      "end_column": 14
+    }
+  },
+  {
+    "type": "Assign",
+    "value": "=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 170,
+      "start_column": 15,
+      "end_line": 170,
+      "end_column": 16
+    }
+  },
+  {
+    "type": "FloatLiteral",
+    "value": "3.141592653589793",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 170,
+      "start_column": 17,
+      "end_line": 170,
+      "end_column": 34
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 170,
+      "start_column": 34,
+      "end_line": 170,
+      "end_column": 35
+    }
+  },
+  {
+    "type": "Const",
+    "value": "const",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 171,
+      "start_column": 1,
+      "end_line": 171,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "GREETING",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 171,
+      "start_column": 7,
+      "end_line": 171,
+      "end_column": 15
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 171,
+      "start_column": 15,
+      "end_line": 171,
+      "end_column": 16
+    }
+  },
+  {
+    "type": "Str",
+    "value": "str",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 171,
+      "start_column": 17,
+      "end_line": 171,
+      "end_column": 20
+    }
+  },
+  {
+    "type": "Assign",
+    "value": "=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 171,
+      "start_column": 21,
+      "end_line": 171,
+      "end_column": 22
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "Hello, World!",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 171,
+      "start_column": 23,
+      "end_line": 171,
+      "end_column": 36
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 171,
+      "start_column": 38,
+      "end_line": 171,
+      "end_column": 39
+    }
+  },
+  {
+    "type": "Const",
+    "value": "const",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 172,
+      "start_column": 1,
+      "end_line": 172,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "ENABLED",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 172,
+      "start_column": 7,
+      "end_line": 172,
+      "end_column": 14
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 172,
+      "start_column": 14,
+      "end_line": 172,
+      "end_column": 15
+    }
+  },
+  {
+    "type": "Bool",
+    "value": "bool",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 172,
+      "start_column": 16,
+      "end_line": 172,
+      "end_column": 20
+    }
+  },
+  {
+    "type": "Assign",
+    "value": "=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 172,
+      "start_column": 21,
+      "end_line": 172,
+      "end_column": 22
+    }
+  },
+  {
+    "type": "True",
+    "value": "true",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 172,
+      "start_column": 23,
+      "end_line": 172,
+      "end_column": 27
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 172,
+      "start_column": 27,
+      "end_line": 172,
+      "end_column": 28
+    }
+  },
+  {
+    "type": "While",
+    "value": "while",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 175,
+      "start_column": 1,
+      "end_line": 175,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "condition",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 175,
+      "start_column": 7,
+      "end_line": 175,
+      "end_column": 16
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 175,
+      "start_column": 17,
+      "end_line": 175,
+      "end_column": 18
+    }
+  },
+  {
+    "type": "Break",
+    "value": "break",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 176,
+      "start_column": 5,
+      "end_line": 176,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 176,
+      "start_column": 10,
+      "end_line": 176,
+      "end_column": 11
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 177,
+      "start_column": 1,
+      "end_line": 177,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "For",
+    "value": "for",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 179,
+      "start_column": 1,
+      "end_line": 179,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "item",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 179,
+      "start_column": 5,
+      "end_line": 179,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "In",
+    "value": "in",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 179,
+      "start_column": 10,
+      "end_line": 179,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "collection",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 179,
+      "start_column": 13,
+      "end_line": 179,
+      "end_column": 23
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 179,
+      "start_column": 24,
+      "end_line": 179,
+      "end_column": 25
+    }
+  },
+  {
+    "type": "Continue",
+    "value": "continue",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 180,
+      "start_column": 5,
+      "end_line": 180,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 180,
+      "start_column": 13,
+      "end_line": 180,
+      "end_column": 14
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 181,
+      "start_column": 1,
+      "end_line": 181,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "result",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 184,
+      "start_column": 1,
+      "end_line": 184,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "Assign",
+    "value": "=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 184,
+      "start_column": 8,
+      "end_line": 184,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "a",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 184,
+      "start_column": 10,
+      "end_line": 184,
+      "end_column": 11
+    }
+  },
+  {
+    "type": "Plus",
+    "value": "+",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 184,
+      "start_column": 12,
+      "end_line": 184,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "b",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 185,
+      "start_column": 5,
+      "end_line": 185,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Star",
+    "value": "*",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 185,
+      "start_column": 7,
+      "end_line": 185,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "c",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 186,
+      "start_column": 5,
+      "end_line": 186,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Slash",
+    "value": "/",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 186,
+      "start_column": 7,
+      "end_line": 186,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "d",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 187,
+      "start_column": 5,
+      "end_line": 187,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 187,
+      "start_column": 6,
+      "end_line": 187,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "Fn",
+    "value": "fn",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 190,
+      "start_column": 1,
+      "end_line": 190,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "main",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 190,
+      "start_column": 4,
+      "end_line": 190,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "LParen",
+    "value": "(",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 190,
+      "start_column": 8,
+      "end_line": 190,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "RParen",
+    "value": ")",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 190,
+      "start_column": 9,
+      "end_line": 190,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 190,
+      "start_column": 11,
+      "end_line": 190,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 190,
+      "start_column": 12,
+      "end_line": 190,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 193,
+      "start_column": 1,
+      "end_line": 193,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 193,
+      "start_column": 2,
+      "end_line": 193,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 193,
+      "start_column": 3,
+      "end_line": 193,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "RBracket",
+    "value": "]",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 193,
+      "start_column": 4,
+      "end_line": 193,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "RBracket",
+    "value": "]",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 193,
+      "start_column": 5,
+      "end_line": 193,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "RBracket",
+    "value": "]",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 193,
+      "start_column": 6,
+      "end_line": 193,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 193,
+      "start_column": 7,
+      "end_line": 193,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "CLiteral",
+    "value": "printf(\"test\");",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 193,
+      "start_column": 9,
+      "end_line": 193,
+      "end_column": 24
+    }
+  },
+  {
+    "type": "FloatLiteral",
+    "value": "42.5",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 193,
+      "start_column": 33,
+      "end_line": 193,
+      "end_column": 37
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 193,
+      "start_column": 37,
+      "end_line": 193,
+      "end_column": 38
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "toString",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 193,
+      "start_column": 38,
+      "end_line": 193,
+      "end_column": 46
+    }
+  },
+  {
+    "type": "LParen",
+    "value": "(",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 193,
+      "start_column": 46,
+      "end_line": 193,
+      "end_column": 47
+    }
+  },
+  {
+    "type": "RParen",
+    "value": ")",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 193,
+      "start_column": 47,
+      "end_line": 193,
+      "end_column": 48
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "unclosed",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 193,
+      "start_column": 49,
+      "end_line": 193,
+      "end_column": 57
+    }
+  },
+  {
+    "type": "Eq",
+    "value": "==",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 194,
+      "start_column": 1,
+      "end_line": 194,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "Assign",
+    "value": "=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 194,
+      "start_column": 3,
+      "end_line": 194,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "Ne",
+    "value": "!=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 194,
+      "start_column": 4,
+      "end_line": 194,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Eq",
+    "value": "==",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 194,
+      "start_column": 6,
+      "end_line": 194,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "Lt",
+    "value": "<",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 194,
+      "start_column": 8,
+      "end_line": 194,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "Lt",
+    "value": "<",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 194,
+      "start_column": 9,
+      "end_line": 194,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "Gt",
+    "value": ">",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 194,
+      "start_column": 10,
+      "end_line": 194,
+      "end_column": 11
+    }
+  },
+  {
+    "type": "Gt",
+    "value": ">",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 194,
+      "start_column": 11,
+      "end_line": 194,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "Gt",
+    "value": ">",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 194,
+      "start_column": 12,
+      "end_line": 194,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "Ge",
+    "value": ">=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 194,
+      "start_column": 13,
+      "end_line": 194,
+      "end_column": 15
+    }
+  },
+  {
+    "type": "Underscore",
+    "value": "_",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 195,
+      "start_column": 1,
+      "end_line": 195,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Underscore",
+    "value": "_",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 195,
+      "start_column": 3,
+      "end_line": 195,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "Underscore",
+    "value": "_",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 195,
+      "start_column": 5,
+      "end_line": 195,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "identifier123",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 195,
+      "start_column": 7,
+      "end_line": 195,
+      "end_column": 20
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "_var_",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 195,
+      "start_column": 21,
+      "end_line": 195,
+      "end_column": 26
+    }
+  },
+  {
+    "type": "True",
+    "value": "true",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 195,
+      "start_column": 27,
+      "end_line": 195,
+      "end_column": 31
+    }
+  },
+  {
+    "type": "False",
+    "value": "false",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 195,
+      "start_column": 32,
+      "end_line": 195,
+      "end_column": 37
+    }
+  },
+  {
+    "type": "And",
+    "value": "and",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 195,
+      "start_column": 38,
+      "end_line": 195,
+      "end_column": 41
+    }
+  },
+  {
+    "type": "Or",
+    "value": "or",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 195,
+      "start_column": 42,
+      "end_line": 195,
+      "end_column": 44
+    }
+  },
+  {
+    "type": "Not",
+    "value": "not",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 195,
+      "start_column": 45,
+      "end_line": 195,
+      "end_column": 48
+    }
+  },
+  {
+    "type": "RangeInclusive",
+    "value": "..=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 196,
+      "start_column": 1,
+      "end_line": 196,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "RangeExclusive",
+    "value": "..<",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 196,
+      "start_column": 4,
+      "end_line": 196,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "RangeInclusive",
+    "value": "..=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 196,
+      "start_column": 7,
+      "end_line": 196,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "RangeExclusive",
+    "value": "..<",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 196,
+      "start_column": 10,
+      "end_line": 196,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "RangeInclusive",
+    "value": "..=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 196,
+      "start_column": 13,
+      "end_line": 196,
+      "end_column": 16
+    }
+  },
+  {
+    "type": "LParen",
+    "value": "(",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 197,
+      "start_column": 1,
+      "end_line": 197,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "RParen",
+    "value": ")",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 197,
+      "start_column": 2,
+      "end_line": 197,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 197,
+      "start_column": 3,
+      "end_line": 197,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 197,
+      "start_column": 4,
+      "end_line": 197,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Comma",
+    "value": ",",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 197,
+      "start_column": 5,
+      "end_line": 197,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 197,
+      "start_column": 6,
+      "end_line": 197,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "Comma",
+    "value": ",",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 197,
+      "start_column": 7,
+      "end_line": 197,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 197,
+      "start_column": 8,
+      "end_line": 197,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 197,
+      "start_column": 9,
+      "end_line": 197,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 197,
+      "start_column": 10,
+      "end_line": 197,
+      "end_column": 11
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 197,
+      "start_column": 11,
+      "end_line": 197,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "Semicolon",
+    "value": ";",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 197,
+      "start_column": 12,
+      "end_line": 197,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "Colon",
+    "value": ":",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 197,
+      "start_column": 13,
+      "end_line": 197,
+      "end_column": 14
+    }
+  },
+  {
+    "type": "Plus",
+    "value": "+",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 198,
+      "start_column": 1,
+      "end_line": 198,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Minus",
+    "value": "-",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 198,
+      "start_column": 2,
+      "end_line": 198,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "Star",
+    "value": "*",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 198,
+      "start_column": 3,
+      "end_line": 198,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "Slash",
+    "value": "/",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 198,
+      "start_column": 4,
+      "end_line": 198,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Percent",
+    "value": "%",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 198,
+      "start_column": 5,
+      "end_line": 198,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Ampersand",
+    "value": "&",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 198,
+      "start_column": 6,
+      "end_line": 198,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "Gt",
+    "value": ">",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 198,
+      "start_column": 7,
+      "end_line": 198,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "Ampersand",
+    "value": "&",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 198,
+      "start_column": 8,
+      "end_line": 198,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "Lt",
+    "value": "<",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 198,
+      "start_column": 9,
+      "end_line": 198,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "Ampersand",
+    "value": "&",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 198,
+      "start_column": 10,
+      "end_line": 198,
+      "end_column": 11
+    }
+  },
+  {
+    "type": "Lt",
+    "value": "<",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 198,
+      "start_column": 11,
+      "end_line": 198,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "Le",
+    "value": "<=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 198,
+      "start_column": 12,
+      "end_line": 198,
+      "end_column": 14
+    }
+  },
+  {
+    "type": "Ge",
+    "value": ">=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 198,
+      "start_column": 14,
+      "end_line": 198,
+      "end_column": 16
+    }
+  },
+  {
+    "type": "Ne",
+    "value": "!=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 198,
+      "start_column": 16,
+      "end_line": 198,
+      "end_column": 18
+    }
+  },
+  {
+    "type": "Slash",
+    "value": "/",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 199,
+      "start_column": 1,
+      "end_line": 199,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Star",
+    "value": "*",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 199,
+      "start_column": 2,
+      "end_line": 199,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "this",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 199,
+      "start_column": 4,
+      "end_line": 199,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "isn",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 199,
+      "start_column": 9,
+      "end_line": 199,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "Apostrophe",
+    "value": "'",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 199,
+      "start_column": 12,
+      "end_line": 199,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "t",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 199,
+      "start_column": 13,
+      "end_line": 199,
+      "end_column": 14
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "a",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 199,
+      "start_column": 15,
+      "end_line": 199,
+      "end_column": 16
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "valid",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 199,
+      "start_column": 17,
+      "end_line": 199,
+      "end_column": 22
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "comment",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 199,
+      "start_column": 23,
+      "end_line": 199,
+      "end_column": 30
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "but",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 199,
+      "start_column": 31,
+      "end_line": 199,
+      "end_column": 34
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "should",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 199,
+      "start_column": 35,
+      "end_line": 199,
+      "end_column": 41
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "lex",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 199,
+      "start_column": 42,
+      "end_line": 199,
+      "end_column": 45
+    }
+  },
+  {
+    "type": "As",
+    "value": "as",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 199,
+      "start_column": 46,
+      "end_line": 199,
+      "end_column": 48
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "individual",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 199,
+      "start_column": 49,
+      "end_line": 199,
+      "end_column": 59
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "tokens",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 199,
+      "start_column": 60,
+      "end_line": 199,
+      "end_column": 66
+    }
+  },
+  {
+    "type": "Star",
+    "value": "*",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 200,
+      "start_column": 1,
+      "end_line": 200,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Slash",
+    "value": "/",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 200,
+      "start_column": 2,
+      "end_line": 200,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "Struct",
+    "value": "struct",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 201,
+      "start_column": 1,
+      "end_line": 201,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 201,
+      "start_column": 7,
+      "end_line": 201,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "Union",
+    "value": "union",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 201,
+      "start_column": 8,
+      "end_line": 201,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 201,
+      "start_column": 13,
+      "end_line": 201,
+      "end_column": 14
+    }
+  },
+  {
+    "type": "Match",
+    "value": "match",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 201,
+      "start_column": 14,
+      "end_line": 201,
+      "end_column": 19
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 201,
+      "start_column": 19,
+      "end_line": 201,
+      "end_column": 20
+    }
+  },
+  {
+    "type": "Case",
+    "value": "case",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 201,
+      "start_column": 20,
+      "end_line": 201,
+      "end_column": 24
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 201,
+      "start_column": 24,
+      "end_line": 201,
+      "end_column": 25
+    }
+  },
+  {
+    "type": "If",
+    "value": "if",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 201,
+      "start_column": 25,
+      "end_line": 201,
+      "end_column": 27
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 201,
+      "start_column": 27,
+      "end_line": 201,
+      "end_column": 28
+    }
+  },
+  {
+    "type": "While",
+    "value": "while",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 201,
+      "start_column": 28,
+      "end_line": 201,
+      "end_column": 33
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 201,
+      "start_column": 33,
+      "end_line": 201,
+      "end_column": 34
+    }
+  },
+  {
+    "type": "For",
+    "value": "for",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 201,
+      "start_column": 34,
+      "end_line": 201,
+      "end_column": 37
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 201,
+      "start_column": 37,
+      "end_line": 201,
+      "end_column": 38
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "i8i16i32i64u8u16u32u64usizef32f64boolstr",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 202,
+      "start_column": 1,
+      "end_line": 202,
+      "end_column": 41
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "escaped\"quotes",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 203,
+      "start_column": 1,
+      "end_line": 203,
+      "end_column": 15
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "adjacent",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 203,
+      "start_column": 18,
+      "end_line": 203,
+      "end_column": 26
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "strings",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 203,
+      "start_column": 28,
+      "end_line": 203,
+      "end_column": 35
+    }
+  },
+  {
+    "type": "FloatLiteral",
+    "value": "123.456",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 204,
+      "start_column": 1,
+      "end_line": 204,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 204,
+      "start_column": 8,
+      "end_line": 204,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "789",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 204,
+      "start_column": 9,
+      "end_line": 204,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 204,
+      "start_column": 12,
+      "end_line": 204,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "abc",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 204,
+      "start_column": 13,
+      "end_line": 204,
+      "end_column": 16
+    }
+  },
+  {
+    "type": "Fn",
+    "value": "fn",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 205,
+      "start_column": 1,
+      "end_line": 205,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "LParen",
+    "value": "(",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 205,
+      "start_column": 3,
+      "end_line": 205,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "RParen",
+    "value": ")",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 205,
+      "start_column": 4,
+      "end_line": 205,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 205,
+      "start_column": 5,
+      "end_line": 205,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 205,
+      "start_column": 6,
+      "end_line": 205,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "LParen",
+    "value": "(",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 205,
+      "start_column": 7,
+      "end_line": 205,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "RParen",
+    "value": ")",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 205,
+      "start_column": 8,
+      "end_line": 205,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "LBracket",
+    "value": "[",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 205,
+      "start_column": 9,
+      "end_line": 205,
+      "end_column": 10
+    }
+  },
+  {
+    "type": "RBracket",
+    "value": "]",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 205,
+      "start_column": 10,
+      "end_line": 205,
+      "end_column": 11
+    }
+  },
+  {
+    "type": "LBracket",
+    "value": "[",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 205,
+      "start_column": 11,
+      "end_line": 205,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "RBracket",
+    "value": "]",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 205,
+      "start_column": 12,
+      "end_line": 205,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 205,
+      "start_column": 13,
+      "end_line": 205,
+      "end_column": 14
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 205,
+      "start_column": 14,
+      "end_line": 205,
+      "end_column": 15
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 205,
+      "start_column": 15,
+      "end_line": 205,
+      "end_column": 16
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 205,
+      "start_column": 16,
+      "end_line": 205,
+      "end_column": 17
+    }
+  },
+  {
+    "type": "Import",
+    "value": "import",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 206,
+      "start_column": 1,
+      "end_line": 206,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "From",
+    "value": "from",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 206,
+      "start_column": 8,
+      "end_line": 206,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "As",
+    "value": "as",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 206,
+      "start_column": 13,
+      "end_line": 206,
+      "end_column": 15
+    }
+  },
+  {
+    "type": "Type",
+    "value": "type",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 206,
+      "start_column": 16,
+      "end_line": 206,
+      "end_column": 20
+    }
+  },
+  {
+    "type": "Const",
+    "value": "const",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 206,
+      "start_column": 21,
+      "end_line": 206,
+      "end_column": 26
+    }
+  },
+  {
+    "type": "Return",
+    "value": "return",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 206,
+      "start_column": 27,
+      "end_line": 206,
+      "end_column": 33
+    }
+  },
+  {
+    "type": "Break",
+    "value": "break",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 206,
+      "start_column": 34,
+      "end_line": 206,
+      "end_column": 39
+    }
+  },
+  {
+    "type": "Continue",
+    "value": "continue",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 206,
+      "start_column": 40,
+      "end_line": 206,
+      "end_column": 48
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "nativenative",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 207,
+      "start_column": 1,
+      "end_line": 207,
+      "end_column": 13
+    }
+  },
+  {
+    "type": "LBrace",
+    "value": "{",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 207,
+      "start_column": 13,
+      "end_line": 207,
+      "end_column": 14
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "code",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 207,
+      "start_column": 14,
+      "end_line": 207,
+      "end_column": 18
+    }
+  },
+  {
+    "type": "RBrace",
+    "value": "}",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 207,
+      "start_column": 18,
+      "end_line": 207,
+      "end_column": 19
+    }
+  },
+  {
+    "type": "CLiteral",
+    "value": "more code",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 207,
+      "start_column": 19,
+      "end_line": 207,
+      "end_column": 28
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "\u03b1\u03b2\u03b3\u03b4\u03b5\u03b6\u03b7\u03b8",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 208,
+      "start_column": 1,
+      "end_line": 208,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "caf\u00e9",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 208,
+      "start_column": 10,
+      "end_line": 208,
+      "end_column": 14
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "na\u00efve",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 208,
+      "start_column": 15,
+      "end_line": 208,
+      "end_column": 20
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "r\u00e9sum\u00e9",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 208,
+      "start_column": 21,
+      "end_line": 208,
+      "end_column": 27
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "\u4f60\u597d\u4e16\u754c",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 208,
+      "start_column": 28,
+      "end_line": 208,
+      "end_column": 32
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "0",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 209,
+      "start_column": 1,
+      "end_line": 209,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "x",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 209,
+      "start_column": 2,
+      "end_line": 209,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "0",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 209,
+      "start_column": 4,
+      "end_line": 209,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "b",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 209,
+      "start_column": 5,
+      "end_line": 209,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "IntLiteral",
+    "value": "0",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 209,
+      "start_column": 7,
+      "end_line": 209,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "o",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 209,
+      "start_column": 8,
+      "end_line": 209,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 210,
+      "start_column": 1,
+      "end_line": 210,
+      "end_column": 2
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 210,
+      "start_column": 2,
+      "end_line": 210,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 210,
+      "start_column": 3,
+      "end_line": 210,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 210,
+      "start_column": 4,
+      "end_line": 210,
+      "end_column": 5
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 210,
+      "start_column": 5,
+      "end_line": 210,
+      "end_column": 6
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 210,
+      "start_column": 6,
+      "end_line": 210,
+      "end_column": 7
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 210,
+      "start_column": 7,
+      "end_line": 210,
+      "end_column": 8
+    }
+  },
+  {
+    "type": "Dot",
+    "value": ".",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 210,
+      "start_column": 8,
+      "end_line": 210,
+      "end_column": 9
+    }
+  },
+  {
+    "type": "RangeInclusive",
+    "value": "..=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 210,
+      "start_column": 9,
+      "end_line": 210,
+      "end_column": 12
+    }
+  },
+  {
+    "type": "Eq",
+    "value": "==",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 210,
+      "start_column": 12,
+      "end_line": 210,
+      "end_column": 14
+    }
+  },
+  {
+    "type": "Eq",
+    "value": "==",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 210,
+      "start_column": 14,
+      "end_line": 210,
+      "end_column": 16
+    }
+  },
+  {
+    "type": "Lt",
+    "value": "<",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 210,
+      "start_column": 16,
+      "end_line": 210,
+      "end_column": 17
+    }
+  },
+  {
+    "type": "Lt",
+    "value": "<",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 210,
+      "start_column": 17,
+      "end_line": 210,
+      "end_column": 18
+    }
+  },
+  {
+    "type": "Lt",
+    "value": "<",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 210,
+      "start_column": 18,
+      "end_line": 210,
+      "end_column": 19
+    }
+  },
+  {
+    "type": "Gt",
+    "value": ">",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 210,
+      "start_column": 19,
+      "end_line": 210,
+      "end_column": 20
+    }
+  },
+  {
+    "type": "Gt",
+    "value": ">",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 210,
+      "start_column": 20,
+      "end_line": 210,
+      "end_column": 21
+    }
+  },
+  {
+    "type": "Gt",
+    "value": ">",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 210,
+      "start_column": 21,
+      "end_line": 210,
+      "end_column": 22
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "string with\nnewlines\tand\tescapes",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 211,
+      "start_column": 1,
+      "end_line": 211,
+      "end_column": 33
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "string_with_underscores_and_123_numbers",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 212,
+      "start_column": 1,
+      "end_line": 212,
+      "end_column": 40
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "_trailing_underscores_",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 213,
+      "start_column": 1,
+      "end_line": 213,
+      "end_column": 23
+    }
+  },
+  {
+    "type": "Identifier",
+    "value": "__double__underscores__throughout__",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 214,
+      "start_column": 1,
+      "end_line": 214,
+      "end_column": 36
+    }
+  },
+  {
+    "type": "Eq",
+    "value": "==",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 215,
+      "start_column": 1,
+      "end_line": 215,
+      "end_column": 3
+    }
+  },
+  {
+    "type": "Assign",
+    "value": "=",
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 215,
+      "start_column": 3,
+      "end_line": 215,
+      "end_column": 4
+    }
+  },
+  {
+    "type": "Eof",
+    "value": null,
+    "span": {
+      "file_path": "test/test_tokens.sl",
+      "start_line": 215,
+      "start_column": 4,
+      "end_line": 215,
+      "end_column": 4
+    }
+  }
+]

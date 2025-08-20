@@ -1,0 +1,4963 @@
+{
+  "span": {
+    "file_path": "test/test_parser_comprehensive.sl",
+    "start_line": 1,
+    "start_column": 1,
+    "end_line": 219,
+    "end_column": 2
+  },
+  "statements": [
+    {
+      "span": {
+        "file_path": "test/test_parser_comprehensive.sl",
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 1,
+        "end_column": 10
+      },
+      "type": "ImportStatement",
+      "package": "os",
+      "items": null,
+      "alias": null
+    },
+    {
+      "span": {
+        "file_path": "test/test_parser_comprehensive.sl",
+        "start_line": 2,
+        "start_column": 1,
+        "end_line": 2,
+        "end_column": 37
+      },
+      "type": "ImportStatement",
+      "package": "io",
+      "items": [
+        "read_file",
+        "write_file"
+      ],
+      "alias": null
+    },
+    {
+      "span": {
+        "file_path": "test/test_parser_comprehensive.sl",
+        "start_line": 3,
+        "start_column": 1,
+        "end_line": 3,
+        "end_column": 17
+      },
+      "type": "ImportStatement",
+      "package": "math",
+      "items": null,
+      "alias": "m"
+    },
+    {
+      "span": {
+        "file_path": "test/test_parser_comprehensive.sl",
+        "start_line": 5,
+        "start_column": 1,
+        "end_line": 5,
+        "end_column": 49
+      },
+      "type": "NativeBlock",
+      "content": "\n    #include <stdio.h>\n    #include <stdlib.h>\n"
+    },
+    {
+      "span": {
+        "file_path": "test/test_parser_comprehensive.sl",
+        "start_line": 10,
+        "start_column": 1,
+        "end_line": 13,
+        "end_column": 2
+      },
+      "type": "StructDef",
+      "name": "Point",
+      "type_params": [
+        "T"
+      ],
+      "fields": [
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 11,
+            "start_column": 5,
+            "end_line": 11,
+            "end_column": 9
+          },
+          "type": "StructField",
+          "name": "x",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 11,
+              "start_column": 8,
+              "end_line": 11,
+              "end_column": 9
+            },
+            "type": "CustomType",
+            "name": "T",
+            "type_args": []
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 12,
+            "start_column": 5,
+            "end_line": 12,
+            "end_column": 9
+          },
+          "type": "StructField",
+          "name": "y",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 12,
+              "start_column": 8,
+              "end_line": 12,
+              "end_column": 9
+            },
+            "type": "CustomType",
+            "name": "T",
+            "type_args": []
+          }
+        }
+      ]
+    },
+    {
+      "span": {
+        "file_path": "test/test_parser_comprehensive.sl",
+        "start_line": 15,
+        "start_column": 1,
+        "end_line": 19,
+        "end_column": 2
+      },
+      "type": "StructDef",
+      "name": "Vector3",
+      "type_params": [],
+      "fields": [
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 16,
+            "start_column": 5,
+            "end_line": 16,
+            "end_column": 11
+          },
+          "type": "StructField",
+          "name": "x",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 16,
+              "start_column": 8,
+              "end_line": 16,
+              "end_column": 11
+            },
+            "type": "F32"
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 17,
+            "start_column": 5,
+            "end_line": 17,
+            "end_column": 11
+          },
+          "type": "StructField",
+          "name": "y",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 17,
+              "start_column": 8,
+              "end_line": 17,
+              "end_column": 11
+            },
+            "type": "F32"
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 18,
+            "start_column": 5,
+            "end_line": 18,
+            "end_column": 11
+          },
+          "type": "StructField",
+          "name": "z",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 18,
+              "start_column": 8,
+              "end_line": 18,
+              "end_column": 11
+            },
+            "type": "F32"
+          }
+        }
+      ]
+    },
+    {
+      "span": {
+        "file_path": "test/test_parser_comprehensive.sl",
+        "start_line": 21,
+        "start_column": 1,
+        "end_line": 24,
+        "end_column": 2
+      },
+      "type": "UnionDef",
+      "name": "Result",
+      "type_params": [
+        "T",
+        "E"
+      ],
+      "variants": [
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 22,
+            "start_column": 5,
+            "end_line": 22,
+            "end_column": 10
+          },
+          "type": "UnionVariant",
+          "name": "ok",
+          "payload": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 22,
+              "start_column": 9,
+              "end_line": 22,
+              "end_column": 10
+            },
+            "type": "CustomType",
+            "name": "T",
+            "type_args": []
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 23,
+            "start_column": 5,
+            "end_line": 23,
+            "end_column": 13
+          },
+          "type": "UnionVariant",
+          "name": "error",
+          "payload": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 23,
+              "start_column": 12,
+              "end_line": 23,
+              "end_column": 13
+            },
+            "type": "CustomType",
+            "name": "E",
+            "type_args": []
+          }
+        }
+      ]
+    },
+    {
+      "span": {
+        "file_path": "test/test_parser_comprehensive.sl",
+        "start_line": 26,
+        "start_column": 1,
+        "end_line": 30,
+        "end_column": 2
+      },
+      "type": "UnionDef",
+      "name": "Color",
+      "type_params": [],
+      "variants": [
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 27,
+            "start_column": 5,
+            "end_line": 27,
+            "end_column": 46
+          },
+          "type": "UnionVariant",
+          "name": "rgb",
+          "payload": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 27,
+              "start_column": 10,
+              "end_line": 27,
+              "end_column": 46
+            },
+            "type": "AnonymousStructType",
+            "fields": [
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 27,
+                  "start_column": 17,
+                  "end_line": 27,
+                  "end_column": 24
+                },
+                "type": "StructField",
+                "name": "red",
+                "type_annotation": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 27,
+                    "start_column": 22,
+                    "end_line": 27,
+                    "end_column": 24
+                  },
+                  "type": "U8"
+                }
+              },
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 27,
+                  "start_column": 26,
+                  "end_line": 27,
+                  "end_column": 35
+                },
+                "type": "StructField",
+                "name": "green",
+                "type_annotation": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 27,
+                    "start_column": 33,
+                    "end_line": 27,
+                    "end_column": 35
+                  },
+                  "type": "U8"
+                }
+              },
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 27,
+                  "start_column": 37,
+                  "end_line": 27,
+                  "end_column": 45
+                },
+                "type": "StructField",
+                "name": "blue",
+                "type_annotation": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 27,
+                    "start_column": 43,
+                    "end_line": 27,
+                    "end_column": 45
+                  },
+                  "type": "U8"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 28,
+            "start_column": 5,
+            "end_line": 28,
+            "end_column": 53
+          },
+          "type": "UnionVariant",
+          "name": "hsv",
+          "payload": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 28,
+              "start_column": 10,
+              "end_line": 28,
+              "end_column": 53
+            },
+            "type": "AnonymousStructType",
+            "fields": [
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 28,
+                  "start_column": 17,
+                  "end_line": 28,
+                  "end_column": 25
+                },
+                "type": "StructField",
+                "name": "hue",
+                "type_annotation": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 28,
+                    "start_column": 22,
+                    "end_line": 28,
+                    "end_column": 25
+                  },
+                  "type": "U16"
+                }
+              },
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 28,
+                  "start_column": 27,
+                  "end_line": 28,
+                  "end_column": 41
+                },
+                "type": "StructField",
+                "name": "saturation",
+                "type_annotation": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 28,
+                    "start_column": 39,
+                    "end_line": 28,
+                    "end_column": 41
+                  },
+                  "type": "U8"
+                }
+              },
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 28,
+                  "start_column": 43,
+                  "end_line": 28,
+                  "end_column": 52
+                },
+                "type": "StructField",
+                "name": "value",
+                "type_annotation": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 28,
+                    "start_column": 50,
+                    "end_line": 28,
+                    "end_column": 52
+                  },
+                  "type": "U8"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 29,
+            "start_column": 5,
+            "end_line": 29,
+            "end_column": 15
+          },
+          "type": "UnionVariant",
+          "name": "named",
+          "payload": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 29,
+              "start_column": 12,
+              "end_line": 29,
+              "end_column": 15
+            },
+            "type": "Str"
+          }
+        }
+      ]
+    },
+    {
+      "span": {
+        "file_path": "test/test_parser_comprehensive.sl",
+        "start_line": 32,
+        "start_column": 1,
+        "end_line": 32,
+        "end_column": 24
+      },
+      "type": "ConstDeclaration",
+      "name": "PI",
+      "type_annotation": {
+        "span": {
+          "file_path": "test/test_parser_comprehensive.sl",
+          "start_line": 32,
+          "start_column": 11,
+          "end_line": 32,
+          "end_column": 14
+        },
+        "type": "F32"
+      },
+      "value": {
+        "span": {
+          "file_path": "test/test_parser_comprehensive.sl",
+          "start_line": 32,
+          "start_column": 17,
+          "end_line": 32,
+          "end_column": 24
+        },
+        "type": "FloatLiteral",
+        "value": "3.14159"
+      }
+    },
+    {
+      "span": {
+        "file_path": "test/test_parser_comprehensive.sl",
+        "start_line": 33,
+        "start_column": 1,
+        "end_line": 33,
+        "end_column": 29
+      },
+      "type": "ConstDeclaration",
+      "name": "MAX_SIZE",
+      "type_annotation": {
+        "span": {
+          "file_path": "test/test_parser_comprehensive.sl",
+          "start_line": 33,
+          "start_column": 17,
+          "end_line": 33,
+          "end_column": 22
+        },
+        "type": "Usize"
+      },
+      "value": {
+        "span": {
+          "file_path": "test/test_parser_comprehensive.sl",
+          "start_line": 33,
+          "start_column": 25,
+          "end_line": 33,
+          "end_column": 29
+        },
+        "type": "IntLiteral",
+        "value": "1024"
+      }
+    },
+    {
+      "span": {
+        "file_path": "test/test_parser_comprehensive.sl",
+        "start_line": 35,
+        "start_column": 1,
+        "end_line": 37,
+        "end_column": 2
+      },
+      "type": "FunctionDef",
+      "name": "add",
+      "params": [
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 35,
+            "start_column": 8,
+            "end_line": 35,
+            "end_column": 14
+          },
+          "type": "Parameter",
+          "name": "a",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 35,
+              "start_column": 11,
+              "end_line": 35,
+              "end_column": 14
+            },
+            "type": "I32"
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 35,
+            "start_column": 16,
+            "end_line": 35,
+            "end_column": 22
+          },
+          "type": "Parameter",
+          "name": "b",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 35,
+              "start_column": 19,
+              "end_line": 35,
+              "end_column": 22
+            },
+            "type": "I32"
+          }
+        }
+      ],
+      "return_type": {
+        "span": {
+          "file_path": "test/test_parser_comprehensive.sl",
+          "start_line": 35,
+          "start_column": 27,
+          "end_line": 35,
+          "end_column": 30
+        },
+        "type": "I32"
+      },
+      "body": [
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 36,
+            "start_column": 5,
+            "end_line": 36,
+            "end_column": 17
+          },
+          "type": "ReturnStatement",
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 36,
+              "start_column": 12,
+              "end_line": 36,
+              "end_column": 17
+            },
+            "type": "BinaryOp",
+            "left": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 36,
+                "start_column": 12,
+                "end_line": 36,
+                "end_column": 13
+              },
+              "type": "Identifier",
+              "name": "a"
+            },
+            "operator": "+",
+            "right": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 36,
+                "start_column": 16,
+                "end_line": 36,
+                "end_column": 17
+              },
+              "type": "Identifier",
+              "name": "b"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "span": {
+        "file_path": "test/test_parser_comprehensive.sl",
+        "start_line": 39,
+        "start_column": 1,
+        "end_line": 46,
+        "end_column": 2
+      },
+      "type": "FunctionDef",
+      "name": "add_vec3",
+      "params": [
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 39,
+            "start_column": 13,
+            "end_line": 39,
+            "end_column": 24
+          },
+          "type": "Parameter",
+          "name": "v1",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 39,
+              "start_column": 17,
+              "end_line": 39,
+              "end_column": 24
+            },
+            "type": "CustomType",
+            "name": "Vector3",
+            "type_args": []
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 39,
+            "start_column": 26,
+            "end_line": 39,
+            "end_column": 37
+          },
+          "type": "Parameter",
+          "name": "v2",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 39,
+              "start_column": 30,
+              "end_line": 39,
+              "end_column": 37
+            },
+            "type": "CustomType",
+            "name": "Vector3",
+            "type_args": []
+          }
+        }
+      ],
+      "return_type": {
+        "span": {
+          "file_path": "test/test_parser_comprehensive.sl",
+          "start_line": 39,
+          "start_column": 42,
+          "end_line": 39,
+          "end_column": 49
+        },
+        "type": "CustomType",
+        "name": "Vector3",
+        "type_args": []
+      },
+      "body": [
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 40,
+            "start_column": 5,
+            "end_line": 44,
+            "end_column": 6
+          },
+          "type": "VarDeclaration",
+          "name": "result",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 40,
+              "start_column": 13,
+              "end_line": 40,
+              "end_column": 20
+            },
+            "type": "CustomType",
+            "name": "Vector3",
+            "type_args": []
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 40,
+              "start_column": 23,
+              "end_line": 44,
+              "end_column": 6
+            },
+            "type": "MapLiteral",
+            "pairs": [
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 41,
+                  "start_column": 9,
+                  "end_line": 41,
+                  "end_column": 23
+                },
+                "type": "MapPair",
+                "key": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 41,
+                    "start_column": 9,
+                    "end_line": 41,
+                    "end_column": 10
+                  },
+                  "type": "Identifier",
+                  "name": "x"
+                },
+                "value": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 41,
+                    "start_column": 12,
+                    "end_line": 41,
+                    "end_column": 23
+                  },
+                  "type": "BinaryOp",
+                  "left": {
+                    "span": {
+                      "file_path": "test/test_parser_comprehensive.sl",
+                      "start_line": 41,
+                      "start_column": 12,
+                      "end_line": 41,
+                      "end_column": 16
+                    },
+                    "type": "FieldAccess",
+                    "object": {
+                      "span": {
+                        "file_path": "test/test_parser_comprehensive.sl",
+                        "start_line": 41,
+                        "start_column": 12,
+                        "end_line": 41,
+                        "end_column": 14
+                      },
+                      "type": "Identifier",
+                      "name": "v1"
+                    },
+                    "field": "x"
+                  },
+                  "operator": "+",
+                  "right": {
+                    "span": {
+                      "file_path": "test/test_parser_comprehensive.sl",
+                      "start_line": 41,
+                      "start_column": 19,
+                      "end_line": 41,
+                      "end_column": 23
+                    },
+                    "type": "FieldAccess",
+                    "object": {
+                      "span": {
+                        "file_path": "test/test_parser_comprehensive.sl",
+                        "start_line": 41,
+                        "start_column": 19,
+                        "end_line": 41,
+                        "end_column": 21
+                      },
+                      "type": "Identifier",
+                      "name": "v2"
+                    },
+                    "field": "x"
+                  }
+                }
+              },
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 42,
+                  "start_column": 9,
+                  "end_line": 42,
+                  "end_column": 23
+                },
+                "type": "MapPair",
+                "key": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 42,
+                    "start_column": 9,
+                    "end_line": 42,
+                    "end_column": 10
+                  },
+                  "type": "Identifier",
+                  "name": "y"
+                },
+                "value": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 42,
+                    "start_column": 12,
+                    "end_line": 42,
+                    "end_column": 23
+                  },
+                  "type": "BinaryOp",
+                  "left": {
+                    "span": {
+                      "file_path": "test/test_parser_comprehensive.sl",
+                      "start_line": 42,
+                      "start_column": 12,
+                      "end_line": 42,
+                      "end_column": 16
+                    },
+                    "type": "FieldAccess",
+                    "object": {
+                      "span": {
+                        "file_path": "test/test_parser_comprehensive.sl",
+                        "start_line": 42,
+                        "start_column": 12,
+                        "end_line": 42,
+                        "end_column": 14
+                      },
+                      "type": "Identifier",
+                      "name": "v1"
+                    },
+                    "field": "y"
+                  },
+                  "operator": "+",
+                  "right": {
+                    "span": {
+                      "file_path": "test/test_parser_comprehensive.sl",
+                      "start_line": 42,
+                      "start_column": 19,
+                      "end_line": 42,
+                      "end_column": 23
+                    },
+                    "type": "FieldAccess",
+                    "object": {
+                      "span": {
+                        "file_path": "test/test_parser_comprehensive.sl",
+                        "start_line": 42,
+                        "start_column": 19,
+                        "end_line": 42,
+                        "end_column": 21
+                      },
+                      "type": "Identifier",
+                      "name": "v2"
+                    },
+                    "field": "y"
+                  }
+                }
+              },
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 43,
+                  "start_column": 9,
+                  "end_line": 43,
+                  "end_column": 23
+                },
+                "type": "MapPair",
+                "key": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 43,
+                    "start_column": 9,
+                    "end_line": 43,
+                    "end_column": 10
+                  },
+                  "type": "Identifier",
+                  "name": "z"
+                },
+                "value": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 43,
+                    "start_column": 12,
+                    "end_line": 43,
+                    "end_column": 23
+                  },
+                  "type": "BinaryOp",
+                  "left": {
+                    "span": {
+                      "file_path": "test/test_parser_comprehensive.sl",
+                      "start_line": 43,
+                      "start_column": 12,
+                      "end_line": 43,
+                      "end_column": 16
+                    },
+                    "type": "FieldAccess",
+                    "object": {
+                      "span": {
+                        "file_path": "test/test_parser_comprehensive.sl",
+                        "start_line": 43,
+                        "start_column": 12,
+                        "end_line": 43,
+                        "end_column": 14
+                      },
+                      "type": "Identifier",
+                      "name": "v1"
+                    },
+                    "field": "z"
+                  },
+                  "operator": "+",
+                  "right": {
+                    "span": {
+                      "file_path": "test/test_parser_comprehensive.sl",
+                      "start_line": 43,
+                      "start_column": 19,
+                      "end_line": 43,
+                      "end_column": 23
+                    },
+                    "type": "FieldAccess",
+                    "object": {
+                      "span": {
+                        "file_path": "test/test_parser_comprehensive.sl",
+                        "start_line": 43,
+                        "start_column": 19,
+                        "end_line": 43,
+                        "end_column": 21
+                      },
+                      "type": "Identifier",
+                      "name": "v2"
+                    },
+                    "field": "z"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 45,
+            "start_column": 5,
+            "end_line": 45,
+            "end_column": 18
+          },
+          "type": "ReturnStatement",
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 45,
+              "start_column": 12,
+              "end_line": 45,
+              "end_column": 18
+            },
+            "type": "Identifier",
+            "name": "result"
+          }
+        }
+      ]
+    },
+    {
+      "span": {
+        "file_path": "test/test_parser_comprehensive.sl",
+        "start_line": 48,
+        "start_column": 1,
+        "end_line": 61,
+        "end_column": 2
+      },
+      "type": "FunctionDef",
+      "name": "find_max",
+      "params": [
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 48,
+            "start_column": 17,
+            "end_line": 48,
+            "end_column": 29
+          },
+          "type": "Parameter",
+          "name": "list",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 48,
+              "start_column": 23,
+              "end_line": 48,
+              "end_column": 29
+            },
+            "type": "CustomType",
+            "name": "List",
+            "type_args": [
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 48,
+                  "start_column": 28,
+                  "end_line": 48,
+                  "end_column": 29
+                },
+                "type": "CustomType",
+                "name": "T",
+                "type_args": []
+              }
+            ]
+          }
+        }
+      ],
+      "return_type": {
+        "span": {
+          "file_path": "test/test_parser_comprehensive.sl",
+          "start_line": 48,
+          "start_column": 34,
+          "end_line": 48,
+          "end_column": 57
+        },
+        "type": "AnonymousUnionType",
+        "variants": [
+          {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 48,
+              "start_column": 41,
+              "end_line": 48,
+              "end_column": 49
+            },
+            "type": "UnionVariant",
+            "name": "value",
+            "payload": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 48,
+                "start_column": 48,
+                "end_line": 48,
+                "end_column": 49
+              },
+              "type": "CustomType",
+              "name": "T",
+              "type_args": []
+            }
+          },
+          {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 48,
+              "start_column": 51,
+              "end_line": 48,
+              "end_column": 56
+            },
+            "type": "UnionVariant",
+            "name": "empty",
+            "payload": null
+          }
+        ]
+      },
+      "body": [
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 49,
+            "start_column": 5,
+            "end_line": 50,
+            "end_column": 22
+          },
+          "type": "IfStatement",
+          "condition": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 49,
+              "start_column": 8,
+              "end_line": 49,
+              "end_column": 22
+            },
+            "type": "BinaryOp",
+            "left": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 49,
+                "start_column": 8,
+                "end_line": 49,
+                "end_column": 16
+              },
+              "type": "FunctionCall",
+              "name": "len",
+              "args": [
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 49,
+                    "start_column": 12,
+                    "end_line": 49,
+                    "end_column": 16
+                  },
+                  "type": "Identifier",
+                  "name": "list"
+                }
+              ]
+            },
+            "operator": "==",
+            "right": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 49,
+                "start_column": 21,
+                "end_line": 49,
+                "end_column": 22
+              },
+              "type": "IntLiteral",
+              "value": "0"
+            }
+          },
+          "then_body": [
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 50,
+                "start_column": 9,
+                "end_line": 50,
+                "end_column": 22
+              },
+              "type": "ReturnStatement",
+              "value": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 50,
+                  "start_column": 16,
+                  "end_line": 50,
+                  "end_column": 22
+                },
+                "type": "UnionLiteral",
+                "variant": "empty",
+                "value": null
+              }
+            }
+          ],
+          "elif_branches": [],
+          "else_body": null
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 53,
+            "start_column": 5,
+            "end_line": 53,
+            "end_column": 25
+          },
+          "type": "VarDeclaration",
+          "name": "max_val",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 53,
+              "start_column": 14,
+              "end_line": 53,
+              "end_column": 15
+            },
+            "type": "CustomType",
+            "name": "T",
+            "type_args": []
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 53,
+              "start_column": 18,
+              "end_line": 53,
+              "end_column": 25
+            },
+            "type": "IndexAccess",
+            "object": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 53,
+                "start_column": 18,
+                "end_line": 53,
+                "end_column": 22
+              },
+              "type": "Identifier",
+              "name": "list"
+            },
+            "index": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 53,
+                "start_column": 23,
+                "end_line": 53,
+                "end_column": 24
+              },
+              "type": "IntLiteral",
+              "value": "0"
+            }
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 54,
+            "start_column": 5,
+            "end_line": 58,
+            "end_column": 6
+          },
+          "type": "ForStatement",
+          "target": [
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 54,
+                "start_column": 9,
+                "end_line": 54,
+                "end_column": 16
+              },
+              "type": "Identifier",
+              "name": "element"
+            }
+          ],
+          "iterable": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 54,
+              "start_column": 20,
+              "end_line": 54,
+              "end_column": 24
+            },
+            "type": "Identifier",
+            "name": "list"
+          },
+          "body": [
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 55,
+                "start_column": 9,
+                "end_line": 56,
+                "end_column": 30
+              },
+              "type": "IfStatement",
+              "condition": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 55,
+                  "start_column": 12,
+                  "end_line": 55,
+                  "end_column": 29
+                },
+                "type": "BinaryOp",
+                "left": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 55,
+                    "start_column": 12,
+                    "end_line": 55,
+                    "end_column": 19
+                  },
+                  "type": "Identifier",
+                  "name": "element"
+                },
+                "operator": ">",
+                "right": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 55,
+                    "start_column": 22,
+                    "end_line": 55,
+                    "end_column": 29
+                  },
+                  "type": "Identifier",
+                  "name": "max_val"
+                }
+              },
+              "then_body": [
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 56,
+                    "start_column": 13,
+                    "end_line": 56,
+                    "end_column": 30
+                  },
+                  "type": "Assignment",
+                  "target": {
+                    "span": {
+                      "file_path": "test/test_parser_comprehensive.sl",
+                      "start_line": 56,
+                      "start_column": 13,
+                      "end_line": 56,
+                      "end_column": 20
+                    },
+                    "type": "Identifier",
+                    "name": "max_val"
+                  },
+                  "value": {
+                    "span": {
+                      "file_path": "test/test_parser_comprehensive.sl",
+                      "start_line": 56,
+                      "start_column": 23,
+                      "end_line": 56,
+                      "end_column": 30
+                    },
+                    "type": "Identifier",
+                    "name": "element"
+                  }
+                }
+              ],
+              "elif_branches": [],
+              "else_body": null
+            }
+          ]
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 60,
+            "start_column": 5,
+            "end_line": 60,
+            "end_column": 27
+          },
+          "type": "ReturnStatement",
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 60,
+              "start_column": 12,
+              "end_line": 60,
+              "end_column": 27
+            },
+            "type": "UnionLiteral",
+            "variant": "value",
+            "value": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 60,
+                "start_column": 19,
+                "end_line": 60,
+                "end_column": 26
+              },
+              "type": "Identifier",
+              "name": "max_val"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "span": {
+        "file_path": "test/test_parser_comprehensive.sl",
+        "start_line": 63,
+        "start_column": 1,
+        "end_line": 88,
+        "end_column": 2
+      },
+      "type": "FunctionDef",
+      "name": "process_numbers",
+      "params": [],
+      "return_type": null,
+      "body": [
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 64,
+            "start_column": 5,
+            "end_line": 64,
+            "end_column": 40
+          },
+          "type": "VarDeclaration",
+          "name": "numbers",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 64,
+              "start_column": 14,
+              "end_line": 64,
+              "end_column": 22
+            },
+            "type": "CustomType",
+            "name": "List",
+            "type_args": [
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 64,
+                  "start_column": 19,
+                  "end_line": 64,
+                  "end_column": 22
+                },
+                "type": "I32"
+              }
+            ]
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 64,
+              "start_column": 25,
+              "end_line": 64,
+              "end_column": 40
+            },
+            "type": "ListLiteral",
+            "elements": [
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 64,
+                  "start_column": 26,
+                  "end_line": 64,
+                  "end_column": 27
+                },
+                "type": "IntLiteral",
+                "value": "1"
+              },
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 64,
+                  "start_column": 29,
+                  "end_line": 64,
+                  "end_column": 30
+                },
+                "type": "IntLiteral",
+                "value": "2"
+              },
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 64,
+                  "start_column": 32,
+                  "end_line": 64,
+                  "end_column": 33
+                },
+                "type": "IntLiteral",
+                "value": "3"
+              },
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 64,
+                  "start_column": 35,
+                  "end_line": 64,
+                  "end_column": 36
+                },
+                "type": "IntLiteral",
+                "value": "4"
+              },
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 64,
+                  "start_column": 38,
+                  "end_line": 64,
+                  "end_column": 39
+                },
+                "type": "IntLiteral",
+                "value": "5"
+              }
+            ]
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 65,
+            "start_column": 5,
+            "end_line": 65,
+            "end_column": 17
+          },
+          "type": "VarDeclaration",
+          "name": "sum",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 65,
+              "start_column": 10,
+              "end_line": 65,
+              "end_column": 13
+            },
+            "type": "I32"
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 65,
+              "start_column": 16,
+              "end_line": 65,
+              "end_column": 17
+            },
+            "type": "IntLiteral",
+            "value": "0"
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 67,
+            "start_column": 5,
+            "end_line": 77,
+            "end_column": 6
+          },
+          "type": "ForStatement",
+          "target": [
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 67,
+                "start_column": 9,
+                "end_line": 67,
+                "end_column": 12
+              },
+              "type": "Identifier",
+              "name": "num"
+            },
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 67,
+                "start_column": 14,
+                "end_line": 67,
+                "end_column": 17
+              },
+              "type": "Identifier",
+              "name": "idx"
+            }
+          ],
+          "iterable": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 67,
+              "start_column": 21,
+              "end_line": 67,
+              "end_column": 28
+            },
+            "type": "Identifier",
+            "name": "numbers"
+          },
+          "body": [
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 68,
+                "start_column": 9,
+                "end_line": 68,
+                "end_column": 24
+              },
+              "type": "Assignment",
+              "target": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 68,
+                  "start_column": 9,
+                  "end_line": 68,
+                  "end_column": 12
+                },
+                "type": "Identifier",
+                "name": "sum"
+              },
+              "value": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 68,
+                  "start_column": 15,
+                  "end_line": 68,
+                  "end_column": 24
+                },
+                "type": "BinaryOp",
+                "left": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 68,
+                    "start_column": 15,
+                    "end_line": 68,
+                    "end_column": 18
+                  },
+                  "type": "Identifier",
+                  "name": "sum"
+                },
+                "operator": "+",
+                "right": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 68,
+                    "start_column": 21,
+                    "end_line": 68,
+                    "end_column": 24
+                  },
+                  "type": "Identifier",
+                  "name": "num"
+                }
+              }
+            },
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 70,
+                "start_column": 9,
+                "end_line": 71,
+                "end_column": 21
+              },
+              "type": "IfStatement",
+              "condition": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 70,
+                  "start_column": 12,
+                  "end_line": 70,
+                  "end_column": 20
+                },
+                "type": "BinaryOp",
+                "left": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 70,
+                    "start_column": 12,
+                    "end_line": 70,
+                    "end_column": 15
+                  },
+                  "type": "Identifier",
+                  "name": "num"
+                },
+                "operator": "==",
+                "right": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 70,
+                    "start_column": 19,
+                    "end_line": 70,
+                    "end_column": 20
+                  },
+                  "type": "IntLiteral",
+                  "value": "3"
+                }
+              },
+              "then_body": [
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 71,
+                    "start_column": 13,
+                    "end_line": 71,
+                    "end_column": 21
+                  },
+                  "type": "ContinueStatement"
+                }
+              ],
+              "elif_branches": [],
+              "else_body": null
+            },
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 74,
+                "start_column": 9,
+                "end_line": 75,
+                "end_column": 18
+              },
+              "type": "IfStatement",
+              "condition": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 74,
+                  "start_column": 12,
+                  "end_line": 74,
+                  "end_column": 19
+                },
+                "type": "BinaryOp",
+                "left": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 74,
+                    "start_column": 12,
+                    "end_line": 74,
+                    "end_column": 15
+                  },
+                  "type": "Identifier",
+                  "name": "num"
+                },
+                "operator": ">",
+                "right": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 74,
+                    "start_column": 18,
+                    "end_line": 74,
+                    "end_column": 19
+                  },
+                  "type": "IntLiteral",
+                  "value": "4"
+                }
+              },
+              "then_body": [
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 75,
+                    "start_column": 13,
+                    "end_line": 75,
+                    "end_column": 18
+                  },
+                  "type": "BreakStatement"
+                }
+              ],
+              "elif_branches": [],
+              "else_body": null
+            }
+          ]
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 79,
+            "start_column": 5,
+            "end_line": 83,
+            "end_column": 6
+          },
+          "type": "ForStatement",
+          "target": [
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 79,
+                "start_column": 9,
+                "end_line": 79,
+                "end_column": 10
+              },
+              "type": "Identifier",
+              "name": "i"
+            }
+          ],
+          "iterable": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 79,
+              "start_column": 19,
+              "end_line": 79,
+              "end_column": 25
+            },
+            "type": "RangeExpression",
+            "start": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 79,
+                "start_column": 19,
+                "end_line": 79,
+                "end_column": 20
+              },
+              "type": "IntLiteral",
+              "value": "0"
+            },
+            "end": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 79,
+                "start_column": 23,
+                "end_line": 79,
+                "end_column": 25
+              },
+              "type": "IntLiteral",
+              "value": "10"
+            },
+            "inclusive": true
+          },
+          "body": [
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 80,
+                "start_column": 9,
+                "end_line": 81,
+                "end_column": 26
+              },
+              "type": "IfStatement",
+              "condition": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 80,
+                  "start_column": 12,
+                  "end_line": 80,
+                  "end_column": 22
+                },
+                "type": "BinaryOp",
+                "left": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 80,
+                    "start_column": 12,
+                    "end_line": 80,
+                    "end_column": 17
+                  },
+                  "type": "BinaryOp",
+                  "left": {
+                    "span": {
+                      "file_path": "test/test_parser_comprehensive.sl",
+                      "start_line": 80,
+                      "start_column": 12,
+                      "end_line": 80,
+                      "end_column": 13
+                    },
+                    "type": "Identifier",
+                    "name": "i"
+                  },
+                  "operator": "%",
+                  "right": {
+                    "span": {
+                      "file_path": "test/test_parser_comprehensive.sl",
+                      "start_line": 80,
+                      "start_column": 16,
+                      "end_line": 80,
+                      "end_column": 17
+                    },
+                    "type": "IntLiteral",
+                    "value": "2"
+                  }
+                },
+                "operator": "==",
+                "right": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 80,
+                    "start_column": 21,
+                    "end_line": 80,
+                    "end_column": 22
+                  },
+                  "type": "IntLiteral",
+                  "value": "0"
+                }
+              },
+              "then_body": [
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 81,
+                    "start_column": 13,
+                    "end_line": 81,
+                    "end_column": 26
+                  },
+                  "type": "Assignment",
+                  "target": {
+                    "span": {
+                      "file_path": "test/test_parser_comprehensive.sl",
+                      "start_line": 81,
+                      "start_column": 13,
+                      "end_line": 81,
+                      "end_column": 16
+                    },
+                    "type": "Identifier",
+                    "name": "sum"
+                  },
+                  "value": {
+                    "span": {
+                      "file_path": "test/test_parser_comprehensive.sl",
+                      "start_line": 81,
+                      "start_column": 19,
+                      "end_line": 81,
+                      "end_column": 26
+                    },
+                    "type": "BinaryOp",
+                    "left": {
+                      "span": {
+                        "file_path": "test/test_parser_comprehensive.sl",
+                        "start_line": 81,
+                        "start_column": 19,
+                        "end_line": 81,
+                        "end_column": 22
+                      },
+                      "type": "Identifier",
+                      "name": "sum"
+                    },
+                    "operator": "+",
+                    "right": {
+                      "span": {
+                        "file_path": "test/test_parser_comprehensive.sl",
+                        "start_line": 81,
+                        "start_column": 25,
+                        "end_line": 81,
+                        "end_column": 26
+                      },
+                      "type": "Identifier",
+                      "name": "i"
+                    }
+                  }
+                }
+              ],
+              "elif_branches": [],
+              "else_body": null
+            }
+          ]
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 85,
+            "start_column": 5,
+            "end_line": 87,
+            "end_column": 6
+          },
+          "type": "WhileStatement",
+          "condition": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 85,
+              "start_column": 11,
+              "end_line": 85,
+              "end_column": 20
+            },
+            "type": "BinaryOp",
+            "left": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 85,
+                "start_column": 11,
+                "end_line": 85,
+                "end_column": 14
+              },
+              "type": "Identifier",
+              "name": "sum"
+            },
+            "operator": ">",
+            "right": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 85,
+                "start_column": 17,
+                "end_line": 85,
+                "end_column": 20
+              },
+              "type": "IntLiteral",
+              "value": "100"
+            }
+          },
+          "body": [
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 86,
+                "start_column": 9,
+                "end_line": 86,
+                "end_column": 23
+              },
+              "type": "Assignment",
+              "target": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 86,
+                  "start_column": 9,
+                  "end_line": 86,
+                  "end_column": 12
+                },
+                "type": "Identifier",
+                "name": "sum"
+              },
+              "value": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 86,
+                  "start_column": 15,
+                  "end_line": 86,
+                  "end_column": 23
+                },
+                "type": "BinaryOp",
+                "left": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 86,
+                    "start_column": 15,
+                    "end_line": 86,
+                    "end_column": 18
+                  },
+                  "type": "Identifier",
+                  "name": "sum"
+                },
+                "operator": "-",
+                "right": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 86,
+                    "start_column": 21,
+                    "end_line": 86,
+                    "end_column": 23
+                  },
+                  "type": "IntLiteral",
+                  "value": "10"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "span": {
+        "file_path": "test/test_parser_comprehensive.sl",
+        "start_line": 90,
+        "start_column": 1,
+        "end_line": 136,
+        "end_column": 2
+      },
+      "type": "FunctionDef",
+      "name": "test_pattern_matching",
+      "params": [],
+      "return_type": null,
+      "body": [
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 91,
+            "start_column": 5,
+            "end_line": 91,
+            "end_column": 37
+          },
+          "type": "VarDeclaration",
+          "name": "color",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 91,
+              "start_column": 12,
+              "end_line": 91,
+              "end_column": 17
+            },
+            "type": "CustomType",
+            "name": "Color",
+            "type_args": []
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 91,
+              "start_column": 20,
+              "end_line": 91,
+              "end_column": 37
+            },
+            "type": "UnionLiteral",
+            "variant": "rgb",
+            "value": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 91,
+                "start_column": 25,
+                "end_line": 91,
+                "end_column": 36
+              },
+              "type": "ListLiteral",
+              "elements": [
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 91,
+                    "start_column": 25,
+                    "end_line": 91,
+                    "end_column": 28
+                  },
+                  "type": "IntLiteral",
+                  "value": "255"
+                },
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 91,
+                    "start_column": 30,
+                    "end_line": 91,
+                    "end_column": 33
+                  },
+                  "type": "IntLiteral",
+                  "value": "128"
+                },
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 91,
+                    "start_column": 35,
+                    "end_line": 91,
+                    "end_column": 36
+                  },
+                  "type": "IntLiteral",
+                  "value": "0"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 93,
+            "start_column": 5,
+            "end_line": 114,
+            "end_column": 6
+          },
+          "type": "MatchStatement",
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 93,
+              "start_column": 11,
+              "end_line": 93,
+              "end_column": 16
+            },
+            "type": "Identifier",
+            "name": "color"
+          },
+          "cases": [
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 94,
+                "start_column": 9,
+                "end_line": 95,
+                "end_column": 68
+              },
+              "type": "MatchCase",
+              "pattern": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 94,
+                  "start_column": 14,
+                  "end_line": 94,
+                  "end_column": 27
+                },
+                "type": "UnionPattern",
+                "variant": "rgb",
+                "pattern": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 94,
+                    "start_column": 19,
+                    "end_line": 94,
+                    "end_column": 26
+                  },
+                  "type": "StructPattern",
+                  "name": "",
+                  "fields": [
+                    {
+                      "span": {
+                        "file_path": "test/test_parser_comprehensive.sl",
+                        "start_line": 94,
+                        "start_column": 19,
+                        "end_line": 94,
+                        "end_column": 20
+                      },
+                      "type": "StructPatternField",
+                      "name": null,
+                      "pattern": {
+                        "span": {
+                          "file_path": "test/test_parser_comprehensive.sl",
+                          "start_line": 94,
+                          "start_column": 19,
+                          "end_line": 94,
+                          "end_column": 20
+                        },
+                        "type": "IdentifierPattern",
+                        "name": "r"
+                      }
+                    },
+                    {
+                      "span": {
+                        "file_path": "test/test_parser_comprehensive.sl",
+                        "start_line": 94,
+                        "start_column": 22,
+                        "end_line": 94,
+                        "end_column": 23
+                      },
+                      "type": "StructPatternField",
+                      "name": null,
+                      "pattern": {
+                        "span": {
+                          "file_path": "test/test_parser_comprehensive.sl",
+                          "start_line": 94,
+                          "start_column": 22,
+                          "end_line": 94,
+                          "end_column": 23
+                        },
+                        "type": "IdentifierPattern",
+                        "name": "g"
+                      }
+                    },
+                    {
+                      "span": {
+                        "file_path": "test/test_parser_comprehensive.sl",
+                        "start_line": 94,
+                        "start_column": 25,
+                        "end_line": 94,
+                        "end_column": 26
+                      },
+                      "type": "StructPatternField",
+                      "name": null,
+                      "pattern": {
+                        "span": {
+                          "file_path": "test/test_parser_comprehensive.sl",
+                          "start_line": 94,
+                          "start_column": 25,
+                          "end_line": 94,
+                          "end_column": 26
+                        },
+                        "type": "IdentifierPattern",
+                        "name": "b"
+                      }
+                    }
+                  ]
+                }
+              },
+              "guard": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 94,
+                  "start_column": 31,
+                  "end_line": 94,
+                  "end_column": 38
+                },
+                "type": "BinaryOp",
+                "left": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 94,
+                    "start_column": 31,
+                    "end_line": 94,
+                    "end_column": 32
+                  },
+                  "type": "Identifier",
+                  "name": "r"
+                },
+                "operator": ">",
+                "right": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 94,
+                    "start_column": 35,
+                    "end_line": 94,
+                    "end_column": 38
+                  },
+                  "type": "IntLiteral",
+                  "value": "200"
+                }
+              },
+              "body": [
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 95,
+                    "start_column": 13,
+                    "end_line": 95,
+                    "end_column": 68
+                  },
+                  "type": "NativeBlock",
+                  "content": "\n                printf(\"Bright color\\n\");\n            "
+                }
+              ]
+            },
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 98,
+                "start_column": 9,
+                "end_line": 99,
+                "end_column": 64
+              },
+              "type": "MatchCase",
+              "pattern": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 98,
+                  "start_column": 14,
+                  "end_line": 98,
+                  "end_column": 29
+                },
+                "type": "UnionPattern",
+                "variant": "rgb",
+                "pattern": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 98,
+                    "start_column": 19,
+                    "end_line": 98,
+                    "end_column": 28
+                  },
+                  "type": "StructPattern",
+                  "name": "",
+                  "fields": [
+                    {
+                      "span": {
+                        "file_path": "test/test_parser_comprehensive.sl",
+                        "start_line": 98,
+                        "start_column": 19,
+                        "end_line": 98,
+                        "end_column": 22
+                      },
+                      "type": "StructPatternField",
+                      "name": null,
+                      "pattern": {
+                        "span": {
+                          "file_path": "test/test_parser_comprehensive.sl",
+                          "start_line": 98,
+                          "start_column": 19,
+                          "end_line": 98,
+                          "end_column": 22
+                        },
+                        "type": "LiteralPattern",
+                        "value": {
+                          "span": {
+                            "file_path": "test/test_parser_comprehensive.sl",
+                            "start_line": 98,
+                            "start_column": 19,
+                            "end_line": 98,
+                            "end_column": 22
+                          },
+                          "type": "IntLiteral",
+                          "value": "255"
+                        }
+                      }
+                    },
+                    {
+                      "span": {
+                        "file_path": "test/test_parser_comprehensive.sl",
+                        "start_line": 98,
+                        "start_column": 24,
+                        "end_line": 98,
+                        "end_column": 25
+                      },
+                      "type": "StructPatternField",
+                      "name": null,
+                      "pattern": {
+                        "span": {
+                          "file_path": "test/test_parser_comprehensive.sl",
+                          "start_line": 98,
+                          "start_column": 24,
+                          "end_line": 98,
+                          "end_column": 25
+                        },
+                        "type": "LiteralPattern",
+                        "value": {
+                          "span": {
+                            "file_path": "test/test_parser_comprehensive.sl",
+                            "start_line": 98,
+                            "start_column": 24,
+                            "end_line": 98,
+                            "end_column": 25
+                          },
+                          "type": "IntLiteral",
+                          "value": "0"
+                        }
+                      }
+                    },
+                    {
+                      "span": {
+                        "file_path": "test/test_parser_comprehensive.sl",
+                        "start_line": 98,
+                        "start_column": 27,
+                        "end_line": 98,
+                        "end_column": 28
+                      },
+                      "type": "StructPatternField",
+                      "name": null,
+                      "pattern": {
+                        "span": {
+                          "file_path": "test/test_parser_comprehensive.sl",
+                          "start_line": 98,
+                          "start_column": 27,
+                          "end_line": 98,
+                          "end_column": 28
+                        },
+                        "type": "LiteralPattern",
+                        "value": {
+                          "span": {
+                            "file_path": "test/test_parser_comprehensive.sl",
+                            "start_line": 98,
+                            "start_column": 27,
+                            "end_line": 98,
+                            "end_column": 28
+                          },
+                          "type": "IntLiteral",
+                          "value": "0"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "guard": null,
+              "body": [
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 99,
+                    "start_column": 13,
+                    "end_line": 99,
+                    "end_column": 64
+                  },
+                  "type": "NativeBlock",
+                  "content": "\n                printf(\"Pure red\\n\");\n            "
+                }
+              ]
+            },
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 102,
+                "start_column": 9,
+                "end_line": 103,
+                "end_column": 65
+              },
+              "type": "MatchCase",
+              "pattern": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 102,
+                  "start_column": 14,
+                  "end_line": 102,
+                  "end_column": 27
+                },
+                "type": "UnionPattern",
+                "variant": "hsv",
+                "pattern": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 102,
+                    "start_column": 19,
+                    "end_line": 102,
+                    "end_column": 26
+                  },
+                  "type": "StructPattern",
+                  "name": "",
+                  "fields": [
+                    {
+                      "span": {
+                        "file_path": "test/test_parser_comprehensive.sl",
+                        "start_line": 102,
+                        "start_column": 19,
+                        "end_line": 102,
+                        "end_column": 20
+                      },
+                      "type": "StructPatternField",
+                      "name": null,
+                      "pattern": {
+                        "span": {
+                          "file_path": "test/test_parser_comprehensive.sl",
+                          "start_line": 102,
+                          "start_column": 19,
+                          "end_line": 102,
+                          "end_column": 20
+                        },
+                        "type": "WildcardPattern"
+                      }
+                    },
+                    {
+                      "span": {
+                        "file_path": "test/test_parser_comprehensive.sl",
+                        "start_line": 102,
+                        "start_column": 22,
+                        "end_line": 102,
+                        "end_column": 23
+                      },
+                      "type": "StructPatternField",
+                      "name": null,
+                      "pattern": {
+                        "span": {
+                          "file_path": "test/test_parser_comprehensive.sl",
+                          "start_line": 102,
+                          "start_column": 22,
+                          "end_line": 102,
+                          "end_column": 23
+                        },
+                        "type": "WildcardPattern"
+                      }
+                    },
+                    {
+                      "span": {
+                        "file_path": "test/test_parser_comprehensive.sl",
+                        "start_line": 102,
+                        "start_column": 25,
+                        "end_line": 102,
+                        "end_column": 26
+                      },
+                      "type": "StructPatternField",
+                      "name": null,
+                      "pattern": {
+                        "span": {
+                          "file_path": "test/test_parser_comprehensive.sl",
+                          "start_line": 102,
+                          "start_column": 25,
+                          "end_line": 102,
+                          "end_column": 26
+                        },
+                        "type": "WildcardPattern"
+                      }
+                    }
+                  ]
+                }
+              },
+              "guard": null,
+              "body": [
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 103,
+                    "start_column": 13,
+                    "end_line": 103,
+                    "end_column": 65
+                  },
+                  "type": "NativeBlock",
+                  "content": "\n                printf(\"HSV color\\n\");\n            "
+                }
+              ]
+            },
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 106,
+                "start_column": 9,
+                "end_line": 107,
+                "end_column": 82
+              },
+              "type": "MatchCase",
+              "pattern": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 106,
+                  "start_column": 14,
+                  "end_line": 106,
+                  "end_column": 26
+                },
+                "type": "UnionPattern",
+                "variant": "named",
+                "pattern": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 106,
+                    "start_column": 21,
+                    "end_line": 106,
+                    "end_column": 25
+                  },
+                  "type": "IdentifierPattern",
+                  "name": "name"
+                }
+              },
+              "guard": null,
+              "body": [
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 107,
+                    "start_column": 13,
+                    "end_line": 107,
+                    "end_column": 82
+                  },
+                  "type": "NativeBlock",
+                  "content": "\n                printf(\"Named color: %s\\n\", name.data);\n            "
+                }
+              ]
+            },
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 110,
+                "start_column": 9,
+                "end_line": 111,
+                "end_column": 69
+              },
+              "type": "MatchCase",
+              "pattern": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 110,
+                  "start_column": 14,
+                  "end_line": 110,
+                  "end_column": 15
+                },
+                "type": "WildcardPattern"
+              },
+              "guard": null,
+              "body": [
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 111,
+                    "start_column": 13,
+                    "end_line": 111,
+                    "end_column": 69
+                  },
+                  "type": "NativeBlock",
+                  "content": "\n                printf(\"Unknown color\\n\");\n            "
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 116,
+            "start_column": 5,
+            "end_line": 116,
+            "end_column": 37
+          },
+          "type": "VarDeclaration",
+          "name": "data",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 116,
+              "start_column": 11,
+              "end_line": 116,
+              "end_column": 19
+            },
+            "type": "CustomType",
+            "name": "List",
+            "type_args": [
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 116,
+                  "start_column": 16,
+                  "end_line": 116,
+                  "end_column": 19
+                },
+                "type": "I32"
+              }
+            ]
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 116,
+              "start_column": 22,
+              "end_line": 116,
+              "end_column": 37
+            },
+            "type": "ListLiteral",
+            "elements": [
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 116,
+                  "start_column": 23,
+                  "end_line": 116,
+                  "end_column": 24
+                },
+                "type": "IntLiteral",
+                "value": "1"
+              },
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 116,
+                  "start_column": 26,
+                  "end_line": 116,
+                  "end_column": 27
+                },
+                "type": "IntLiteral",
+                "value": "2"
+              },
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 116,
+                  "start_column": 29,
+                  "end_line": 116,
+                  "end_column": 30
+                },
+                "type": "IntLiteral",
+                "value": "3"
+              },
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 116,
+                  "start_column": 32,
+                  "end_line": 116,
+                  "end_column": 33
+                },
+                "type": "IntLiteral",
+                "value": "4"
+              },
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 116,
+                  "start_column": 35,
+                  "end_line": 116,
+                  "end_column": 36
+                },
+                "type": "IntLiteral",
+                "value": "5"
+              }
+            ]
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 118,
+            "start_column": 5,
+            "end_line": 135,
+            "end_column": 6
+          },
+          "type": "MatchStatement",
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 118,
+              "start_column": 11,
+              "end_line": 118,
+              "end_column": 15
+            },
+            "type": "Identifier",
+            "name": "data"
+          },
+          "cases": [
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 119,
+                "start_column": 9,
+                "end_line": 120,
+                "end_column": 66
+              },
+              "type": "MatchCase",
+              "pattern": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 119,
+                  "start_column": 14,
+                  "end_line": 119,
+                  "end_column": 16
+                },
+                "type": "ListPattern",
+                "prefix_patterns": [],
+                "rest_name": null,
+                "suffix_patterns": []
+              },
+              "guard": null,
+              "body": [
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 120,
+                    "start_column": 13,
+                    "end_line": 120,
+                    "end_column": 66
+                  },
+                  "type": "NativeBlock",
+                  "content": "\n                printf(\"Empty list\\n\");\n            "
+                }
+              ]
+            },
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 123,
+                "start_column": 9,
+                "end_line": 124,
+                "end_column": 72
+              },
+              "type": "MatchCase",
+              "pattern": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 123,
+                  "start_column": 14,
+                  "end_line": 123,
+                  "end_column": 29
+                },
+                "type": "ListPattern",
+                "prefix_patterns": [
+                  {
+                    "span": {
+                      "file_path": "test/test_parser_comprehensive.sl",
+                      "start_line": 123,
+                      "start_column": 15,
+                      "end_line": 123,
+                      "end_column": 20
+                    },
+                    "type": "IdentifierPattern",
+                    "name": "first"
+                  }
+                ],
+                "rest_name": "rest",
+                "suffix_patterns": []
+              },
+              "guard": null,
+              "body": [
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 124,
+                    "start_column": 13,
+                    "end_line": 124,
+                    "end_column": 72
+                  },
+                  "type": "NativeBlock",
+                  "content": "\n                printf(\"First: %d\\n\", first);\n            "
+                }
+              ]
+            },
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 127,
+                "start_column": 9,
+                "end_line": 128,
+                "end_column": 67
+              },
+              "type": "MatchCase",
+              "pattern": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 127,
+                  "start_column": 14,
+                  "end_line": 127,
+                  "end_column": 29
+                },
+                "type": "ListPattern",
+                "prefix_patterns": [
+                  {
+                    "span": {
+                      "file_path": "test/test_parser_comprehensive.sl",
+                      "start_line": 127,
+                      "start_column": 15,
+                      "end_line": 127,
+                      "end_column": 16
+                    },
+                    "type": "LiteralPattern",
+                    "value": {
+                      "span": {
+                        "file_path": "test/test_parser_comprehensive.sl",
+                        "start_line": 127,
+                        "start_column": 15,
+                        "end_line": 127,
+                        "end_column": 16
+                      },
+                      "type": "IntLiteral",
+                      "value": "1"
+                    }
+                  },
+                  {
+                    "span": {
+                      "file_path": "test/test_parser_comprehensive.sl",
+                      "start_line": 127,
+                      "start_column": 18,
+                      "end_line": 127,
+                      "end_column": 19
+                    },
+                    "type": "LiteralPattern",
+                    "value": {
+                      "span": {
+                        "file_path": "test/test_parser_comprehensive.sl",
+                        "start_line": 127,
+                        "start_column": 18,
+                        "end_line": 127,
+                        "end_column": 19
+                      },
+                      "type": "IntLiteral",
+                      "value": "2"
+                    }
+                  },
+                  {
+                    "span": {
+                      "file_path": "test/test_parser_comprehensive.sl",
+                      "start_line": 127,
+                      "start_column": 21,
+                      "end_line": 127,
+                      "end_column": 22
+                    },
+                    "type": "LiteralPattern",
+                    "value": {
+                      "span": {
+                        "file_path": "test/test_parser_comprehensive.sl",
+                        "start_line": 127,
+                        "start_column": 21,
+                        "end_line": 127,
+                        "end_column": 22
+                      },
+                      "type": "IntLiteral",
+                      "value": "3"
+                    }
+                  },
+                  {
+                    "span": {
+                      "file_path": "test/test_parser_comprehensive.sl",
+                      "start_line": 127,
+                      "start_column": 24,
+                      "end_line": 127,
+                      "end_column": 25
+                    },
+                    "type": "LiteralPattern",
+                    "value": {
+                      "span": {
+                        "file_path": "test/test_parser_comprehensive.sl",
+                        "start_line": 127,
+                        "start_column": 24,
+                        "end_line": 127,
+                        "end_column": 25
+                      },
+                      "type": "IntLiteral",
+                      "value": "4"
+                    }
+                  },
+                  {
+                    "span": {
+                      "file_path": "test/test_parser_comprehensive.sl",
+                      "start_line": 127,
+                      "start_column": 27,
+                      "end_line": 127,
+                      "end_column": 28
+                    },
+                    "type": "LiteralPattern",
+                    "value": {
+                      "span": {
+                        "file_path": "test/test_parser_comprehensive.sl",
+                        "start_line": 127,
+                        "start_column": 27,
+                        "end_line": 127,
+                        "end_column": 28
+                      },
+                      "type": "IntLiteral",
+                      "value": "5"
+                    }
+                  }
+                ],
+                "rest_name": null,
+                "suffix_patterns": []
+              },
+              "guard": null,
+              "body": [
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 128,
+                    "start_column": 13,
+                    "end_line": 128,
+                    "end_column": 67
+                  },
+                  "type": "NativeBlock",
+                  "content": "\n                printf(\"Exact match\\n\");\n            "
+                }
+              ]
+            },
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 131,
+                "start_column": 9,
+                "end_line": 132,
+                "end_column": 61
+              },
+              "type": "MatchCase",
+              "pattern": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 131,
+                  "start_column": 14,
+                  "end_line": 131,
+                  "end_column": 15
+                },
+                "type": "WildcardPattern"
+              },
+              "guard": null,
+              "body": [
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 132,
+                    "start_column": 13,
+                    "end_line": 132,
+                    "end_column": 61
+                  },
+                  "type": "NativeBlock",
+                  "content": "\n                printf(\"Other\\n\");\n            "
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "span": {
+        "file_path": "test/test_parser_comprehensive.sl",
+        "start_line": 138,
+        "start_column": 1,
+        "end_line": 164,
+        "end_column": 2
+      },
+      "type": "FunctionDef",
+      "name": "test_collections",
+      "params": [],
+      "return_type": null,
+      "body": [
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 139,
+            "start_column": 5,
+            "end_line": 143,
+            "end_column": 6
+          },
+          "type": "VarDeclaration",
+          "name": "scores",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 139,
+              "start_column": 13,
+              "end_line": 139,
+              "end_column": 24
+            },
+            "type": "CustomType",
+            "name": "Map",
+            "type_args": [
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 139,
+                  "start_column": 17,
+                  "end_line": 139,
+                  "end_column": 20
+                },
+                "type": "Str"
+              },
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 139,
+                  "start_column": 21,
+                  "end_line": 139,
+                  "end_column": 24
+                },
+                "type": "I32"
+              }
+            ]
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 139,
+              "start_column": 27,
+              "end_line": 143,
+              "end_column": 6
+            },
+            "type": "MapLiteral",
+            "pairs": [
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 140,
+                  "start_column": 9,
+                  "end_line": 140,
+                  "end_column": 20
+                },
+                "type": "MapPair",
+                "key": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 140,
+                    "start_column": 9,
+                    "end_line": 140,
+                    "end_column": 14
+                  },
+                  "type": "StringLiteral",
+                  "value": "Alice"
+                },
+                "value": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 140,
+                    "start_column": 18,
+                    "end_line": 140,
+                    "end_column": 20
+                  },
+                  "type": "IntLiteral",
+                  "value": "95"
+                }
+              },
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 141,
+                  "start_column": 9,
+                  "end_line": 141,
+                  "end_column": 18
+                },
+                "type": "MapPair",
+                "key": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 141,
+                    "start_column": 9,
+                    "end_line": 141,
+                    "end_column": 12
+                  },
+                  "type": "StringLiteral",
+                  "value": "Bob"
+                },
+                "value": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 141,
+                    "start_column": 16,
+                    "end_line": 141,
+                    "end_column": 18
+                  },
+                  "type": "IntLiteral",
+                  "value": "87"
+                }
+              },
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 142,
+                  "start_column": 9,
+                  "end_line": 142,
+                  "end_column": 22
+                },
+                "type": "MapPair",
+                "key": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 142,
+                    "start_column": 9,
+                    "end_line": 142,
+                    "end_column": 16
+                  },
+                  "type": "StringLiteral",
+                  "value": "Charlie"
+                },
+                "value": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 142,
+                    "start_column": 20,
+                    "end_line": 142,
+                    "end_column": 22
+                  },
+                  "type": "IntLiteral",
+                  "value": "92"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 145,
+            "start_column": 5,
+            "end_line": 149,
+            "end_column": 6
+          },
+          "type": "VarDeclaration",
+          "name": "visited",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 145,
+              "start_column": 14,
+              "end_line": 145,
+              "end_column": 21
+            },
+            "type": "CustomType",
+            "name": "Set",
+            "type_args": [
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 145,
+                  "start_column": 18,
+                  "end_line": 145,
+                  "end_column": 21
+                },
+                "type": "Str"
+              }
+            ]
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 145,
+              "start_column": 24,
+              "end_line": 149,
+              "end_column": 6
+            },
+            "type": "SetLiteral",
+            "elements": [
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 146,
+                  "start_column": 9,
+                  "end_line": 146,
+                  "end_column": 14
+                },
+                "type": "StringLiteral",
+                "value": "Paris"
+              },
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 147,
+                  "start_column": 9,
+                  "end_line": 147,
+                  "end_column": 15
+                },
+                "type": "StringLiteral",
+                "value": "London"
+              },
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 148,
+                  "start_column": 9,
+                  "end_line": 148,
+                  "end_column": 14
+                },
+                "type": "StringLiteral",
+                "value": "Tokyo"
+              }
+            ]
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 151,
+            "start_column": 5,
+            "end_line": 157,
+            "end_column": 6
+          },
+          "type": "ForStatement",
+          "target": [
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 151,
+                "start_column": 9,
+                "end_line": 151,
+                "end_column": 13
+              },
+              "type": "Identifier",
+              "name": "name"
+            },
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 151,
+                "start_column": 15,
+                "end_line": 151,
+                "end_column": 20
+              },
+              "type": "Identifier",
+              "name": "score"
+            }
+          ],
+          "iterable": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 151,
+              "start_column": 24,
+              "end_line": 151,
+              "end_column": 30
+            },
+            "type": "Identifier",
+            "name": "scores"
+          },
+          "body": [
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 152,
+                "start_column": 9,
+                "end_line": 153,
+                "end_column": 92
+              },
+              "type": "IfStatement",
+              "condition": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 152,
+                  "start_column": 12,
+                  "end_line": 152,
+                  "end_column": 22
+                },
+                "type": "BinaryOp",
+                "left": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 152,
+                    "start_column": 12,
+                    "end_line": 152,
+                    "end_column": 17
+                  },
+                  "type": "Identifier",
+                  "name": "score"
+                },
+                "operator": ">",
+                "right": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 152,
+                    "start_column": 20,
+                    "end_line": 152,
+                    "end_column": 22
+                  },
+                  "type": "IntLiteral",
+                  "value": "90"
+                }
+              },
+              "then_body": [
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 153,
+                    "start_column": 13,
+                    "end_line": 153,
+                    "end_column": 92
+                  },
+                  "type": "NativeBlock",
+                  "content": "\n                printf(\"%s scored well: %d\\n\", name.data, score);\n            "
+                }
+              ],
+              "elif_branches": [],
+              "else_body": null
+            }
+          ]
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 159,
+            "start_column": 5,
+            "end_line": 163,
+            "end_column": 6
+          },
+          "type": "ForStatement",
+          "target": [
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 159,
+                "start_column": 9,
+                "end_line": 159,
+                "end_column": 13
+              },
+              "type": "Identifier",
+              "name": "city"
+            }
+          ],
+          "iterable": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 159,
+              "start_column": 17,
+              "end_line": 159,
+              "end_column": 24
+            },
+            "type": "Identifier",
+            "name": "visited"
+          },
+          "body": [
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 160,
+                "start_column": 9,
+                "end_line": 160,
+                "end_column": 66
+              },
+              "type": "NativeBlock",
+              "content": "\n            printf(\"Visited: %s\\n\", city.data);\n        "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "span": {
+        "file_path": "test/test_parser_comprehensive.sl",
+        "start_line": 166,
+        "start_column": 1,
+        "end_line": 175,
+        "end_column": 2
+      },
+      "type": "FunctionDef",
+      "name": "test_pointers_and_references",
+      "params": [],
+      "return_type": null,
+      "body": [
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 167,
+            "start_column": 5,
+            "end_line": 167,
+            "end_column": 17
+          },
+          "type": "VarDeclaration",
+          "name": "age",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 167,
+              "start_column": 10,
+              "end_line": 167,
+              "end_column": 12
+            },
+            "type": "U8"
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 167,
+              "start_column": 15,
+              "end_line": 167,
+              "end_column": 17
+            },
+            "type": "IntLiteral",
+            "value": "25"
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 168,
+            "start_column": 5,
+            "end_line": 168,
+            "end_column": 24
+          },
+          "type": "VarDeclaration",
+          "name": "age_ptr",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 168,
+              "start_column": 14,
+              "end_line": 168,
+              "end_column": 17
+            },
+            "type": "PointerType",
+            "target": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 168,
+                "start_column": 15,
+                "end_line": 168,
+                "end_column": 17
+              },
+              "type": "U8"
+            }
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 168,
+              "start_column": 20,
+              "end_line": 168,
+              "end_column": 24
+            },
+            "type": "UnaryOp",
+            "operator": "&",
+            "operand": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 168,
+                "start_column": 21,
+                "end_line": 168,
+                "end_column": 24
+              },
+              "type": "Identifier",
+              "name": "age"
+            }
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 169,
+            "start_column": 5,
+            "end_line": 169,
+            "end_column": 18
+          },
+          "type": "Assignment",
+          "target": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 169,
+              "start_column": 5,
+              "end_line": 169,
+              "end_column": 13
+            },
+            "type": "UnaryOp",
+            "operator": "*",
+            "operand": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 169,
+                "start_column": 6,
+                "end_line": 169,
+                "end_column": 13
+              },
+              "type": "Identifier",
+              "name": "age_ptr"
+            }
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 169,
+              "start_column": 16,
+              "end_line": 169,
+              "end_column": 18
+            },
+            "type": "IntLiteral",
+            "value": "30"
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 171,
+            "start_column": 5,
+            "end_line": 171,
+            "end_column": 38
+          },
+          "type": "VarDeclaration",
+          "name": "point",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 171,
+              "start_column": 12,
+              "end_line": 171,
+              "end_column": 21
+            },
+            "type": "CustomType",
+            "name": "Point",
+            "type_args": [
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 171,
+                  "start_column": 18,
+                  "end_line": 171,
+                  "end_column": 21
+                },
+                "type": "I32"
+              }
+            ]
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 171,
+              "start_column": 24,
+              "end_line": 171,
+              "end_column": 38
+            },
+            "type": "MapLiteral",
+            "pairs": [
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 171,
+                  "start_column": 25,
+                  "end_line": 171,
+                  "end_column": 30
+                },
+                "type": "MapPair",
+                "key": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 171,
+                    "start_column": 25,
+                    "end_line": 171,
+                    "end_column": 26
+                  },
+                  "type": "Identifier",
+                  "name": "x"
+                },
+                "value": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 171,
+                    "start_column": 28,
+                    "end_line": 171,
+                    "end_column": 30
+                  },
+                  "type": "IntLiteral",
+                  "value": "10"
+                }
+              },
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 171,
+                  "start_column": 32,
+                  "end_line": 171,
+                  "end_column": 37
+                },
+                "type": "MapPair",
+                "key": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 171,
+                    "start_column": 32,
+                    "end_line": 171,
+                    "end_column": 33
+                  },
+                  "type": "Identifier",
+                  "name": "y"
+                },
+                "value": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 171,
+                    "start_column": 35,
+                    "end_line": 171,
+                    "end_column": 37
+                  },
+                  "type": "IntLiteral",
+                  "value": "20"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 172,
+            "start_column": 5,
+            "end_line": 172,
+            "end_column": 35
+          },
+          "type": "VarDeclaration",
+          "name": "point_ptr",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 172,
+              "start_column": 16,
+              "end_line": 172,
+              "end_column": 26
+            },
+            "type": "PointerType",
+            "target": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 172,
+                "start_column": 17,
+                "end_line": 172,
+                "end_column": 26
+              },
+              "type": "CustomType",
+              "name": "Point",
+              "type_args": [
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 172,
+                    "start_column": 23,
+                    "end_line": 172,
+                    "end_column": 26
+                  },
+                  "type": "I32"
+                }
+              ]
+            }
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 172,
+              "start_column": 29,
+              "end_line": 172,
+              "end_column": 35
+            },
+            "type": "UnaryOp",
+            "operator": "&",
+            "operand": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 172,
+                "start_column": 30,
+                "end_line": 172,
+                "end_column": 35
+              },
+              "type": "Identifier",
+              "name": "point"
+            }
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 174,
+            "start_column": 5,
+            "end_line": 174,
+            "end_column": 29
+          },
+          "type": "VarDeclaration",
+          "name": "x_val",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 174,
+              "start_column": 12,
+              "end_line": 174,
+              "end_column": 15
+            },
+            "type": "I32"
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 174,
+              "start_column": 18,
+              "end_line": 174,
+              "end_column": 29
+            },
+            "type": "FieldAccess",
+            "object": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 174,
+                "start_column": 18,
+                "end_line": 174,
+                "end_column": 27
+              },
+              "type": "Identifier",
+              "name": "point_ptr"
+            },
+            "field": "x"
+          }
+        }
+      ]
+    },
+    {
+      "span": {
+        "file_path": "test/test_parser_comprehensive.sl",
+        "start_line": 177,
+        "start_column": 1,
+        "end_line": 190,
+        "end_column": 2
+      },
+      "type": "FunctionDef",
+      "name": "test_expressions",
+      "params": [],
+      "return_type": null,
+      "body": [
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 178,
+            "start_column": 5,
+            "end_line": 178,
+            "end_column": 16
+          },
+          "type": "VarDeclaration",
+          "name": "a",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 178,
+              "start_column": 8,
+              "end_line": 178,
+              "end_column": 11
+            },
+            "type": "I32"
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 178,
+              "start_column": 14,
+              "end_line": 178,
+              "end_column": 16
+            },
+            "type": "IntLiteral",
+            "value": "10"
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 179,
+            "start_column": 5,
+            "end_line": 179,
+            "end_column": 16
+          },
+          "type": "VarDeclaration",
+          "name": "b",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 179,
+              "start_column": 8,
+              "end_line": 179,
+              "end_column": 11
+            },
+            "type": "I32"
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 179,
+              "start_column": 14,
+              "end_line": 179,
+              "end_column": 16
+            },
+            "type": "IntLiteral",
+            "value": "20"
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 180,
+            "start_column": 5,
+            "end_line": 180,
+            "end_column": 18
+          },
+          "type": "VarDeclaration",
+          "name": "c",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 180,
+              "start_column": 8,
+              "end_line": 180,
+              "end_column": 11
+            },
+            "type": "F32"
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 180,
+              "start_column": 14,
+              "end_line": 180,
+              "end_column": 18
+            },
+            "type": "FloatLiteral",
+            "value": "3.14"
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 181,
+            "start_column": 5,
+            "end_line": 181,
+            "end_column": 22
+          },
+          "type": "VarDeclaration",
+          "name": "d",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 181,
+              "start_column": 8,
+              "end_line": 181,
+              "end_column": 11
+            },
+            "type": "F64"
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 181,
+              "start_column": 14,
+              "end_line": 181,
+              "end_column": 22
+            },
+            "type": "FloatLiteral",
+            "value": "2.718e10"
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 183,
+            "start_column": 5,
+            "end_line": 183,
+            "end_column": 39
+          },
+          "type": "VarDeclaration",
+          "name": "result1",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 183,
+              "start_column": 14,
+              "end_line": 183,
+              "end_column": 18
+            },
+            "type": "Bool"
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 183,
+              "start_column": 21,
+              "end_line": 183,
+              "end_column": 39
+            },
+            "type": "BinaryOp",
+            "left": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 183,
+                "start_column": 21,
+                "end_line": 183,
+                "end_column": 27
+              },
+              "type": "BinaryOp",
+              "left": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 183,
+                  "start_column": 21,
+                  "end_line": 183,
+                  "end_column": 22
+                },
+                "type": "Identifier",
+                "name": "a"
+              },
+              "operator": "==",
+              "right": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 183,
+                  "start_column": 26,
+                  "end_line": 183,
+                  "end_column": 27
+                },
+                "type": "Identifier",
+                "name": "b"
+              }
+            },
+            "operator": "and",
+            "right": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 183,
+                "start_column": 32,
+                "end_line": 183,
+                "end_column": 39
+              },
+              "type": "BinaryOp",
+              "left": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 183,
+                  "start_column": 32,
+                  "end_line": 183,
+                  "end_column": 33
+                },
+                "type": "Identifier",
+                "name": "c"
+              },
+              "operator": ">",
+              "right": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 183,
+                  "start_column": 36,
+                  "end_line": 183,
+                  "end_column": 39
+                },
+                "type": "FloatLiteral",
+                "value": "2.0"
+              }
+            }
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 184,
+            "start_column": 5,
+            "end_line": 184,
+            "end_column": 44
+          },
+          "type": "VarDeclaration",
+          "name": "result2",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 184,
+              "start_column": 14,
+              "end_line": 184,
+              "end_column": 18
+            },
+            "type": "Bool"
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 184,
+              "start_column": 21,
+              "end_line": 184,
+              "end_column": 44
+            },
+            "type": "UnaryOp",
+            "operator": "not",
+            "operand": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 184,
+                "start_column": 26,
+                "end_line": 184,
+                "end_column": 44
+              },
+              "type": "BinaryOp",
+              "left": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 184,
+                  "start_column": 26,
+                  "end_line": 184,
+                  "end_column": 32
+                },
+                "type": "BinaryOp",
+                "left": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 184,
+                    "start_column": 26,
+                    "end_line": 184,
+                    "end_column": 27
+                  },
+                  "type": "Identifier",
+                  "name": "a"
+                },
+                "operator": "!=",
+                "right": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 184,
+                    "start_column": 31,
+                    "end_line": 184,
+                    "end_column": 32
+                  },
+                  "type": "Identifier",
+                  "name": "b"
+                }
+              },
+              "operator": "or",
+              "right": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 184,
+                  "start_column": 36,
+                  "end_line": 184,
+                  "end_column": 44
+                },
+                "type": "BinaryOp",
+                "left": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 184,
+                    "start_column": 36,
+                    "end_line": 184,
+                    "end_column": 37
+                  },
+                  "type": "Identifier",
+                  "name": "c"
+                },
+                "operator": "<=",
+                "right": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 184,
+                    "start_column": 41,
+                    "end_line": 184,
+                    "end_column": 44
+                  },
+                  "type": "FloatLiteral",
+                  "value": "1.0"
+                }
+              }
+            }
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 185,
+            "start_column": 5,
+            "end_line": 185,
+            "end_column": 37
+          },
+          "type": "VarDeclaration",
+          "name": "result3",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 185,
+              "start_column": 14,
+              "end_line": 185,
+              "end_column": 17
+            },
+            "type": "I32"
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 185,
+              "start_column": 20,
+              "end_line": 185,
+              "end_column": 37
+            },
+            "type": "BinaryOp",
+            "left": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 185,
+                "start_column": 20,
+                "end_line": 185,
+                "end_column": 29
+              },
+              "type": "BinaryOp",
+              "left": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 185,
+                  "start_column": 20,
+                  "end_line": 185,
+                  "end_column": 21
+                },
+                "type": "Identifier",
+                "name": "a"
+              },
+              "operator": "+",
+              "right": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 185,
+                  "start_column": 24,
+                  "end_line": 185,
+                  "end_column": 29
+                },
+                "type": "BinaryOp",
+                "left": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 185,
+                    "start_column": 24,
+                    "end_line": 185,
+                    "end_column": 25
+                  },
+                  "type": "Identifier",
+                  "name": "b"
+                },
+                "operator": "*",
+                "right": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 185,
+                    "start_column": 28,
+                    "end_line": 185,
+                    "end_column": 29
+                  },
+                  "type": "IntLiteral",
+                  "value": "2"
+                }
+              }
+            },
+            "operator": "-",
+            "right": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 185,
+                "start_column": 32,
+                "end_line": 185,
+                "end_column": 37
+              },
+              "type": "BinaryOp",
+              "left": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 185,
+                  "start_column": 32,
+                  "end_line": 185,
+                  "end_column": 33
+                },
+                "type": "Identifier",
+                "name": "a"
+              },
+              "operator": "/",
+              "right": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 185,
+                  "start_column": 36,
+                  "end_line": 185,
+                  "end_column": 37
+                },
+                "type": "IntLiteral",
+                "value": "3"
+              }
+            }
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 186,
+            "start_column": 5,
+            "end_line": 186,
+            "end_column": 25
+          },
+          "type": "VarDeclaration",
+          "name": "result4",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 186,
+              "start_column": 14,
+              "end_line": 186,
+              "end_column": 17
+            },
+            "type": "I32"
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 186,
+              "start_column": 20,
+              "end_line": 186,
+              "end_column": 25
+            },
+            "type": "BinaryOp",
+            "left": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 186,
+                "start_column": 20,
+                "end_line": 186,
+                "end_column": 21
+              },
+              "type": "Identifier",
+              "name": "a"
+            },
+            "operator": "%",
+            "right": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 186,
+                "start_column": 24,
+                "end_line": 186,
+                "end_column": 25
+              },
+              "type": "IntLiteral",
+              "value": "3"
+            }
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 188,
+            "start_column": 5,
+            "end_line": 188,
+            "end_column": 39
+          },
+          "type": "VarDeclaration",
+          "name": "greeting",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 188,
+              "start_column": 15,
+              "end_line": 188,
+              "end_column": 18
+            },
+            "type": "Str"
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 188,
+              "start_column": 21,
+              "end_line": 188,
+              "end_column": 39
+            },
+            "type": "BinaryOp",
+            "left": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 188,
+                "start_column": 21,
+                "end_line": 188,
+                "end_column": 28
+              },
+              "type": "StringLiteral",
+              "value": "Hello, "
+            },
+            "operator": "+",
+            "right": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 188,
+                "start_column": 33,
+                "end_line": 188,
+                "end_column": 39
+              },
+              "type": "StringLiteral",
+              "value": "world!"
+            }
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 189,
+            "start_column": 5,
+            "end_line": 189,
+            "end_column": 43
+          },
+          "type": "VarDeclaration",
+          "name": "numbers",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 189,
+              "start_column": 14,
+              "end_line": 189,
+              "end_column": 22
+            },
+            "type": "CustomType",
+            "name": "List",
+            "type_args": [
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 189,
+                  "start_column": 19,
+                  "end_line": 189,
+                  "end_column": 22
+                },
+                "type": "I32"
+              }
+            ]
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 189,
+              "start_column": 25,
+              "end_line": 189,
+              "end_column": 43
+            },
+            "type": "BinaryOp",
+            "left": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 189,
+                "start_column": 25,
+                "end_line": 189,
+                "end_column": 31
+              },
+              "type": "ListLiteral",
+              "elements": [
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 189,
+                    "start_column": 26,
+                    "end_line": 189,
+                    "end_column": 27
+                  },
+                  "type": "IntLiteral",
+                  "value": "1"
+                },
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 189,
+                    "start_column": 29,
+                    "end_line": 189,
+                    "end_column": 30
+                  },
+                  "type": "IntLiteral",
+                  "value": "2"
+                }
+              ]
+            },
+            "operator": "+",
+            "right": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 189,
+                "start_column": 34,
+                "end_line": 189,
+                "end_column": 43
+              },
+              "type": "ListLiteral",
+              "elements": [
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 189,
+                    "start_column": 35,
+                    "end_line": 189,
+                    "end_column": 36
+                  },
+                  "type": "IntLiteral",
+                  "value": "3"
+                },
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 189,
+                    "start_column": 38,
+                    "end_line": 189,
+                    "end_column": 39
+                  },
+                  "type": "IntLiteral",
+                  "value": "4"
+                },
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 189,
+                    "start_column": 41,
+                    "end_line": 189,
+                    "end_column": 42
+                  },
+                  "type": "IntLiteral",
+                  "value": "5"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "span": {
+        "file_path": "test/test_parser_comprehensive.sl",
+        "start_line": 192,
+        "start_column": 1,
+        "end_line": 200,
+        "end_column": 2
+      },
+      "type": "FunctionDef",
+      "name": "fibonacci",
+      "params": [
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 192,
+            "start_column": 14,
+            "end_line": 192,
+            "end_column": 20
+          },
+          "type": "Parameter",
+          "name": "n",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 192,
+              "start_column": 17,
+              "end_line": 192,
+              "end_column": 20
+            },
+            "type": "I32"
+          }
+        }
+      ],
+      "return_type": {
+        "span": {
+          "file_path": "test/test_parser_comprehensive.sl",
+          "start_line": 192,
+          "start_column": 25,
+          "end_line": 192,
+          "end_column": 28
+        },
+        "type": "I32"
+      },
+      "body": [
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 193,
+            "start_column": 5,
+            "end_line": 199,
+            "end_column": 6
+          },
+          "type": "IfStatement",
+          "condition": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 193,
+              "start_column": 8,
+              "end_line": 193,
+              "end_column": 14
+            },
+            "type": "BinaryOp",
+            "left": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 193,
+                "start_column": 8,
+                "end_line": 193,
+                "end_column": 9
+              },
+              "type": "Identifier",
+              "name": "n"
+            },
+            "operator": "<=",
+            "right": {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 193,
+                "start_column": 13,
+                "end_line": 193,
+                "end_column": 14
+              },
+              "type": "IntLiteral",
+              "value": "1"
+            }
+          },
+          "then_body": [
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 194,
+                "start_column": 9,
+                "end_line": 194,
+                "end_column": 17
+              },
+              "type": "ReturnStatement",
+              "value": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 194,
+                  "start_column": 16,
+                  "end_line": 194,
+                  "end_column": 17
+                },
+                "type": "Identifier",
+                "name": "n"
+              }
+            }
+          ],
+          "elif_branches": [
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 195,
+                "start_column": 7,
+                "end_line": 197,
+                "end_column": 6
+              },
+              "type": "ElifBranch",
+              "condition": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 195,
+                  "start_column": 12,
+                  "end_line": 195,
+                  "end_column": 18
+                },
+                "type": "BinaryOp",
+                "left": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 195,
+                    "start_column": 12,
+                    "end_line": 195,
+                    "end_column": 13
+                  },
+                  "type": "Identifier",
+                  "name": "n"
+                },
+                "operator": "==",
+                "right": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 195,
+                    "start_column": 17,
+                    "end_line": 195,
+                    "end_column": 18
+                  },
+                  "type": "IntLiteral",
+                  "value": "2"
+                }
+              },
+              "body": [
+                {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 196,
+                    "start_column": 9,
+                    "end_line": 196,
+                    "end_column": 17
+                  },
+                  "type": "ReturnStatement",
+                  "value": {
+                    "span": {
+                      "file_path": "test/test_parser_comprehensive.sl",
+                      "start_line": 196,
+                      "start_column": 16,
+                      "end_line": 196,
+                      "end_column": 17
+                    },
+                    "type": "IntLiteral",
+                    "value": "1"
+                  }
+                }
+              ]
+            }
+          ],
+          "else_body": [
+            {
+              "span": {
+                "file_path": "test/test_parser_comprehensive.sl",
+                "start_line": 198,
+                "start_column": 9,
+                "end_line": 198,
+                "end_column": 50
+              },
+              "type": "ReturnStatement",
+              "value": {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 198,
+                  "start_column": 16,
+                  "end_line": 198,
+                  "end_column": 50
+                },
+                "type": "BinaryOp",
+                "left": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 198,
+                    "start_column": 16,
+                    "end_line": 198,
+                    "end_column": 31
+                  },
+                  "type": "FunctionCall",
+                  "name": "fibonacci",
+                  "args": [
+                    {
+                      "span": {
+                        "file_path": "test/test_parser_comprehensive.sl",
+                        "start_line": 198,
+                        "start_column": 26,
+                        "end_line": 198,
+                        "end_column": 31
+                      },
+                      "type": "BinaryOp",
+                      "left": {
+                        "span": {
+                          "file_path": "test/test_parser_comprehensive.sl",
+                          "start_line": 198,
+                          "start_column": 26,
+                          "end_line": 198,
+                          "end_column": 27
+                        },
+                        "type": "Identifier",
+                        "name": "n"
+                      },
+                      "operator": "-",
+                      "right": {
+                        "span": {
+                          "file_path": "test/test_parser_comprehensive.sl",
+                          "start_line": 198,
+                          "start_column": 30,
+                          "end_line": 198,
+                          "end_column": 31
+                        },
+                        "type": "IntLiteral",
+                        "value": "1"
+                      }
+                    }
+                  ]
+                },
+                "operator": "+",
+                "right": {
+                  "span": {
+                    "file_path": "test/test_parser_comprehensive.sl",
+                    "start_line": 198,
+                    "start_column": 35,
+                    "end_line": 198,
+                    "end_column": 50
+                  },
+                  "type": "FunctionCall",
+                  "name": "fibonacci",
+                  "args": [
+                    {
+                      "span": {
+                        "file_path": "test/test_parser_comprehensive.sl",
+                        "start_line": 198,
+                        "start_column": 45,
+                        "end_line": 198,
+                        "end_column": 50
+                      },
+                      "type": "BinaryOp",
+                      "left": {
+                        "span": {
+                          "file_path": "test/test_parser_comprehensive.sl",
+                          "start_line": 198,
+                          "start_column": 45,
+                          "end_line": 198,
+                          "end_column": 46
+                        },
+                        "type": "Identifier",
+                        "name": "n"
+                      },
+                      "operator": "-",
+                      "right": {
+                        "span": {
+                          "file_path": "test/test_parser_comprehensive.sl",
+                          "start_line": 198,
+                          "start_column": 49,
+                          "end_line": 198,
+                          "end_column": 50
+                        },
+                        "type": "IntLiteral",
+                        "value": "2"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "span": {
+        "file_path": "test/test_parser_comprehensive.sl",
+        "start_line": 202,
+        "start_column": 1,
+        "end_line": 219,
+        "end_column": 2
+      },
+      "type": "FunctionDef",
+      "name": "main",
+      "params": [],
+      "return_type": null,
+      "body": [
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 203,
+            "start_column": 5,
+            "end_line": 203,
+            "end_column": 62
+          },
+          "type": "NativeBlock",
+          "content": "\n        printf(\"Starting Sageleaf test program\\n\");\n    "
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 207,
+            "start_column": 5,
+            "end_line": 207,
+            "end_column": 20
+          },
+          "type": "ExpressionStatement",
+          "expression": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 207,
+              "start_column": 5,
+              "end_line": 207,
+              "end_column": 20
+            },
+            "type": "FunctionCall",
+            "name": "process_numbers",
+            "args": []
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 208,
+            "start_column": 5,
+            "end_line": 208,
+            "end_column": 26
+          },
+          "type": "ExpressionStatement",
+          "expression": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 208,
+              "start_column": 5,
+              "end_line": 208,
+              "end_column": 26
+            },
+            "type": "FunctionCall",
+            "name": "test_pattern_matching",
+            "args": []
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 209,
+            "start_column": 5,
+            "end_line": 209,
+            "end_column": 21
+          },
+          "type": "ExpressionStatement",
+          "expression": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 209,
+              "start_column": 5,
+              "end_line": 209,
+              "end_column": 21
+            },
+            "type": "FunctionCall",
+            "name": "test_collections",
+            "args": []
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 210,
+            "start_column": 5,
+            "end_line": 210,
+            "end_column": 33
+          },
+          "type": "ExpressionStatement",
+          "expression": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 210,
+              "start_column": 5,
+              "end_line": 210,
+              "end_column": 33
+            },
+            "type": "FunctionCall",
+            "name": "test_pointers_and_references",
+            "args": []
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 211,
+            "start_column": 5,
+            "end_line": 211,
+            "end_column": 21
+          },
+          "type": "ExpressionStatement",
+          "expression": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 211,
+              "start_column": 5,
+              "end_line": 211,
+              "end_column": 21
+            },
+            "type": "FunctionCall",
+            "name": "test_expressions",
+            "args": []
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 213,
+            "start_column": 5,
+            "end_line": 213,
+            "end_column": 35
+          },
+          "type": "VarDeclaration",
+          "name": "fib_result",
+          "type_annotation": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 213,
+              "start_column": 17,
+              "end_line": 213,
+              "end_column": 20
+            },
+            "type": "I32"
+          },
+          "value": {
+            "span": {
+              "file_path": "test/test_parser_comprehensive.sl",
+              "start_line": 213,
+              "start_column": 23,
+              "end_line": 213,
+              "end_column": 35
+            },
+            "type": "FunctionCall",
+            "name": "fibonacci",
+            "args": [
+              {
+                "span": {
+                  "file_path": "test/test_parser_comprehensive.sl",
+                  "start_line": 213,
+                  "start_column": 33,
+                  "end_line": 213,
+                  "end_column": 35
+                },
+                "type": "IntLiteral",
+                "value": "10"
+              }
+            ]
+          }
+        },
+        {
+          "span": {
+            "file_path": "test/test_parser_comprehensive.sl",
+            "start_line": 215,
+            "start_column": 5,
+            "end_line": 215,
+            "end_column": 114
+          },
+          "type": "NativeBlock",
+          "content": "\n        printf(\"Fibonacci(10) = %d\\n\", fib_result);\n        printf(\"Program completed successfully\\n\");\n    "
+        }
+      ]
+    }
+  ]
+}

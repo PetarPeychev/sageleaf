@@ -1,2 +1,16 @@
+# IDE
 .vscode/
-sage
+.idea/
+*.swp
+*.swo
+*~
+
+# System
+.DS_Store
+
+# Python
+.ruff_cache/
+.venv/
+.pytest_cache/
+.claude/
+__pycache__
