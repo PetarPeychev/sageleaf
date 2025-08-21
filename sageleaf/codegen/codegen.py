@@ -11,7 +11,9 @@ from sageleaf.parse.ast import (
     U64,
     Bool,
     FunctionDef,
+    NativeBlock,
     Program,
+    Statement,
     Type,
     Usize,
 )
@@ -30,56 +32,95 @@ class CodeGenerator:
     def __init__(self, program: Program):
         self.program = program
         self.code = ""
+        self.indent_level = 0
+
+    def indent(self, level: int = 1):
+        self.indent_level += level
+
+    def dedent(self, level: int = 1):
+        self.indent_level -= level
+
+    def add(self, s: str = "", indent: bool = True):
+        if indent:
+            self.code += "    " * self.indent_level + s + "\n"
+        else:
+            self.code += s + "\n"
 
     def generate(self) -> str:
-        self.code += "// --- Sageleaf Runtime ---\n\n"
+        self.add("// --- Sageleaf Runtime ---")
         with open("runtime/core.c") as f:
-            self.code += f.read().strip()
+            self.add(f.read().strip())
+        self.add()
 
-        self.code += "\n\n// --- Sageleaf User Program ---\n\n"
+        self.add("// --- Sageleaf User Program ---")
 
         assert self.program.functions
         for f in self.program.functions.values():
-            self.function_declaration(f)
-
-        self.code += "\n"
+            if f.name != "main":
+                self.function_declaration(f)
+                self.add()
 
         for f in self.program.functions.values():
             self.function_definition(f)
+            self.add()
 
         return self.code
 
     def function_declaration(self, f: FunctionDef):
-        self.code += self.type_to_c_type(f.return_type)
-        self.code += " "
-        self.code += f.name
-        self.code += "("
+        params: list[str] = []
+        for p in f.params:
+            params.append(self.type_to_c_type(p.type_annotation) + " " + p.name)
 
-        for i, p in enumerate(f.params):
-            self.code += self.type_to_c_type(p.type_annotation)
-            self.code += " "
-            self.code += p.name
-            if i < len(f.params) - 1:
-                self.code += ", "
-
-        self.code += ");\n"
+        self.add(
+            f"{self.type_to_c_type(f.return_type)} sl_{f.name}({', '.join(params)});"
+        )
 
     def function_definition(self, f: FunctionDef):
-        self.code += self.type_to_c_type(f.return_type)
-        self.code += " "
-        self.code += f.name
-        self.code += "("
+        params: list[str] = []
+        for p in f.params:
+            params.append(self.type_to_c_type(p.type_annotation) + " " + p.name)
 
-        for i, p in enumerate(f.params):
-            self.code += self.type_to_c_type(p.type_annotation)
-            self.code += " "
-            self.code += p.name
-            if i < len(f.params) - 1:
-                self.code += ", "
+        self.add(
+            f"{self.type_to_c_type(f.return_type)} sl_{f.name}({', '.join(params)})"
+            + " {"
+        )
+        self.indent()
+        for s in f.body:
+            self.statement(s)
+        self.dedent()
+        self.add("}")
 
-        self.code += ") {\n"
-        # TODO: Implement function body
-        self.code += "}\n"
+    def statement(self, s: Statement):
+        match s:
+            case NativeBlock():
+                self.native(s)
+            case _:
+                raise CodeGenError(f"Unknown statement {s}", s.span)
+
+    def native(self, n: NativeBlock):
+        content = n.content
+        if content.strip():
+            lines = content.splitlines()
+
+            while lines and not lines[0].strip():
+                lines.pop(0)
+            while lines and not lines[-1].strip():
+                lines.pop()
+
+            non_empty_lines = [line for line in lines if line.strip()]
+            if non_empty_lines:
+                min_indent = min(
+                    len(line) - len(line.lstrip()) for line in non_empty_lines
+                )
+                for line in lines:
+                    if line.strip():
+                        if len(line) >= min_indent:
+                            dedented = line[min_indent:]
+                        else:
+                            dedented = line.lstrip()
+                        self.add(dedented)
+                    else:
+                        self.add("")
 
     def type_to_c_type(self, t: Type | None) -> str:
         match t:

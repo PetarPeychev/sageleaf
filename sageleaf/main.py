@@ -83,7 +83,8 @@ def cmd_run(args: argparse.Namespace) -> None:
             sys.exit(1)
 
         try:
-            subprocess.run([str(exe_file)], check=True)
+            p = subprocess.run([str(exe_file)], check=True)
+            print(f"Exit code: {p.returncode}")
         except subprocess.CalledProcessError as e:
             sys.exit(e.returncode)
 

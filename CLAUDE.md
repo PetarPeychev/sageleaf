@@ -12,9 +12,9 @@ Sageleaf is a statically-typed programming language that compiles to C99.
 
 The Sageleaf compiler CLI supports the following commands:
 
-- `uv run sageleaf build <package/dir>` - Build a Sageleaf program
-- `uv run sageleaf run <package/dir>` - Run a Sageleaf program
-- `uv run sageleaf emit c <package/dir>` - Emit C code for a Sageleaf program
+- `uv run sage build <package/dir>` - Build a Sageleaf program
+- `uv run sage run <package/dir>` - Run a Sageleaf program
+- `uv run sage emit c <package/dir>` - Emit C code for a Sageleaf program
 
 ## Development Workflow
 
