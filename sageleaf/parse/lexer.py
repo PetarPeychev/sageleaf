@@ -13,12 +13,10 @@ class LexerError(Exception):
 
 class Lexer:
     def __init__(self, source: str, file_path: Path):
-        self.source = source
-        # Convert to relative path from current working directory
+        self.source = source.replace("\r\n", "\n")
         try:
             self.file_path = file_path.relative_to(Path.cwd())
         except ValueError:
-            # If relative_to fails, keep the original path
             self.file_path = file_path
         self.pos = 0
         self.line = 1

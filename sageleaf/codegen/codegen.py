@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from sageleaf.parse.ast import (
     F32,
     F64,
@@ -17,7 +19,10 @@ from sageleaf.parse.ast import (
     Type,
     Usize,
 )
+from sageleaf.parse.lexer import Lexer
+from sageleaf.parse.parser import Parser
 from sageleaf.parse.tokens import SourceSpan
+from sageleaf.typecheck.typechecker import TypeChecker
 
 
 class CodeGenError(Exception):
@@ -29,10 +34,11 @@ class CodeGenError(Exception):
 
 
 class CodeGenerator:
-    def __init__(self, program: Program):
+    def __init__(self, program: Program, lib: bool = False):
         self.program = program
         self.code = ""
         self.indent_level = 0
+        self.lib = lib
 
     def indent(self, level: int = 1):
         self.indent_level += level
@@ -40,19 +46,33 @@ class CodeGenerator:
     def dedent(self, level: int = 1):
         self.indent_level -= level
 
-    def add(self, s: str = "", indent: bool = True):
+    def add(self, s: str = "", indent: bool = True, newline: bool = True):
         if indent:
-            self.code += "    " * self.indent_level + s + "\n"
-        else:
-            self.code += s + "\n"
+            self.code += "    " * self.indent_level
+        self.code += s
+        if newline:
+            self.code += "\n"
 
     def generate(self) -> str:
-        self.add("// --- Sageleaf Runtime ---")
-        with open("runtime/core.c") as f:
-            self.add(f.read().strip())
-        self.add()
+        if not self.lib:
+            self.add("// --- Sageleaf Runtime ---")
+            with open("runtime/core.c") as f:
+                self.add(f.read().strip())
+            self.add()
 
-        self.add("// --- Sageleaf User Program ---")
+            self.add("// --- Sageleaf Library ---")
+            with open("runtime/lib.sl") as f:
+                lib_source = f.read().strip()
+            lexer = Lexer(lib_source, Path("runtime/lib.sl"))
+            tokens = lexer.tokenize()
+            parser = Parser(tokens)
+            ast = parser.parse()
+            typechecker = TypeChecker(ast)
+            typechecker.check()
+            codegen = CodeGenerator(ast, lib=True)
+            self.add(codegen.generate(), newline=False)
+
+            self.add("// --- Sageleaf User Program ---")
 
         assert self.program.functions
         for f in self.program.functions.values():
@@ -69,7 +89,7 @@ class CodeGenerator:
     def function_declaration(self, f: FunctionDef):
         params: list[str] = []
         for p in f.params:
-            params.append(self.type_to_c_type(p.type_annotation) + " " + p.name)
+            params.append(self.type_to_c_type(p.type_annotation) + " sl_" + p.name)
 
         self.add(
             f"{self.type_to_c_type(f.return_type)} sl_{f.name}({', '.join(params)});"
@@ -78,7 +98,7 @@ class CodeGenerator:
     def function_definition(self, f: FunctionDef):
         params: list[str] = []
         for p in f.params:
-            params.append(self.type_to_c_type(p.type_annotation) + " " + p.name)
+            params.append(self.type_to_c_type(p.type_annotation) + " sl_" + p.name)
 
         self.add(
             f"{self.type_to_c_type(f.return_type)} sl_{f.name}({', '.join(params)})"
