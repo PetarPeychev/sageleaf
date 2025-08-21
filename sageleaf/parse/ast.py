@@ -99,7 +99,7 @@ type TopLevelStatement = (
 
 
 class FunctionDef(ASTNode):
-    type: Literal["FunctionDef"] = "FunctionDef"
+    kind: Literal["FunctionDef"] = "FunctionDef"
     name: str
     params: list[Parameter]
     return_type: Type | None
@@ -109,46 +109,46 @@ class FunctionDef(ASTNode):
 
 
 class Parameter(ASTNode):
-    type: Literal["Parameter"] = "Parameter"
+    kind: Literal["Parameter"] = "Parameter"
     name: str
     type_annotation: Type
 
 
 class StructDef(ASTNode):
-    type: Literal["StructDef"] = "StructDef"
+    kind: Literal["StructDef"] = "StructDef"
     name: str
     type_params: list[str]
     fields: list[StructField]
 
 
 class StructField(ASTNode):
-    type: Literal["StructField"] = "StructField"
+    kind: Literal["StructField"] = "StructField"
     name: str
     type_annotation: Type
 
 
 class UnionDef(ASTNode):
-    type: Literal["UnionDef"] = "UnionDef"
+    kind: Literal["UnionDef"] = "UnionDef"
     name: str
     type_params: list[str]
     variants: list[UnionVariant]
 
 
 class UnionVariant(ASTNode):
-    type: Literal["UnionVariant"] = "UnionVariant"
+    kind: Literal["UnionVariant"] = "UnionVariant"
     name: str
     payload: Type | None
 
 
 class ImportStatement(ASTNode):
-    type: Literal["ImportStatement"] = "ImportStatement"
+    kind: Literal["ImportStatement"] = "ImportStatement"
     package: str
     items: list[str] | None
     alias: str | None
 
 
 class NativeBlock(ASTNode):
-    type: Literal["NativeBlock"] = "NativeBlock"
+    kind: Literal["NativeBlock"] = "NativeBlock"
     content: str
 
 
@@ -174,81 +174,85 @@ type Type = (
 )
 
 
-class I8(ASTNode):
-    type: Literal["I8"] = "I8"
+class NumberType(BaseModel):
+    pass
 
 
-class I16(ASTNode):
-    type: Literal["I16"] = "I16"
+class I8(ASTNode, NumberType):
+    kind: Literal["I8"] = "I8"
 
 
-class I32(ASTNode):
-    type: Literal["I32"] = "I32"
+class I16(ASTNode, NumberType):
+    kind: Literal["I16"] = "I16"
 
 
-class I64(ASTNode):
-    type: Literal["I64"] = "I64"
+class I32(ASTNode, NumberType):
+    kind: Literal["I32"] = "I32"
 
 
-class U8(ASTNode):
-    type: Literal["U8"] = "U8"
+class I64(ASTNode, NumberType):
+    kind: Literal["I64"] = "I64"
 
 
-class U16(ASTNode):
-    type: Literal["U16"] = "U16"
+class U8(ASTNode, NumberType):
+    kind: Literal["U8"] = "U8"
 
 
-class U32(ASTNode):
-    type: Literal["U32"] = "U32"
+class U16(ASTNode, NumberType):
+    kind: Literal["U16"] = "U16"
 
 
-class U64(ASTNode):
-    type: Literal["U64"] = "U64"
+class U32(ASTNode, NumberType):
+    kind: Literal["U32"] = "U32"
 
 
-class Usize(ASTNode):
-    type: Literal["Usize"] = "Usize"
+class U64(ASTNode, NumberType):
+    kind: Literal["U64"] = "U64"
 
 
-class F32(ASTNode):
-    type: Literal["F32"] = "F32"
+class Usize(ASTNode, NumberType):
+    kind: Literal["Usize"] = "Usize"
 
 
-class F64(ASTNode):
-    type: Literal["F64"] = "F64"
+class F32(ASTNode, NumberType):
+    kind: Literal["F32"] = "F32"
+
+
+class F64(ASTNode, NumberType):
+    kind: Literal["F64"] = "F64"
 
 
 class Bool(ASTNode):
-    type: Literal["Bool"] = "Bool"
+    kind: Literal["Bool"] = "Bool"
 
 
 class Str(ASTNode):
-    type: Literal["Str"] = "Str"
+    kind: Literal["Str"] = "Str"
 
 
 class PointerType(ASTNode):
-    type: Literal["PointerType"] = "PointerType"
+    kind: Literal["PointerType"] = "PointerType"
     target: Type
 
 
 class GenericType(ASTNode):
-    type: Literal["GenericType"] = "GenericType"
+    kind: Literal["GenericType"] = "GenericType"
     name: str
 
 
 class CustomType(ASTNode):
-    type: Literal["CustomType"] = "CustomType"
+    kind: Literal["CustomType"] = "CustomType"
     name: str
     type_args: list[Type]
 
 
 class AnonymousUnionType(ASTNode):
-    type: Literal["AnonymousUnionType"] = "AnonymousUnionType"
+    kind: Literal["AnonymousUnionType"] = "AnonymousUnionType"
     variants: list[UnionVariant]
 
 
 class AnonymousStructType(ASTNode):
-    type: Literal["AnonymousStructType"] = "AnonymousStructType"
+    kind: Literal["AnonymousStructType"] = "AnonymousStructType"
     fields: list[StructField]
 
 
@@ -269,37 +273,39 @@ type Statement = (
 
 
 class ReturnStatement(ASTNode):
-    type: Literal["ReturnStatement"] = "ReturnStatement"
+    kind: Literal["ReturnStatement"] = "ReturnStatement"
     value: Expression | None
+    type: Type | None = None
+    return_token: Token | None = None
 
 
 class VarDeclaration(ASTNode):
-    type: Literal["VarDeclaration"] = "VarDeclaration"
+    kind: Literal["VarDeclaration"] = "VarDeclaration"
     name: str
     type_annotation: Type | None
     value: Expression
 
 
 class ConstDeclaration(ASTNode):
-    type: Literal["ConstDeclaration"] = "ConstDeclaration"
+    kind: Literal["ConstDeclaration"] = "ConstDeclaration"
     name: str
     type_annotation: Type | None
     value: Expression
 
 
 class Assignment(ASTNode):
-    type: Literal["Assignment"] = "Assignment"
+    kind: Literal["Assignment"] = "Assignment"
     target: Expression
     value: Expression
 
 
 class ExpressionStatement(ASTNode):
-    type: Literal["ExpressionStatement"] = "ExpressionStatement"
+    kind: Literal["ExpressionStatement"] = "ExpressionStatement"
     expression: Expression
 
 
 class IfStatement(ASTNode):
-    type: Literal["IfStatement"] = "IfStatement"
+    kind: Literal["IfStatement"] = "IfStatement"
     condition: Expression
     then_body: list[Statement]
     elif_branches: list[ElifBranch]
@@ -307,19 +313,19 @@ class IfStatement(ASTNode):
 
 
 class ElifBranch(ASTNode):
-    type: Literal["ElifBranch"] = "ElifBranch"
+    kind: Literal["ElifBranch"] = "ElifBranch"
     condition: Expression
     body: list[Statement]
 
 
 class WhileStatement(ASTNode):
-    type: Literal["WhileStatement"] = "WhileStatement"
+    kind: Literal["WhileStatement"] = "WhileStatement"
     condition: Expression
     body: list[Statement]
 
 
 class ForStatement(ASTNode):
-    type: Literal["ForStatement"] = "ForStatement"
+    kind: Literal["ForStatement"] = "ForStatement"
     target: ForTarget
     iterable: Expression
     body: list[Statement]
@@ -329,21 +335,21 @@ type ForTarget = list[Identifier]
 
 
 class BreakStatement(ASTNode):
-    type: Literal["BreakStatement"] = "BreakStatement"
+    kind: Literal["BreakStatement"] = "BreakStatement"
 
 
 class ContinueStatement(ASTNode):
-    type: Literal["ContinueStatement"] = "ContinueStatement"
+    kind: Literal["ContinueStatement"] = "ContinueStatement"
 
 
 class MatchStatement(ASTNode):
-    type: Literal["MatchStatement"] = "MatchStatement"
+    kind: Literal["MatchStatement"] = "MatchStatement"
     value: Expression
     cases: list[MatchCase]
 
 
 class MatchCase(ASTNode):
-    type: Literal["MatchCase"] = "MatchCase"
+    kind: Literal["MatchCase"] = "MatchCase"
     pattern: Pattern
     guard: Expression | None
     body: list[Statement]
@@ -371,109 +377,112 @@ type Expression = (
 
 
 class IntLiteral(ASTNode):
-    type: Literal["IntLiteral"] = "IntLiteral"
+    kind: Literal["IntLiteral"] = "IntLiteral"
     value: str
+    type: NumberType | None = None
 
 
 class FloatLiteral(ASTNode):
-    type: Literal["FloatLiteral"] = "FloatLiteral"
+    kind: Literal["FloatLiteral"] = "FloatLiteral"
     value: str
+    type: NumberType | None = None
 
 
 class StringLiteral(ASTNode):
-    type: Literal["StringLiteral"] = "StringLiteral"
+    kind: Literal["StringLiteral"] = "StringLiteral"
     value: str
 
 
 class BoolLiteral(ASTNode):
-    type: Literal["BoolLiteral"] = "BoolLiteral"
+    kind: Literal["BoolLiteral"] = "BoolLiteral"
     value: bool
+    type: Bool | None = None
 
 
 class Identifier(ASTNode):
-    type: Literal["Identifier"] = "Identifier"
+    kind: Literal["Identifier"] = "Identifier"
     name: str
 
 
 class BinaryOp(ASTNode):
-    type: Literal["BinaryOp"] = "BinaryOp"
+    kind: Literal["BinaryOp"] = "BinaryOp"
     left: Expression
     operator: str
     right: Expression
 
 
 class UnaryOp(ASTNode):
-    type: Literal["UnaryOp"] = "UnaryOp"
+    kind: Literal["UnaryOp"] = "UnaryOp"
     operator: str
     operand: Expression
 
 
 class FunctionCall(ASTNode):
-    type: Literal["FunctionCall"] = "FunctionCall"
+    kind: Literal["FunctionCall"] = "FunctionCall"
     name: str
     args: list[Expression]
 
 
 class MethodCall(ASTNode):
-    type: Literal["MethodCall"] = "MethodCall"
+    kind: Literal["MethodCall"] = "MethodCall"
     object: Expression
     method: str
     args: list[Expression]
 
 
 class FieldAccess(ASTNode):
-    type: Literal["FieldAccess"] = "FieldAccess"
+    kind: Literal["FieldAccess"] = "FieldAccess"
     object: Expression
     field: str
 
 
 class IndexAccess(ASTNode):
-    type: Literal["IndexAccess"] = "IndexAccess"
+    kind: Literal["IndexAccess"] = "IndexAccess"
     object: Expression
     index: Expression
 
 
 class ListLiteral(ASTNode):
-    type: Literal["ListLiteral"] = "ListLiteral"
+    kind: Literal["ListLiteral"] = "ListLiteral"
     elements: list[Expression]
 
 
 class MapLiteral(ASTNode):
-    type: Literal["MapLiteral"] = "MapLiteral"
+    kind: Literal["MapLiteral"] = "MapLiteral"
     pairs: list[MapPair]
 
 
 class MapPair(ASTNode):
-    type: Literal["MapPair"] = "MapPair"
+    kind: Literal["MapPair"] = "MapPair"
     key: Expression
     value: Expression
 
 
 class SetLiteral(ASTNode):
-    type: Literal["SetLiteral"] = "SetLiteral"
+    kind: Literal["SetLiteral"] = "SetLiteral"
     elements: list[Expression]
 
 
 class StructLiteral(ASTNode):
-    type: Literal["StructLiteral"] = "StructLiteral"
+    kind: Literal["StructLiteral"] = "StructLiteral"
     name: str
     fields: list[StructLiteralField]
 
 
 class StructLiteralField(ASTNode):
-    type: Literal["StructLiteralField"] = "StructLiteralField"
+    kind: Literal["StructLiteralField"] = "StructLiteralField"
     name: str | None
     value: Expression
 
 
 class UnionLiteral(ASTNode):
-    type: Literal["UnionLiteral"] = "UnionLiteral"
+    kind: Literal["UnionLiteral"] = "UnionLiteral"
     variant: str
     value: Expression | None
 
 
 class RangeExpression(ASTNode):
-    type: Literal["RangeExpression"] = "RangeExpression"
+    kind: Literal["RangeExpression"] = "RangeExpression"
     start: Expression
     end: Expression
     inclusive: bool
@@ -491,46 +500,46 @@ type Pattern = (
 
 
 class WildcardPattern(ASTNode):
-    type: Literal["WildcardPattern"] = "WildcardPattern"
+    kind: Literal["WildcardPattern"] = "WildcardPattern"
 
 
 class IdentifierPattern(ASTNode):
-    type: Literal["IdentifierPattern"] = "IdentifierPattern"
+    kind: Literal["IdentifierPattern"] = "IdentifierPattern"
     name: str
 
 
 class LiteralPattern(ASTNode):
-    type: Literal["LiteralPattern"] = "LiteralPattern"
+    kind: Literal["LiteralPattern"] = "LiteralPattern"
     value: Expression
 
 
 class StructPattern(ASTNode):
-    type: Literal["StructPattern"] = "StructPattern"
+    kind: Literal["StructPattern"] = "StructPattern"
     name: str
     fields: list[StructPatternField]
 
 
 class StructPatternField(ASTNode):
-    type: Literal["StructPatternField"] = "StructPatternField"
+    kind: Literal["StructPatternField"] = "StructPatternField"
     name: str | None
     pattern: Pattern
 
 
 class UnionPattern(ASTNode):
-    type: Literal["UnionPattern"] = "UnionPattern"
+    kind: Literal["UnionPattern"] = "UnionPattern"
     variant: str
     pattern: Pattern | None
 
 
 class ListPattern(ASTNode):
-    type: Literal["ListPattern"] = "ListPattern"
+    kind: Literal["ListPattern"] = "ListPattern"
     prefix_patterns: list[Pattern]
     rest_name: str | None
     suffix_patterns: list[Pattern]
 
 
 class RangePattern(ASTNode):
-    type: Literal["RangePattern"] = "RangePattern"
+    kind: Literal["RangePattern"] = "RangePattern"
     start: Expression
     end: Expression
     inclusive: bool

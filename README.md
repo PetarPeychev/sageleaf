@@ -1,5 +1,5 @@
 # Sageleaf
-Sageleaf is a statically-typed garbage-collected programming language which compiles to readable C99 code. It makes C interop easy by allowing escape hatches to drop down to native C code, similarly to how inline assembly works in other languages.
+Sageleaf is a statically-typed garbage-collected programming language which compiles to C99 code. It makes C interop easy by allowing escape hatches to drop down to native C code, similarly to how inline assembly works in other languages.
 
 The language makes pragmatic performance-usability trade-offs by codifying common C patterns such as dynamic arrays, hashmaps, hash sets, tagged unions, length-based strings, non-nullable pointers, bounds checking, runtime type information, etc.
 

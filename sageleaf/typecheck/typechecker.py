@@ -1,7 +1,4 @@
-from sageleaf.parse.ast import (
-    FunctionDef,
-    Program,
-)
+from sageleaf.parse import ast
 from sageleaf.parse.tokens import SourceSpan
 
 
@@ -14,7 +11,7 @@ class TypeCheckError(Exception):
 
 
 class TypeChecker:
-    def __init__(self, program: Program):
+    def __init__(self, program: ast.Program):
         self.program = program
 
     def check(self):
@@ -22,7 +19,7 @@ class TypeChecker:
 
         for s in self.program.statements:
             match s:
-                case FunctionDef():
+                case ast.FunctionDef():
                     self.check_function_def(s)
                 case _:
                     pass
@@ -31,7 +28,7 @@ class TypeChecker:
         self.program.functions = {}
         for s in self.program.statements:
             match s:
-                case FunctionDef():
+                case ast.FunctionDef():
                     if s.name in self.program.functions:
                         raise TypeCheckError(
                             f"Duplicate function definition '{s.name}'",
@@ -41,5 +38,81 @@ class TypeChecker:
                 case _:
                     pass
 
-    def check_function_def(self, function_def: FunctionDef):
-        pass
+    def check_function_def(self, function_def: ast.FunctionDef):
+        for s in function_def.body:
+            match s:
+                case ast.ReturnStatement():
+                    self.check_return_statement(s, function_def.return_type)
+                case _:
+                    pass
+
+    def check_return_statement(self, r: ast.ReturnStatement, t: ast.Type | None):
+        assert r.return_token
+        if t:
+            r.type = t
+            if not r.value:
+                raise TypeCheckError(
+                    "Return statement must have a value", r.return_token.span
+                )
+            self.check_expression(r.value, r.type)
+        elif r.value:
+            raise TypeCheckError(
+                "Return statement must not have a value", r.return_token.span
+            )
+
+    def check_expression(self, e: ast.Expression, t: ast.Type):
+        match e:
+            case ast.IntLiteral():
+                if isinstance(t, ast.NumberType):
+                    e.type = t
+                else:
+                    raise TypeCheckError(
+                        f"Expected {self.type_to_name(t)}, got integer literal", e.span
+                    )
+            case ast.FloatLiteral():
+                if isinstance(t, ast.NumberType):
+                    e.type = t
+                else:
+                    raise TypeCheckError(
+                        f"Expected {self.type_to_name(t)}, got float literal", e.span
+                    )
+            case ast.BoolLiteral():
+                if isinstance(t, ast.Bool):
+                    e.type = t
+                else:
+                    raise TypeCheckError(
+                        f"Expected {self.type_to_name(t)}, got bool literal", e.span
+                    )
+            case _:
+                raise TypeCheckError(f"Unsupported expression {e}", e.span)
+
+    def type_to_name(self, t: ast.Type) -> str:
+        match t:
+            case ast.I8():
+                return "i8"
+            case ast.I16():
+                return "i16"
+            case ast.I32():
+                return "i32"
+            case ast.I64():
+                return "i64"
+            case ast.U8():
+                return "u8"
+            case ast.U16():
+                return "u16"
+            case ast.U32():
+                return "u32"
+            case ast.U64():
+                return "u64"
+            case ast.Usize():
+                return "usize"
+            case ast.F32():
+                return "f32"
+            case ast.F64():
+                return "f64"
+            case ast.Bool():
+                return "bool"
+            case ast.Str():
+                return "str"
+            case _:
+                raise TypeCheckError(f"Unknown type {t}", t.span)

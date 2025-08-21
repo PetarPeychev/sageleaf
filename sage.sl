@@ -1,5 +1,5 @@
-fn is_petar_cool() -> bool {
-    return true;
+fn do_stuff() -> u8 {
+    return 256;
 }
 
 fn main() {
@@ -10,6 +10,6 @@ fn main() {
             printf("i = %d\n", i);
         }
 
-        printf("is petar cool: %d\n", sl_is_petar_cool());
+        printf("stuff: %d\n", sl_do_stuff());
     }
 }

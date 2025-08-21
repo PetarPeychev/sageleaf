@@ -1,29 +1,6 @@
 from pathlib import Path
 
-from sageleaf.parse.ast import (
-    F32,
-    F64,
-    I8,
-    I16,
-    I32,
-    I64,
-    U8,
-    U16,
-    U32,
-    U64,
-    Bool,
-    BoolLiteral,
-    Expression,
-    FloatLiteral,
-    FunctionDef,
-    IntLiteral,
-    NativeBlock,
-    Program,
-    ReturnStatement,
-    Statement,
-    Type,
-    Usize,
-)
+from sageleaf.parse import ast
 from sageleaf.parse.lexer import Lexer
 from sageleaf.parse.parser import Parser
 from sageleaf.parse.tokens import SourceSpan
@@ -39,7 +16,7 @@ class CodeGenError(Exception):
 
 
 class CodeGenerator:
-    def __init__(self, program: Program, lib: bool = False):
+    def __init__(self, program: ast.Program, lib: bool = False):
         self.program = program
         self.code = ""
         self.indent_level = 0
@@ -58,31 +35,31 @@ class CodeGenerator:
         if newline:
             self.code += "\n"
 
-    def type_to_c_type(self, t: Type | None) -> str:
+    def type_to_c_type(self, t: ast.Type | None) -> str:
         match t:
-            case I8():
+            case ast.I8():
                 return "int8_t"
-            case I16():
+            case ast.I16():
                 return "int16_t"
-            case I32():
+            case ast.I32():
                 return "int32_t"
-            case I64():
+            case ast.I64():
                 return "int64_t"
-            case U8():
+            case ast.U8():
                 return "uint8_t"
-            case U16():
+            case ast.U16():
                 return "uint16_t"
-            case U32():
+            case ast.U32():
                 return "uint32_t"
-            case U64():
+            case ast.U64():
                 return "uint64_t"
-            case Usize():
+            case ast.Usize():
                 return "size_t"
-            case F32():
+            case ast.F32():
                 return "float"
-            case F64():
+            case ast.F64():
                 return "double"
-            case Bool():
+            case ast.Bool():
                 return "bool"
             case None:
                 return "void"
@@ -122,7 +99,7 @@ class CodeGenerator:
 
         return self.code
 
-    def function_declaration(self, f: FunctionDef):
+    def function_declaration(self, f: ast.FunctionDef):
         params: list[str] = []
         for p in f.params:
             params.append(self.type_to_c_type(p.type_annotation) + " sl_" + p.name)
@@ -131,7 +108,7 @@ class CodeGenerator:
             f"{self.type_to_c_type(f.return_type)} sl_{f.name}({', '.join(params)});"
         )
 
-    def function_definition(self, f: FunctionDef):
+    def function_definition(self, f: ast.FunctionDef):
         params: list[str] = []
         for p in f.params:
             params.append(self.type_to_c_type(p.type_annotation) + " sl_" + p.name)
@@ -146,16 +123,16 @@ class CodeGenerator:
         self.dedent()
         self.add("}")
 
-    def statement(self, s: Statement):
+    def statement(self, s: ast.Statement):
         match s:
-            case NativeBlock():
+            case ast.NativeBlock():
                 self.native(s)
-            case ReturnStatement():
+            case ast.ReturnStatement():
                 self.return_statement(s)
             case _:
                 raise CodeGenError(f"Unknown statement {s}", s.span)
 
-    def native(self, n: NativeBlock):
+    def native(self, n: ast.NativeBlock):
         content = n.content
         if content.strip():
             lines = content.splitlines()
@@ -180,20 +157,20 @@ class CodeGenerator:
                     else:
                         self.add("")
 
-    def return_statement(self, r: ReturnStatement):
+    def return_statement(self, r: ast.ReturnStatement):
         match r.value:
             case None:
                 self.add("return;")
             case expr:
                 self.add(f"return {self.expression(expr)};")
 
-    def expression(self, e: Expression) -> str:
+    def expression(self, e: ast.Expression) -> str:
         match e:
-            case IntLiteral():
+            case ast.IntLiteral():
                 return f"{e.value}"
-            case FloatLiteral():
+            case ast.FloatLiteral():
                 return f"{e.value}"
-            case BoolLiteral():
+            case ast.BoolLiteral():
                 return "true" if e.value else "false"
             case _:
                 raise CodeGenError(f"Unsupported expression {e}", e.span)

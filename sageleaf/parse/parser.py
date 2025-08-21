@@ -390,7 +390,7 @@ class Parser:
         self.expect(TokenType.SEMICOLON)
         span = self.merge_spans(start_token.span, end_span)
 
-        return ReturnStatement(span=span, value=value)
+        return ReturnStatement(span=span, value=value, return_token=start_token)
 
     def parse_const_declaration(self) -> ConstDeclaration:
         start_token = self.expect(TokenType.CONST)
