@@ -12,9 +12,14 @@ from sageleaf.parse.ast import (
     U32,
     U64,
     Bool,
+    BoolLiteral,
+    Expression,
+    FloatLiteral,
     FunctionDef,
+    IntLiteral,
     NativeBlock,
     Program,
+    ReturnStatement,
     Statement,
     Type,
     Usize,
@@ -52,6 +57,37 @@ class CodeGenerator:
         self.code += s
         if newline:
             self.code += "\n"
+
+    def type_to_c_type(self, t: Type | None) -> str:
+        match t:
+            case I8():
+                return "int8_t"
+            case I16():
+                return "int16_t"
+            case I32():
+                return "int32_t"
+            case I64():
+                return "int64_t"
+            case U8():
+                return "uint8_t"
+            case U16():
+                return "uint16_t"
+            case U32():
+                return "uint32_t"
+            case U64():
+                return "uint64_t"
+            case Usize():
+                return "size_t"
+            case F32():
+                return "float"
+            case F64():
+                return "double"
+            case Bool():
+                return "bool"
+            case None:
+                return "void"
+            case _:
+                raise CodeGenError(f"Unknown type {t}", t.span)
 
     def generate(self) -> str:
         if not self.lib:
@@ -114,6 +150,8 @@ class CodeGenerator:
         match s:
             case NativeBlock():
                 self.native(s)
+            case ReturnStatement():
+                self.return_statement(s)
             case _:
                 raise CodeGenError(f"Unknown statement {s}", s.span)
 
@@ -142,33 +180,20 @@ class CodeGenerator:
                     else:
                         self.add("")
 
-    def type_to_c_type(self, t: Type | None) -> str:
-        match t:
-            case I8():
-                return "int8_t"
-            case I16():
-                return "int16_t"
-            case I32():
-                return "int32_t"
-            case I64():
-                return "int64_t"
-            case U8():
-                return "uint8_t"
-            case U16():
-                return "uint16_t"
-            case U32():
-                return "uint32_t"
-            case U64():
-                return "uint64_t"
-            case Usize():
-                return "size_t"
-            case F32():
-                return "float"
-            case F64():
-                return "double"
-            case Bool():
-                return "bool"
+    def return_statement(self, r: ReturnStatement):
+        match r.value:
             case None:
-                return "void"
+                self.add("return;")
+            case expr:
+                self.add(f"return {self.expression(expr)};")
+
+    def expression(self, e: Expression) -> str:
+        match e:
+            case IntLiteral():
+                return f"{e.value}"
+            case FloatLiteral():
+                return f"{e.value}"
+            case BoolLiteral():
+                return "true" if e.value else "false"
             case _:
-                raise CodeGenError(f"Unknown type {t}", t.span)
+                raise CodeGenError(f"Unsupported expression {e}", e.span)
