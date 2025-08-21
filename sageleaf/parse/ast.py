@@ -152,106 +152,88 @@ class NativeBlock(ASTNode):
     content: str
 
 
-type Type = (
-    I8
-    | I16
-    | I32
-    | I64
-    | U8
-    | U16
-    | U32
-    | U64
-    | Usize
-    | F32
-    | F64
-    | Bool
-    | Str
-    | PointerType
-    | GenericType
-    | CustomType
-    | AnonymousUnionType
-    | AnonymousStructType
-)
-
-
-class NumberType(BaseModel):
+class Type(ASTNode):
     pass
 
 
-class I8(ASTNode, NumberType):
+class NumberType(Type):
+    pass
+
+
+class I8(NumberType):
     kind: Literal["I8"] = "I8"
 
 
-class I16(ASTNode, NumberType):
+class I16(NumberType):
     kind: Literal["I16"] = "I16"
 
 
-class I32(ASTNode, NumberType):
+class I32(NumberType):
     kind: Literal["I32"] = "I32"
 
 
-class I64(ASTNode, NumberType):
+class I64(NumberType):
     kind: Literal["I64"] = "I64"
 
 
-class U8(ASTNode, NumberType):
+class U8(NumberType):
     kind: Literal["U8"] = "U8"
 
 
-class U16(ASTNode, NumberType):
+class U16(NumberType):
     kind: Literal["U16"] = "U16"
 
 
-class U32(ASTNode, NumberType):
+class U32(NumberType):
     kind: Literal["U32"] = "U32"
 
 
-class U64(ASTNode, NumberType):
+class U64(NumberType):
     kind: Literal["U64"] = "U64"
 
 
-class Usize(ASTNode, NumberType):
+class Usize(NumberType):
     kind: Literal["Usize"] = "Usize"
 
 
-class F32(ASTNode, NumberType):
+class F32(NumberType):
     kind: Literal["F32"] = "F32"
 
 
-class F64(ASTNode, NumberType):
+class F64(NumberType):
     kind: Literal["F64"] = "F64"
 
 
-class Bool(ASTNode):
+class Bool(Type):
     kind: Literal["Bool"] = "Bool"
 
 
-class Str(ASTNode):
+class Str(Type):
     kind: Literal["Str"] = "Str"
 
 
-class PointerType(ASTNode):
+class PointerType(Type):
     kind: Literal["PointerType"] = "PointerType"
     target: Type
 
 
-class GenericType(ASTNode):
+class GenericType(Type):
     kind: Literal["GenericType"] = "GenericType"
     name: str
 
 
-class CustomType(ASTNode):
+class CustomType(Type):
     kind: Literal["CustomType"] = "CustomType"
     name: str
     type_args: list[Type]
 
 
-class AnonymousUnionType(ASTNode):
+class AnonymousUnionType(Type):
     kind: Literal["AnonymousUnionType"] = "AnonymousUnionType"
     variants: list[UnionVariant]
 
 
-class AnonymousStructType(ASTNode):
+class AnonymousStructType(Type):
     kind: Literal["AnonymousStructType"] = "AnonymousStructType"
     fields: list[StructField]
 

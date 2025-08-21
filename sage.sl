@@ -1,5 +1,5 @@
 fn do_stuff() -> u8 {
-    return 256;
+    return 255;
 }
 
 fn main() {

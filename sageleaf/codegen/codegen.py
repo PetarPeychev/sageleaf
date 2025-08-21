@@ -167,9 +167,9 @@ class CodeGenerator:
     def expression(self, e: ast.Expression) -> str:
         match e:
             case ast.IntLiteral():
-                return f"{e.value}"
+                return f"({self.type_to_c_type(e.type)}){e.value}"
             case ast.FloatLiteral():
-                return f"{e.value}"
+                return f"({self.type_to_c_type(e.type)}){e.value}"
             case ast.BoolLiteral():
                 return "true" if e.value else "false"
             case _:
