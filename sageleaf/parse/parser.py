@@ -169,8 +169,6 @@ class Parser:
             return self.parse_native_block()
         elif self.match(TokenType.CONST):
             return self.parse_const_declaration()
-        elif self.match(TokenType.IDENTIFIER):
-            return self.parse_var_declaration()
         elif self.current_token:
             raise ParseError(
                 "Unexpected token in top-level statement", self.current_token

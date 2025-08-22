@@ -94,7 +94,6 @@ type TopLevelStatement = (
     | UnionDef
     | ImportStatement
     | ConstDeclaration
-    | VarDeclaration
 )
 
 
