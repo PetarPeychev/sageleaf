@@ -1,10 +1,5 @@
-from pathlib import Path
-
 from sageleaf.parse import ast
-from sageleaf.parse.lexer import Lexer
-from sageleaf.parse.parser import Parser
 from sageleaf.parse.tokens import SourceSpan
-from sageleaf.typecheck.typechecker import TypeChecker
 
 
 class CodeGenError(Exception):
@@ -16,11 +11,10 @@ class CodeGenError(Exception):
 
 
 class CodeGenerator:
-    def __init__(self, program: ast.Program, lib: bool = False):
+    def __init__(self, program: ast.Program):
         self.program = program
         self.code = ""
         self.indent_level = 0
-        self.lib = lib
 
     def indent(self, level: int = 1):
         self.indent_level += level
@@ -67,26 +61,12 @@ class CodeGenerator:
                 raise CodeGenError(f"Unknown type {t}", t.span)
 
     def generate(self) -> str:
-        if not self.lib:
-            self.add("// --- Sageleaf Runtime ---")
-            with open("runtime/core.c") as f:
-                self.add(f.read().strip())
-            self.add()
+        self.add("// --- Sageleaf Runtime ---")
+        with open("runtime/core.c") as f:
+            self.add(f.read().strip())
+        self.add()
 
-            self.add("// --- Sageleaf Library ---")
-            with open("runtime/lib.sl") as f:
-                lib_source = f.read().strip()
-            lexer = Lexer(lib_source, Path("runtime/lib.sl"))
-            tokens = lexer.tokenize()
-            parser = Parser(tokens)
-            ast = parser.parse()
-            typechecker = TypeChecker(ast)
-            typechecker.check()
-            codegen = CodeGenerator(ast, lib=True)
-            self.add(codegen.generate(), newline=False)
-
-            self.add("// --- Sageleaf User Program ---")
-
+        self.add("// --- Sageleaf Program ---")
         assert self.program.functions
         for f in self.program.functions.values():
             if f.name != "main":
@@ -129,6 +109,8 @@ class CodeGenerator:
                 self.native(s)
             case ast.ReturnStatement():
                 self.return_statement(s)
+            case ast.ExpressionStatement():
+                self.expression_statement(s)
             case _:
                 raise CodeGenError(f"Unknown statement {s}", s.span)
 
@@ -167,10 +149,17 @@ class CodeGenerator:
     def expression(self, e: ast.Expression) -> str:
         match e:
             case ast.IntLiteral():
-                return f"({self.type_to_c_type(e.type)}){e.value}"
+                return (f"({self.type_to_c_type(e.type)})" if e.type else "") + e.value
             case ast.FloatLiteral():
-                return f"({self.type_to_c_type(e.type)}){e.value}"
+                return (f"({self.type_to_c_type(e.type)})" if e.type else "") + e.value
             case ast.BoolLiteral():
                 return "true" if e.value else "false"
+            case ast.FunctionCall():
+                return (
+                    f"sl_{e.name}({', '.join(self.expression(arg) for arg in e.args)})"
+                )
             case _:
-                raise CodeGenError(f"Unsupported expression {e}", e.span)
+                raise CodeGenError(f"Unsupported expression {e.kind}", e.span)
+
+    def expression_statement(self, e: ast.ExpressionStatement):
+        self.add(f"{self.expression(e.expression)};")

@@ -15,7 +15,13 @@ def compile_sageleaf_file(file_path: Path) -> str:
     with open(file_path) as f:
         source = f.read()
 
-    lexer = Lexer(source, file_path)
+    # Prepend library code to user source
+    with open("runtime/lib.sl") as f:
+        lib_source = f.read().strip()
+
+    combined_source = lib_source + "\n\n" + source
+
+    lexer = Lexer(combined_source, file_path)
     tokens = lexer.tokenize()
     parser = Parser(tokens)
     ast = parser.parse()
@@ -82,11 +88,8 @@ def cmd_run(args: argparse.Namespace) -> None:
             print(f"Compilation failed: {e.stderr.decode()}", file=sys.stderr)
             sys.exit(1)
 
-        try:
-            p = subprocess.run([str(exe_file)], check=True)
-            print(f"Exit code: {p.returncode}")
-        except subprocess.CalledProcessError as e:
-            sys.exit(e.returncode)
+        p = subprocess.run([str(exe_file)])
+        print(f"Exit code: {p.returncode}")
 
 
 def cmd_check(args: argparse.Namespace) -> None:

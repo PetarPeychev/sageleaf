@@ -390,9 +390,7 @@ class Lexer:
             elif char == "*":
                 return self.make_token(TokenType.STAR, char, start_line, start_column)
             elif char == "%":
-                return self.make_token(
-                    TokenType.PERCENT, char, start_line, start_column
-                )
+                return self.make_token(TokenType.PERCENT, char, start_line, start_column)
             elif char == "=":
                 return self.make_token(TokenType.ASSIGN, char, start_line, start_column)
             elif char == ">":

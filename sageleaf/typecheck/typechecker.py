@@ -43,6 +43,8 @@ class TypeChecker:
             match s:
                 case ast.ReturnStatement():
                     self.check_return_statement(s, function_def.return_type)
+                case ast.ExpressionStatement():
+                    self.check_expression(s.expression, None)
                 case _:
                     pass
 
@@ -60,31 +62,50 @@ class TypeChecker:
                 "Return statement must not have a value", r.return_token.span
             )
 
-    def check_expression(self, e: ast.Expression, t: ast.Type):
+    def check_expression(self, e: ast.Expression, t: ast.Type | None):
         match e:
             case ast.IntLiteral():
-                if isinstance(t, ast.NumberType):
+                if not t or isinstance(t, ast.NumberType):
                     e.type = t
                 else:
                     raise TypeCheckError(
                         f"Expected {self.type_to_name(t)}, got integer literal", e.span
                     )
             case ast.FloatLiteral():
-                if isinstance(t, ast.NumberType):
+                if not t or isinstance(t, ast.NumberType):
                     e.type = t
                 else:
                     raise TypeCheckError(
                         f"Expected {self.type_to_name(t)}, got float literal", e.span
                     )
             case ast.BoolLiteral():
-                if isinstance(t, ast.Bool):
+                if not t or isinstance(t, ast.Bool):
                     e.type = t
                 else:
                     raise TypeCheckError(
                         f"Expected {self.type_to_name(t)}, got bool literal", e.span
                     )
+            case ast.FunctionCall():
+                assert self.program.functions
+                if not t or self.program.functions[e.name].return_type == t:
+                    e.type = t
+                    if len(e.args) != len(self.program.functions[e.name].params):
+                        raise TypeCheckError(
+                            f"Expected {len(self.program.functions[e.name].params)} "
+                            f"arguments, got {len(e.args)}",
+                            e.name_token.span,
+                        )
+                    for arg, param in zip(
+                        e.args, self.program.functions[e.name].params, strict=True
+                    ):
+                        self.check_expression(arg, param.type_annotation)
+                else:
+                    raise TypeCheckError(
+                        f"Expected {self.type_to_name(t)}, got function call",
+                        e.name_token.span,
+                    )
             case _:
-                raise TypeCheckError(f"Unsupported expression {e}", e.span)
+                raise TypeCheckError(f"Unsupported expression {e.kind}", e.span)
 
     def type_to_name(self, t: ast.Type) -> str:
         match t:

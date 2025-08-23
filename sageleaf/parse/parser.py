@@ -290,9 +290,7 @@ class Parser:
         end_token = self.expect(TokenType.RBRACE)
         span = self.merge_spans(start_token.span, end_token.span)
 
-        return UnionDef(
-            span=span, name=name, type_params=type_params, variants=variants
-        )
+        return UnionDef(span=span, name=name, type_params=type_params, variants=variants)
 
     def parse_union_variant(self) -> UnionVariant:
         name_token = self.expect(TokenType.IDENTIFIER)
@@ -805,9 +803,7 @@ class Parser:
             right = self.parse_addition()
             span = self.merge_spans(left.span, right.span)
             inclusive = op_token.type == TokenType.RANGE_INCLUSIVE
-            return RangeExpression(
-                span=span, start=left, end=right, inclusive=inclusive
-            )
+            return RangeExpression(span=span, start=left, end=right, inclusive=inclusive)
 
         return left
 
@@ -880,7 +876,9 @@ class Parser:
                 args = self.parse_argument_list()
                 end_span = args[-1].span if args else expr.span
                 span = self.merge_spans(expr.span, end_span)
-                expr = FunctionCall(span=span, name=expr.name, args=args)
+                expr = FunctionCall(
+                    span=span, name=expr.name, args=args, name_token=expr.name_token
+                )
             else:
                 break
 
@@ -917,7 +915,7 @@ class Parser:
             return BoolLiteral(span=token.span, value=False)
         elif self.match(TokenType.IDENTIFIER):
             token = self.advance()
-            return Identifier(span=token.span, name=token.value)
+            return Identifier(span=token.span, name=token.value, name_token=token)
         elif self.match(TokenType.LBRACKET):
             return self.parse_list_literal()
         elif self.match(TokenType.LBRACE):
@@ -1195,7 +1193,7 @@ class Parser:
 
     def parse_identifier(self) -> Identifier:
         token = self.expect(TokenType.IDENTIFIER)
-        return Identifier(span=token.span, name=token.value)
+        return Identifier(span=token.span, name=token.value, name_token=token)
 
 
 def parse_source(source: str, file_path: Path) -> Program:

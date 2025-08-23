@@ -88,12 +88,7 @@ class Program(ASTNode):
 
 
 type TopLevelStatement = (
-    FunctionDef
-    | NativeBlock
-    | StructDef
-    | UnionDef
-    | ImportStatement
-    | ConstDeclaration
+    FunctionDef | NativeBlock | StructDef | UnionDef | ImportStatement | ConstDeclaration
 )
 
 
@@ -383,6 +378,7 @@ class BoolLiteral(ASTNode):
 class Identifier(ASTNode):
     kind: Literal["Identifier"] = "Identifier"
     name: str
+    name_token: Token
 
 
 class BinaryOp(ASTNode):
@@ -402,6 +398,8 @@ class FunctionCall(ASTNode):
     kind: Literal["FunctionCall"] = "FunctionCall"
     name: str
     args: list[Expression]
+    type: Type | None = None
+    name_token: Token
 
 
 class MethodCall(ASTNode):
