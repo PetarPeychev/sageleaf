@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdarg.h>
+#include <stdint.h>
 
 void print_usage(char *program_name) {
     fprintf(stderr, "Usage: %s <command> [ARGUMENTS]\n", program_name);
@@ -86,6 +88,153 @@ void write_file(char *path, char *content) {
     fclose(file);
 }
 
+enum TokenKind {
+    // Symbols
+    TK_LPAREN,
+    TK_RPAREN,
+    TK_ARROW,
+    TK_LCURLY,
+    TK_RCURLY,
+    TK_SEMICOLON,
+
+    // Keywords
+    TK_FN,
+    TK_RETURN,
+    TK_I32,
+    
+    TK_IDENTIFIER,
+
+    TK_EOF,
+};
+
+struct Slice {
+    const char *data;
+    size_t length;
+};
+
+struct Slice slice(const char *str) {
+    struct Slice slice = {.data = str, .length = strlen(str)};
+    return slice;
+}
+
+struct Token {
+    enum TokenKind kind;
+    struct Slice span;
+    int32_t value;
+};
+
+struct Token *lex(const char *source) {
+    struct Token *tokens = malloc(sizeof(struct Token) * 1000); // TODO: dynamic array
+    size_t t = 0;
+
+    for (char c = *source; c != '\0'; c = *++source) {
+        // Skip whitespace
+        if (isspace(c)) {
+            continue;
+        }
+
+        // Single-character symbols
+        else if (c == '(') {
+            struct Token token = {
+                .kind = TK_LPAREN,
+                .span = {
+                    .data = source,
+                    .length = 1
+                }
+            };
+            tokens[t++] = token;
+        }
+
+        else if (c == ')') {
+            struct Token token = {
+                .kind = TK_RPAREN,
+                .span = {
+                    .data = source,
+                    .length = 1
+                }
+            };
+            tokens[t++] = token;
+        }
+
+        else if (c == '{') {
+            struct Token token = {
+                .kind = TK_LCURLY,
+                .span = {
+                    .data = source,
+                    .length = 1
+                }
+            };
+            tokens[t++] = token;
+        }
+
+        else if (c == '}') {
+            struct Token token = {
+                .kind = TK_RCURLY,
+                .span = {
+                    .data = source,
+                    .length = 1
+                }
+            };
+            tokens[t++] = token;
+        }
+
+        else if (c == ';') {
+            struct Token token = {
+                .kind = TK_SEMICOLON,
+                .span = {
+                    .data = source,
+                    .length = 1
+                }
+            };
+            tokens[t++] = token;
+        }
+
+        // Multi-character symbols
+        else if (c == '-') {
+            if (*++source != '>') {
+                fprintf(stderr, "ERROR: Expected '>' in arrow token, got '%c'.\n", *source);
+                exit(EXIT_FAILURE);
+            }
+            c = *source;
+            struct Token token = {
+                .kind = TK_ARROW,
+                .span = {
+                    .data = source - 1,
+                    .length = 2
+                }
+            };
+            tokens[t++] = token;
+        }
+
+        // Identifiers and Keywords
+        else if (isalpha(c) || c == '_') {
+            size_t length = 1;
+            for (c = *++source; isalnum(c) || c == '_'; c = *++source) {
+                length++;
+            }
+            struct Token token = {
+                .kind = TK_IDENTIFIER,
+                .span = {
+                    .data = source - length,
+                    .length = length
+                }
+            };
+            tokens[t++] = token;
+            source--;
+        }
+
+        else {
+            fprintf(stderr, "ERROR: Unrecognized token '%c'.\n", c);
+            exit(EXIT_FAILURE);
+        }
+    }
+
+    struct Token eof = {.kind = TK_EOF};
+    tokens[t] = eof;
+
+    return tokens;
+}
+
 int main(int argc, char *argv[]) {
     char *program_name = argv[0];
     
@@ -105,18 +254,12 @@ int main(int argc, char *argv[]) {
             return EXIT_FAILURE;
         }
 
-        // 1. Read source file.
-        char *source = read_file(argv[2]);
-        if (source == NULL) {
-            fprintf(stderr, "ERROR: Failed to read file '%s'.\n", argv[2]);
-            return EXIT_FAILURE;
-        }
-
+        // Strip file extension
         size_t len = strlen(argv[2]);
         size_t len_stripped = len - 3;
 
         if (strcmp(argv[2] + len_stripped, ".sl") != 0) {
-            fprintf(stderr, "ERROR: Expected .sl file, got '%s'.\n", argv[2]);
+            fprintf(stderr, "ERROR: Expected a .sl file, got '%s'.\n", argv[2]);
             return EXIT_FAILURE;
         }
 
@@ -124,7 +267,19 @@ int main(int argc, char *argv[]) {
         strncpy(path, argv[2], len_stripped);
         path[len_stripped] = '\0';
 
+        // 1. Read source file.
+        char *source = read_file(argv[2]);
+        if (source == NULL) {
+            fprintf(stderr, "ERROR: Failed to read file '%s'.\n", argv[2]);
+            return EXIT_FAILURE;
+        }
+
         // 2. Lex into tokens.
+        struct Token *tokens = lex(source);
+        for (struct Token t = *tokens; t.kind != TK_EOF; t = *++tokens) {
+            printf("%.*s ", (int)t.span.length, t.span.data);
+        }
+        putchar('\n');
         
         // 3. Parse into an AST.
 
