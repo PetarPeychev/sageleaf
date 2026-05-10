@@ -1,2 +1,0 @@
-Hello, world!
-Exit code: 0
