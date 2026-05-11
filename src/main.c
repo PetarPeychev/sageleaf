@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
+#include <errno.h>
+#include <limits.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdarg.h>
@@ -14,33 +16,30 @@ void print_usage(char *program_name) {
 
 char *format(const char *fmt, ...)
 {
-    int n = 0;
-    size_t size = 0;
-    char *p = NULL;
     va_list ap;
 
     va_start(ap, fmt);
-    n = vsnprintf(p, size, fmt, ap);
+    int required_length = vsnprintf(NULL, 0, fmt, ap);
     va_end(ap);
 
-    if (n < 0)
+    if (required_length < 0)
         return NULL;
 
-    size = (size_t) n + 1;
-    p = malloc(size);
-    if (p == NULL)
+    size_t size = (size_t) required_length + 1; // +1 for '\0'
+    char *string = malloc(size);
+    if (string == NULL)
         return NULL;
 
     va_start(ap, fmt);
-    n = vsnprintf(p, size, fmt, ap);
+    required_length = vsnprintf(string, size, fmt, ap);
     va_end(ap);
 
-    if (n < 0) {
-        free(p);
+    if (required_length < 0) {
+        free(string);
         return NULL;
     }
 
-    return p;
+    return string;
 }
 
 char *read_file(char *path) {
@@ -103,6 +102,7 @@ enum TokenKind {
     TK_I32,
     
     TK_IDENTIFIER,
+    TK_INTEGER,
 
     TK_EOF,
 };
@@ -123,7 +123,7 @@ struct Token {
     int32_t value;
 };
 
-struct Token *lex(const char *source) {
+struct Token *lex(char *source) {
     struct Token *tokens = malloc(sizeof(struct Token) * 1000); // TODO: dynamic array
     size_t t = 0;
 
@@ -206,7 +206,7 @@ struct Token *lex(const char *source) {
             tokens[t++] = token;
         }
 
-        // Identifiers and Keywords
+        // Variable-length tokens
         else if (isalpha(c) || c == '_') {
             size_t length = 1;
             for (c = *++source; isalnum(c) || c == '_'; c = *++source) {
@@ -221,6 +221,33 @@ struct Token *lex(const char *source) {
             };
             tokens[t++] = token;
             source--;
+        }
+
+        else if(isdigit(c)) {
+            char *end = source;   
+            errno = 0; // To distinguish success/failure after call
+            long int value = strtol(source, &end, 10);
+            if (errno == ERANGE) {
+                perror("strtol");
+                exit(EXIT_FAILURE);
+            }
+
+            // Clamp to 32-bit int for now
+            int32_t truncated = 0;
+            if (value > INT32_MAX) truncated = INT32_MAX;
+            else if (value < INT32_MIN) truncated = INT32_MIN;
+            else truncated = (int32_t)value;
+            
+            struct Token token = {
+                .kind = TK_INTEGER,
+                .value = truncated,
+                .span = {
+                    .data = source,
+                    .length = end - source   
+                }
+            };
+            tokens[t++] = token;
+            source = --end;
         }
 
         else {
@@ -277,7 +304,12 @@ int main(int argc, char *argv[]) {
         // 2. Lex into tokens.
         struct Token *tokens = lex(source);
         for (struct Token t = *tokens; t.kind != TK_EOF; t = *++tokens) {
-            printf("%.*s ", (int)t.span.length, t.span.data);
+            if (t.kind == TK_INTEGER) {
+                printf("%d ", t.value);
+            }
+            else {
+                printf("%.*s ", (int)t.span.length, t.span.data);
+            }
         }
         putchar('\n');
         
